@@ -13,15 +13,18 @@
     .legend span{display:inline-flex;align-items:center;gap:7px;color:#5b526b;font-size:13px}
     .dot{width:10px;height:10px;border-radius:50%;background:#d7d0e5}
     .dot.green{background:#1a9b58}
+    .dot.yellow{background:#d89a16}
     .dot.red{background:#c96a43}
     ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:10px}
     li{background:#fff;border:1px solid #e5dfef;border-radius:8px;padding:12px 14px;box-shadow:0 1px 0 rgba(23,17,36,.03)}
     li.ready{border:2px solid #1a9b58;background:#f0fff6;box-shadow:0 0 0 3px rgba(26,155,88,.08)}
+    li.partial{border:2px solid #d89a16;background:#fff9e8;box-shadow:0 0 0 3px rgba(216,154,22,.10)}
     li.blocked{border:2px solid #c96a43;background:#fff6f1}
     a{display:block;color:#4321a8;font-weight:700;text-decoration:none}
     a:hover{text-decoration:underline}
     strong{display:inline-block;margin-top:8px;border-radius:999px;padding:3px 8px;background:#eee8f6;color:#5b526b;font-size:12px}
     li.ready strong{background:#dff7e9;color:#0d6b39}
+    li.partial strong{background:#ffeab5;color:#835800}
     li.blocked strong{background:#ffe3d7;color:#91421f}
     li span{display:block;margin-top:7px;color:#7c738a;font-size:12px;word-break:break-all}
   </style>
@@ -29,8 +32,8 @@
 <body>
   <main>
     <h1>Nebula Finished Pages</h1>
-    <p>Direct links to the published HTML implementations. Зеленым отмечены страницы, которые сейчас считаем примерно 1-в-1 для человеческого восприятия по имеющимся review evidence.</p>
-    <div class="legend"><span><i class="dot green"></i>Примерно 1-в-1</span><span><i class="dot"></i>Не классифицировано</span><span><i class="dot red"></i>Не принято 1-в-1</span></div>
+    <p>Direct links to the published HTML implementations. Зеленым отмечены страницы, которые сейчас считаем примерно 1-в-1 для человеческого восприятия. Желтым отмечены страницы с заметными косяками, примерно 50-75% готовности.</p>
+    <div class="legend"><span><i class="dot green"></i>Примерно 1-в-1</span><span><i class="dot yellow"></i>50-75% готово</span><span><i class="dot"></i>Не классифицировано</span><span><i class="dot red"></i>Не принято 1-в-1</span></div>
     <ul>
         <li class="neutral"><a href="_unzipped/404-new.html">404 New</a><strong>Не классифицировано</strong><span>_unzipped/404-new.html</span></li>
         <li class="neutral"><a href="_unzipped/about-us-new.html">About Us New</a><strong>Не классифицировано</strong><span>_unzipped/about-us-new.html</span></li>
@@ -55,7 +58,7 @@
         <li class="neutral"><a href="_unzipped/card-1-new.html">Card 1 New</a><strong>Не классифицировано</strong><span>_unzipped/card-1-new.html</span></li>
         <li class="neutral"><a href="_unzipped/career-reading-new.html">Career Reading New</a><strong>Не классифицировано</strong><span>_unzipped/career-reading-new.html</span></li>
         <li class="neutral"><a href="_unzipped/careers-join-new.html">Careers Join New</a><strong>Не классифицировано</strong><span>_unzipped/careers-join-new.html</span></li>
-        <li class="ready"><a href="_unzipped/cheap-psychic-new.html">Cheap Psychic New</a><strong>Примерно 1-в-1</strong><span>_unzipped/cheap-psychic-new.html</span></li>
+        <li class="partial"><a href="_unzipped/cheap-psychic-new.html">Cheap Psychic New</a><strong>50-75% готово</strong><span>_unzipped/cheap-psychic-new.html</span></li>
         <li class="neutral"><a href="_unzipped/contact-us-new.html">Contact Us New</a><strong>Не классифицировано</strong><span>_unzipped/contact-us-new.html</span></li>
         <li class="neutral"><a href="_unzipped/cookie-policy-new.html">Cookie Policy New</a><strong>Не классифицировано</strong><span>_unzipped/cookie-policy-new.html</span></li>
         <li class="neutral"><a href="_unzipped/cookies-new.html">Cookies New</a><strong>Не классифицировано</strong><span>_unzipped/cookies-new.html</span></li>
@@ -93,17 +96,17 @@
         <li class="neutral"><a href="_unzipped/profile-user-new.html">Profile User New</a><strong>Не классифицировано</strong><span>_unzipped/profile-user-new.html</span></li>
         <li class="neutral"><a href="_unzipped/psychic-chat-new.html">Psychic Chat New</a><strong>Не классифицировано</strong><span>_unzipped/psychic-chat-new.html</span></li>
         <li class="neutral"><a href="_unzipped/psychic-near-me-new.html">Psychic Near Me New</a><strong>Не классифицировано</strong><span>_unzipped/psychic-near-me-new.html</span></li>
-        <li class="ready"><a href="_unzipped/psychic-reading-new.html">Psychic Reading New</a><strong>Примерно 1-в-1</strong><span>_unzipped/psychic-reading-new.html</span></li>
+        <li class="partial"><a href="_unzipped/psychic-reading-new.html">Psychic Reading New</a><strong>50-75% готово</strong><span>_unzipped/psychic-reading-new.html</span></li>
         <li class="neutral"><a href="_unzipped/referral-program-new.html">Referral Program New</a><strong>Не классифицировано</strong><span>_unzipped/referral-program-new.html</span></li>
         <li class="neutral"><a href="_unzipped/refund-policy-new.html">Refund Policy New</a><strong>Не классифицировано</strong><span>_unzipped/refund-policy-new.html</span></li>
         <li class="neutral"><a href="_unzipped/settings-personal-new.html">Settings Personal New</a><strong>Не классифицировано</strong><span>_unzipped/settings-personal-new.html</span></li>
-        <li class="ready"><a href="_unzipped/signup-step-1.html">Signup Step 1</a><strong>Примерно 1-в-1</strong><span>_unzipped/signup-step-1.html</span></li>
-        <li class="ready"><a href="_unzipped/signup-step-2.html">Signup Step 2</a><strong>Примерно 1-в-1</strong><span>_unzipped/signup-step-2.html</span></li>
+        <li class="partial"><a href="_unzipped/signup-step-1.html">Signup Step 1</a><strong>50-75% готово</strong><span>_unzipped/signup-step-1.html</span></li>
+        <li class="partial"><a href="_unzipped/signup-step-2.html">Signup Step 2</a><strong>50-75% готово</strong><span>_unzipped/signup-step-2.html</span></li>
         <li class="neutral"><a href="_unzipped/soulmate-reading-new.html">Soulmate Reading New</a><strong>Не классифицировано</strong><span>_unzipped/soulmate-reading-new.html</span></li>
         <li class="neutral"><a href="_unzipped/spiritual-meanings-new.html">Spiritual Meanings New</a><strong>Не классифицировано</strong><span>_unzipped/spiritual-meanings-new.html</span></li>
         <li class="neutral"><a href="_unzipped/tabs-new.html">Tabs New</a><strong>Не классифицировано</strong><span>_unzipped/tabs-new.html</span></li>
         <li class="neutral"><a href="_unzipped/tarot-cards-meaning-new.html">Tarot Cards Meaning New</a><strong>Не классифицировано</strong><span>_unzipped/tarot-cards-meaning-new.html</span></li>
-        <li class="ready"><a href="_unzipped/tarot-reading-new.html">Tarot Reading New</a><strong>Примерно 1-в-1</strong><span>_unzipped/tarot-reading-new.html</span></li>
+        <li class="partial"><a href="_unzipped/tarot-reading-new.html">Tarot Reading New</a><strong>50-75% готово</strong><span>_unzipped/tarot-reading-new.html</span></li>
         <li class="neutral"><a href="_unzipped/taurus-compatibility-new.html">Taurus Compatibility New</a><strong>Не классифицировано</strong><span>_unzipped/taurus-compatibility-new.html</span></li>
         <li class="neutral"><a href="_unzipped/terms-conditions-new.html">Terms Conditions New</a><strong>Не классифицировано</strong><span>_unzipped/terms-conditions-new.html</span></li>
         <li class="neutral"><a href="_unzipped/topic-new.html">Topic New</a><strong>Не классифицировано</strong><span>_unzipped/topic-new.html</span></li>
