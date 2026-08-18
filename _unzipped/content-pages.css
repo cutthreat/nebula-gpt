@@ -1,4 +1,4 @@
-:root{
+.content-page{
   --cp-bg:#f6f2fb;
   --cp-bg-2:#eee5fb;
   --cp-surface:#ffffff;
@@ -11,7 +11,7 @@
   --cp-shadow:0 18px 50px rgba(84,54,173,.10);
 }
 
-body.content-page{
+.content-page{
   margin:0;
   font-family:"Manrope",sans-serif;
   color:var(--cp-text);
@@ -69,7 +69,7 @@ body.content-page{
   align-items:stretch;
   margin-bottom:24px;
 }
-.content-card,.content-hero__panel,.content-panel,.content-quote,.content-mini{
+.content-card,.content-hero__panel,.content-panel,.content-quote{
   background:var(--cp-surface);
   border:1px solid var(--cp-border);
   box-shadow:var(--cp-shadow);
@@ -91,7 +91,7 @@ body.content-page{
   margin:18px 0 12px;
   font-size:56px;
   line-height:.98;
-  letter-spacing:-.05em;
+  letter-spacing:0;
 }
 .content-lead{margin:0;max-width:760px;color:var(--cp-muted);font-size:18px;line-height:1.68}
 .content-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
@@ -133,7 +133,13 @@ body.content-page{
 .content-item span{display:block;color:var(--cp-muted);font-size:14px;line-height:1.55;margin-top:4px}
 .content-chip{display:inline-flex;align-items:center;justify-content:center;min-height:28px;padding:0 10px;border-radius:999px;background:rgba(110,73,239,.10);color:var(--cp-accent);font-size:12px;font-weight:800}
 .content-quote{padding:18px 20px;color:#3c3650;font-size:15px;line-height:1.62}
-.content-mini{padding:20px;background:linear-gradient(180deg,#fff 0%,#faf6ff 100%)}
+.content-mini{
+  padding:20px;
+  background:linear-gradient(180deg,#fff 0%,#faf6ff 100%);
+  border:1px solid var(--cp-border);
+  box-shadow:var(--cp-shadow);
+  border-radius:28px;
+}
 .content-mini__title{margin:0 0 10px;font-size:24px;line-height:1.1}
 .content-mini__text{margin:0;color:var(--cp-muted);font-size:15px;line-height:1.6}
 .content-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
@@ -196,3 +202,8 @@ body.content-page{
   .content-panel--wide,.content-panel--side{grid-column:span 1}
   .content-item,.content-step{grid-template-columns:1fr}
 }
+
+.content-page .content-main{padding-top:118px}
+.content-page .site-footer{margin-top:26px}
+.content-page .content-shell{min-height:auto}
+@media (max-width:767.98px){.content-page .content-main{padding-top:108px}}

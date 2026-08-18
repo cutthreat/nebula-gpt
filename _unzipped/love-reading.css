@@ -1,4 +1,4 @@
-:root {
+.lov-page {
   --lov-bg: #f5f5f5;
   --lov-soft: #f1f1f1;
   --lov-purple: #673eda;
@@ -6,35 +6,62 @@
   --lov-text: #101010;
   --lov-muted: #898989;
   --lov-gold: #f1b45a;
-}
-
-/* Source contract repair: current Love Reading Figma uses the compact FAQ title. */
-.lov-answer__desktop-title {
-  display: none !important;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
   min-width: 320px;
   font-family: "Manrope", sans-serif;
   color: var(--lov-text);
   background: #fff;
 }
 
-img {
+/* Source contract repair: mobile Figma uses the compact FAQ title. */
+.lov-answer__desktop-title {
+  display: none !important;
+}
+
+@media (min-width: 1200px) {
+  .lov-answer__desktop-title {
+    display: inline !important;
+  }
+}
+
+.lov-page,
+.lov-page *,
+.lov-page *::before,
+.lov-page *::after {
+  box-sizing: border-box;
+}
+
+.lov-page img {
   display: block;
   max-width: 100%;
 }
 
-a {
-  color: inherit;
+.lov-bp-1200-only {
+  display: none !important;
+}
+
+.lov-bp-not-1200 {
+  display: inline !important;
+}
+
+@media (min-width: 1200px) {
+  .lov-bp-1200-only {
+    display: inline !important;
+  }
+
+  .lov-bp-not-1200 {
+    display: none !important;
+  }
+}
+
+.lov-page :where(a) {
   text-decoration: none;
+}
+
+.lov-svg-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .lov-page {
@@ -161,7 +188,7 @@ a {
   font-weight: 700;
 }
 
-.lov-expert-card__rating span {
+.lov-expert-card__rating > span[aria-hidden="true"] {
   display: inline-block;
   width: 20px;
   height: 19px;
@@ -240,10 +267,12 @@ a {
 
 .lov-expert-card__stats li:first-child::before {
   background-image: url("img/all-psychic-fact-exp.png");
+  background-image: image-set(url("img/all-psychic-fact-exp.webp") type("image/webp"), url("img/all-psychic-fact-exp.png") type("image/png"));
 }
 
 .lov-expert-card__stats li:nth-child(2)::before {
   background-image: url("img/all-psychic-fact-consult.png");
+  background-image: image-set(url("img/all-psychic-fact-consult.webp") type("image/webp"), url("img/all-psychic-fact-consult.png") type("image/png"));
 }
 
 .lov-expert-card__fact-text {
@@ -399,7 +428,9 @@ a {
 }
 
 .lov-review-card p {
-  margin: 20px 0 0;
+  display: flex;
+  gap: 9px;
+  margin: 18px 0 0;
   font-size: 14px;
   line-height: 19px;
   font-weight: 700;
@@ -407,7 +438,8 @@ a {
 
 .lov-review-card__quote {
   display: inline-block;
-  margin-right: 6px;
+  flex: 0 0 auto;
+  margin-right: 0;
   color: #bda8ff;
   font-size: 33px;
   line-height: 0;
@@ -457,19 +489,20 @@ a {
   position: relative;
   overflow: hidden;
   background-color: #f1f1f1;
-  background-image: radial-gradient(ellipse at 0 0, rgba(103, 62, 218, 0.17) 0%, rgba(103, 62, 218, 0) 58%);
+  /* source: Figma node 917:20862 BG, solid #f1f1f1 + purple linear gradient fill at 25% opacity. */
+  background-image: linear-gradient(to bottom right, rgba(103, 62, 218, 0.1675) 0%, rgba(103, 62, 218, 0) 20%);
 }
 
 .lov-best-online::before {
   content: "";
   position: absolute;
-  left: 438px;
-  top: 802px;
-  width: 1000px;
-  height: 1000px;
-  border-radius: 50%;
-  background: rgba(138, 104, 234, 0.74);
+  left: -60px;
+  top: 304px;
+  width: 1996px;
+  height: 1996px;
+  z-index: 0;
   pointer-events: none;
+  background: url("img/love-reading-source/best-online-ellipse-1200.svg") center / contain no-repeat;
 }
 
 .lov-best-online__row {
@@ -522,13 +555,13 @@ a {
   bottom: -12px;
   width: 748px;
   height: 748px;
-  opacity: 0.96;
+  opacity: 1;
 }
 
 .lov-best-online__art img {
   width: 748px;
   height: 748px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .lov-answer {
@@ -601,17 +634,17 @@ a {
   line-height: 23px;
 }
 
-.site-footer {
+.lov-page .site-footer {
   background: var(--lov-soft);
 }
 
-.site-footer__title {
+.lov-page .site-footer__title {
   font-size: 18px !important;
   line-height: 20px !important;
   letter-spacing: -0.01em !important;
 }
 
-.site-footer__apps {
+.lov-page .site-footer__apps {
   display: grid;
   gap: 10px;
   margin-top: 40px;
@@ -627,6 +660,16 @@ a {
 .lov-hero__copy p {
   line-height: 35px;
   color: #000;
+}
+
+@media (min-width: 1200px) {
+  .lov-hero__copy h1 {
+    line-height: 65.5px;
+  }
+
+  .lov-hero__copy p {
+    line-height: 29.5px;
+  }
 }
 
 .lov-expert-card__rating strong {
@@ -812,7 +855,7 @@ a {
     min-height: 510px;
   }
 
-  .site-footer__title {
+  .lov-page .site-footer__title {
     font-size: 17px !important;
   }
 }
@@ -1101,7 +1144,7 @@ a {
     line-height: 30px;
   }
 
-  .site-footer__title {
+  .lov-page .site-footer__title {
     font-size: 16px !important;
   }
 }
@@ -1113,17 +1156,22 @@ a {
 
   .lov-hero__row {
     min-height: 900px;
+    padding-top: 109px;
   }
 
   .lov-hero__copy h1 {
-    font-size: 31px;
-    line-height: 42px;
+    width: 290px;
+    font-size: 35px;
+    line-height: 38.5px;
+    text-align: center;
   }
 
   .lov-hero__copy p {
-    margin-top: 390px;
+    margin-top: 394px;
+    width: 288px;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 25.5px;
+    text-align: center;
   }
 
   .lov-hero__art {
@@ -1328,6 +1376,8 @@ a {
   }
   .lov-help-title,
   .lov-answer h2 { letter-spacing: -0.9px; }
+  .lov-clients-love h2,
+  .lov-help-title { text-align: center; }
   .lov-answer h2 { font-size: 30px; line-height: 42px; color: rgb(16, 16, 16); }
 }
 
@@ -1345,7 +1395,7 @@ a {
   .lov-ghost-btn { font-size: 18px; line-height: 30px; letter-spacing: -0.18px; }
   .lov-clients-love h2,
   .lov-help-title { font-size: 30px; line-height: 40px; letter-spacing: -0.9px; }
-  .lov-best-online h2 { font-size: 30px; line-height: 42px; }
+  .lov-best-online h2 { font-size: 30px; line-height: 42px; letter-spacing: 0; }
   .lov-answer h2 { font-size: 30px; line-height: 40.98px; letter-spacing: -0.9px; }
   .lov-rating-line { font-size: 17px; }
   .lov-help-card h3 { font-size: 25px; line-height: 30px; letter-spacing: 0; }
@@ -1361,8 +1411,8 @@ a {
 }
 
 @media (max-width: 575.98px) {
-  .lov-hero__copy h1 { font-size: 35px; line-height: 43px; }
-  .lov-hero__copy p { font-size: 15px; line-height: 28px; }
+  .lov-hero__copy h1 { font-size: 35px; line-height: 38.5px; }
+  .lov-hero__copy p { font-size: 14px; line-height: 25.5px; }
   .lov-expert-card__meta h3 { font-size: 16px; line-height: 16px; }
   .lov-expert-card__rating strong { font-size: 13px; line-height: 22px; letter-spacing: -0.39px; }
   .lov-expert-card__rating small { font-size: 10px; letter-spacing: -0.3px; }
@@ -1422,6 +1472,27 @@ a {
   overflow: hidden;
 }
 
+@media (min-width: 1200px) {
+  .lov-page .site-footer__inner-top {
+    grid-template-columns: 142px 860px;
+    gap: 0 108px;
+  }
+
+  .lov-page .site-footer__col-right {
+    display: grid;
+    grid-template-columns: 160px 140px 160px 160px 160px;
+    column-gap: 20px;
+    row-gap: 0;
+    width: 860px;
+    max-width: 860px;
+  }
+
+  .lov-page .site-footer__col-menu {
+    width: auto;
+    max-width: none;
+  }
+}
+
 .lov-page .pay-icon-wrapper {
   height: 20px;
   margin: 0 !important;
@@ -1449,6 +1520,7 @@ a {
   flex-direction: column;
   gap: 14px;
   width: min(100%, 1110px);
+  max-width: 1110px;
   margin: 72px auto 0;
 }
 
@@ -1473,7 +1545,7 @@ a {
 .lov-answer .faq-section__toggle {
   width: 100%;
   min-height: 90px;
-  padding: 0 30px 0 40px;
+  padding: 0 30px;
   display: flex;
   align-items: center;
   gap: 28px;
@@ -1561,6 +1633,59 @@ a {
     position: relative;
   }
 
+  .lov-page .site-footer__inner-top {
+    position: relative;
+    display: block;
+    height: 533px;
+  }
+
+  .lov-page .site-footer__col-left,
+  .lov-page .site-footer__col-right {
+    position: absolute;
+    margin: 0;
+  }
+
+  .lov-page .site-footer__col-left {
+    left: 0;
+    top: 45px;
+    width: 690px;
+  }
+
+  .lov-page .site-footer__logo {
+    margin: 0 auto;
+  }
+
+  .lov-page .site-footer__apps {
+    position: absolute;
+    left: 239px;
+    top: 47px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 212px;
+    height: 30px;
+    margin: 0;
+  }
+
+  .lov-page .site-footer__col-right {
+    left: 120px;
+    top: 172px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 150px 180px 120px;
+    column-gap: 25px;
+    row-gap: 40px;
+  }
+
+  .lov-page .site-footer__col-menu {
+    width: auto;
+  }
+
+  .lov-page .site-footer__col-menu:nth-child(-n+3) {
+    height: 121px;
+  }
+
   .lov-page .site-footer__inner-bottom {
     position: absolute;
     left: 197px;
@@ -1593,6 +1718,63 @@ a {
     position: relative;
   }
 
+  .lov-page .site-footer__inner-top {
+    position: relative;
+    display: block;
+    height: 533px;
+  }
+
+  .lov-page .site-footer__col-left,
+  .lov-page .site-footer__col-right {
+    position: absolute;
+    margin: 0;
+  }
+
+  .lov-page .site-footer__col-left {
+    left: 0;
+    top: 45px;
+    width: 510px;
+  }
+
+  .lov-page .site-footer__logo {
+    margin: 0 auto;
+  }
+
+  .lov-page .site-footer__apps {
+    position: absolute;
+    left: 149px;
+    top: 47px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 212px;
+    height: 30px;
+    margin: 0;
+  }
+
+  .lov-page .site-footer__col-right {
+    left: 45px;
+    top: 172px;
+    width: 420px;
+    display: grid;
+    grid-template-columns: 150px 120px 100px;
+    column-gap: 25px;
+    row-gap: 40px;
+  }
+
+  .lov-page .site-footer__col-menu {
+    width: auto;
+  }
+
+  .lov-page .site-footer__col-menu:nth-child(-n+3) {
+    height: 121px;
+  }
+
+  .lov-page .site-footer__col-menu:nth-child(5) {
+    width: 160px;
+  }
+
   .lov-page .site-footer__inner-bottom {
     position: absolute;
     left: 108px;
@@ -1604,29 +1786,85 @@ a {
     text-align: center;
   }
 
+  .lov-page .site-footer__copyright {
+    margin-top: 0 !important;
+  }
+
   .lov-answer {
     padding-top: 40px;
   }
 
+  .lov-answer .lov-shell {
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+
+  .lov-answer h2 {
+    width: 504px;
+    margin-left: 6px;
+    text-align: left;
+  }
+
   .lov-answer .lov-faq.faq-section__list {
-    width: calc(100% - 30px);
+    width: 510px;
+    max-width: 510px;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 38px;
+    gap: 14px;
   }
 
   .lov-answer .faq-section__item {
-    min-height: 78px;
+    height: 88px !important;
+    min-height: 88px !important;
     border-radius: 24px;
   }
 
+  .lov-answer .faq-section__item:nth-child(1) {
+    height: 88px !important;
+    min-height: 88px !important;
+  }
+
+  .lov-answer .faq-section__item:not(.is-open) {
+    height: 88px !important;
+    min-height: 88px !important;
+  }
+
+  .lov-answer .faq-section__item:nth-child(1):not(.is-open) {
+    height: 88px !important;
+    min-height: 88px !important;
+  }
+
   .lov-answer .faq-section__item.is-open {
-    min-height: 132px;
+    height: 224px !important;
+    min-height: 224px !important;
     border-radius: 28px;
   }
 
+  .lov-answer .faq-section__item:nth-child(4) {
+    height: 66px !important;
+    min-height: 66px !important;
+  }
+
   .lov-answer .faq-section__toggle {
-    min-height: 78px;
-    padding: 16px 16px 16px 22px;
+    height: 100%;
+    min-height: 0;
+    padding: 0 5px 0 30px;
     gap: 14px;
+  }
+
+  .lov-answer .faq-section__item.is-open .faq-section__toggle {
+    height: 102px;
+    align-items: flex-start;
+    padding-top: 22px;
+  }
+
+  .lov-answer .faq-section__toggle-content {
+    max-width: 377px;
+  }
+
+  .lov-answer .faq-section__item.is-open .faq-section__toggle-content {
+    max-width: 370px;
   }
 
   .lov-answer .faq-section__title {
@@ -1635,13 +1873,18 @@ a {
   }
 
   .lov-answer .faq-section__icon {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .lov-answer .faq-section__item.is-open .faq-section__icon {
+    width: 63px;
+    height: 63px;
   }
 
   .lov-answer .faq-section__body {
-    max-width: none;
-    padding: 0 22px 24px;
+    max-width: 370px;
+    padding: 0 0 0 30px;
     font-size: 14px;
     line-height: 26px;
   }
@@ -1686,18 +1929,40 @@ a {
     padding-top: 40px;
   }
 
+  .lov-answer h2 {
+    text-align: center;
+  }
+
   .lov-answer .lov-faq.faq-section__list {
     width: calc(100% - 30px);
     margin-top: 38px;
+    gap: 20px;
   }
 
   .lov-answer .faq-section__item {
-    min-height: 78px;
+    height: 103px !important;
+    min-height: 103px !important;
     border-radius: 24px;
   }
 
+  .lov-answer .faq-section__item:nth-child(1) {
+    height: 128px !important;
+    min-height: 128px !important;
+  }
+
+  .lov-answer .faq-section__item:not(.is-open) {
+    height: 103px !important;
+    min-height: 103px !important;
+  }
+
+  .lov-answer .faq-section__item:nth-child(1):not(.is-open) {
+    height: 128px !important;
+    min-height: 128px !important;
+  }
+
   .lov-answer .faq-section__item.is-open {
-    min-height: 132px;
+    height: 322px !important;
+    min-height: 322px !important;
     border-radius: 28px;
   }
 
@@ -1722,6 +1987,105 @@ a {
     padding: 0 22px 24px;
     font-size: 14px;
     line-height: 26px;
+  }
+}
+
+/* Figma 917:20906/21144/21387/21622/21856: FAQ geometry is breakpoint-specific. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .lov-answer {
+    padding-top: 60px;
+  }
+
+  .lov-answer .lov-faq.faq-section__list {
+    margin-top: 57px;
+  }
+
+  .lov-answer .faq-section__item.is-open {
+    height: 178px !important;
+    min-height: 178px !important;
+  }
+
+  .lov-answer .faq-section__item.is-open .faq-section__panel {
+    margin-top: -8px;
+  }
+
+  .lov-answer .faq-section__item.is-open .faq-section__body {
+    box-sizing: content-box;
+    width: 770px;
+    max-width: 770px;
+    padding: 0 0 0 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .lov-answer {
+    padding-top: 50px;
+  }
+
+  .lov-answer h2 {
+    width: 690px;
+    max-width: 690px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lov-answer .lov-faq.faq-section__list {
+    margin-top: 58px;
+  }
+
+  .lov-answer .faq-section__item,
+  .lov-answer .faq-section__item:not(.is-open) {
+    height: 66px !important;
+    min-height: 66px !important;
+  }
+
+  .lov-answer .faq-section__item.is-open {
+    height: 205px !important;
+    min-height: 205px !important;
+  }
+
+  .lov-answer .faq-section__item:nth-child(4) {
+    height: 92px !important;
+    min-height: 92px !important;
+  }
+
+  .lov-answer .faq-section__toggle {
+    height: 66px;
+    min-height: 66px;
+  }
+
+  .lov-answer .faq-section__item.is-open .faq-section__toggle {
+    height: 112px;
+    min-height: 112px;
+    align-items: flex-start;
+    padding-top: 22px;
+  }
+
+  .lov-answer .faq-section__title {
+    line-height: 27px;
+  }
+
+  .lov-answer .faq-section__item.is-open .faq-section__title {
+    line-height: 35px;
+  }
+
+  .lov-answer .faq-section__icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .lov-answer .faq-section__item.is-open .faq-section__icon {
+    width: 63px;
+    height: 63px;
+  }
+
+  .lov-answer .faq-section__item.is-open .faq-section__body {
+    box-sizing: content-box;
+    width: 550px;
+    max-width: 550px;
+    padding: 0 0 0 30px;
+    font-size: 16px;
+    line-height: 29px;
   }
 }
 
@@ -1758,7 +2122,7 @@ a {
     margin-top: 2px;
   }
 
-  .lov-expert-card__rating span {
+    .lov-expert-card__rating > span[aria-hidden="true"] {
     width: 17px;
     height: 17px;
     flex-basis: 17px;
@@ -1836,7 +2200,7 @@ a {
     margin-top: 2px;
   }
 
-  .lov-expert-card__rating span {
+    .lov-expert-card__rating > span[aria-hidden="true"] {
     width: 17px;
     height: 17px;
     flex-basis: 17px;
@@ -1936,7 +2300,7 @@ a {
     line-height: 22px;
   }
 
-  .lov-expert-card__rating span {
+    .lov-expert-card__rating > span[aria-hidden="true"] {
     width: 17px;
     height: 17px;
     flex-basis: 17px;
@@ -2052,7 +2416,7 @@ a {
     line-height: 22px;
   }
 
-  .lov-expert-card__rating span {
+    .lov-expert-card__rating > span[aria-hidden="true"] {
     width: 13px;
     height: 13px;
     flex-basis: 13px;
@@ -2132,8 +2496,8 @@ a {
 .lov-rating-stars span{display:block;width:23.44px;height:22.32px;background:url('img/all-psychic-rating-star-purple-figma.svg') center/contain no-repeat}
 .lov-review-card__stars span{display:block;width:15px;height:15px;background:url('img/all-psychic-rating-star-figma.svg') center/contain no-repeat}
 
-/* Source-backed owner correction: Best Online block must keep Figma outline point icons
-   and prevent the decorative art layer from covering copy across breakpoints. */
+/* Figma-only guard: Best Online decorative vectors must come from exact node exports.
+   Local CSS/SVG redraws are forbidden; missing exports keep this block blocked. */
 .lov-best-online__copy,
 .lov-points {
   position: relative;
@@ -2141,11 +2505,18 @@ a {
 }
 
 .lov-points {
-  max-width: 620px;
+  max-width: 700px;
 }
 
 .lov-points p {
-  max-width: 510px;
+  max-width: 622px;
+}
+
+.lov-points article:nth-child(2) h3,
+.lov-points article:nth-child(2) p,
+.lov-points article:nth-child(3) h3,
+.lov-points article:nth-child(3) p {
+  max-width: 445px;
 }
 
 .lov-points article > span {
@@ -2155,7 +2526,8 @@ a {
   font-size: 0 !important;
   line-height: 0 !important;
   color: transparent !important;
-  background: url("data:image/svg+xml,%3Csvg width='50' height='65' viewBox='0 0 50 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 4C28.8 22.6 31.7 28.7 46 32.5C31.7 36.3 28.8 42.4 25 61C21.2 42.4 18.3 36.3 4 32.5C18.3 28.7 21.2 22.6 25 4Z' stroke='%239F7AFF' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+  /* source: Figma STAR nodes 917-20869 / 917-21106 / 917-21349 / 917-21585 / 917-21819; transparent vector, stroke #a07cf2, strokeWeight 4. */
+  background: url("img/love-reading-source/best-online-star.svg") center / contain no-repeat;
 }
 
 .lov-best-online__art {
@@ -2165,10 +2537,11 @@ a {
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .lov-best-online::before {
-    left: 273px;
-    top: 782px;
-    width: 1000px;
-    height: 1000px;
+    left: -225px;
+    top: 284px;
+    width: 1996px;
+    height: 1996px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-best-online/992/917-21100-best-online-ellipse-background.svg");
   }
 
   .lov-best-online__row {
@@ -2176,11 +2549,25 @@ a {
   }
 
   .lov-points {
-    max-width: 585px;
+    max-width: 760px;
   }
 
   .lov-points p {
-    max-width: 505px;
+    max-width: 682px;
+  }
+
+  .lov-points article > span {
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-best-online/992/917-21106-best-online-point-icon.webp");
+  }
+
+  .lov-points article:nth-child(3) h3,
+  .lov-points article:nth-child(3) p {
+    max-width: 363px;
+  }
+
+  .lov-points article:nth-child(2) h3,
+  .lov-points article:nth-child(2) p {
+    max-width: 400px;
   }
 
   .lov-answer__desktop-title {
@@ -2203,10 +2590,11 @@ a {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .lov-best-online::before {
-    left: 296px;
-    top: 722px;
-    width: 550px;
-    height: 550px;
+    left: -202px;
+    top: 224px;
+    width: 1546px;
+    height: 1546px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-best-online/768/917-21343-best-online-ellipse-background.svg");
   }
 
   .lov-best-online__row {
@@ -2214,16 +2602,23 @@ a {
   }
 
   .lov-points {
-    max-width: 570px;
+    margin-left: 7px;
+    max-width: 698px;
   }
 
   .lov-points p {
-    max-width: 540px;
+    max-width: 620px;
   }
 
   .lov-points article > span {
-    width: 42px;
-    height: 54px;
+    width: 50px;
+    height: 65px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-best-online/768/917-21349-best-online-point-icon.webp");
+  }
+
+  .lov-points article:nth-child(3) h3,
+  .lov-points article:nth-child(3) p {
+    max-width: 290px;
   }
 
   .lov-best-online__art {
@@ -2242,15 +2637,17 @@ a {
 
 @media (max-width: 767.98px) {
   .lov-best-online::before {
-    left: 244px;
-    top: 690px;
-    width: 464px;
-    height: 464px;
+    left: -254px;
+    top: 192px;
+    width: 1460px;
+    height: 1460px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-best-online/576/917-21579-best-online-ellipse-background.svg");
   }
 
   .lov-points article > span {
-    width: 34px;
-    height: 45px;
+    width: 50px;
+    height: 65px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-best-online/576/917-21585-best-online-point-icon.webp");
   }
 
   .lov-best-online__art {
@@ -2269,10 +2666,11 @@ a {
 
 @media (max-width: 575.98px) {
   .lov-best-online::before {
-    left: 10px;
-    top: 1102px;
-    width: 300px;
-    height: 300px;
+    left: -488px;
+    top: 604px;
+    width: 1296px;
+    height: 1296px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-best-online/320/917-21813-best-online-ellipse-background.svg");
   }
 
   .lov-points {
@@ -2281,6 +2679,12 @@ a {
 
   .lov-points p {
     max-width: 100%;
+  }
+
+  .lov-points article > span {
+    width: 40px;
+    height: 52px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-best-online/320/917-21819-best-online-point-icon.webp");
   }
 
   .lov-best-online__art {
@@ -2294,6 +2698,65 @@ a {
   .lov-best-online__art img {
     width: 368px;
     height: 368px;
+  }
+}
+
+/* Source-backed Best Online geometry repair.
+   These values are taken from the Love Reading breakpoint-specific screen.json
+   nodes for 05-Best Online reading, not inherited from other pages. */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .lov-best-online__row {
+    padding-top: 64px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .lov-best-online__row {
+    padding-top: 54px;
+  }
+
+  .lov-best-online h2 {
+    margin-left: 15px;
+    max-width: 690px;
+  }
+
+  .lov-points article:nth-child(2) h3,
+  .lov-points article:nth-child(2) p {
+    max-width: 620px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .lov-best-online h2 {
+    margin-left: 13px;
+    max-width: 480px;
+  }
+
+  .lov-points {
+    margin-top: 50px;
+    margin-left: 17px;
+    gap: 36px;
+    max-width: 536px;
+  }
+
+  .lov-points article:nth-child(1) h3,
+  .lov-points article:nth-child(1) p {
+    max-width: 450px;
+  }
+
+  .lov-points article:nth-child(3) h3,
+  .lov-points article:nth-child(3) p {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .lov-best-online h2 {
+    text-align: center;
+  }
+
+  .lov-points {
+    gap: 37px;
   }
 }
 
@@ -2508,4 +2971,713 @@ a {
 
 .lov-answer .faq-section__icon-plus::after {
   transform: translate(-50%, -50%) rotate(90deg) !important;
+}
+
+/* Figma 917-21517 / 576: hero copy is centered inside the locked 740px slice. */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .lov-hero__row {
+    padding-top: 90px;
+  }
+
+  .lov-hero__copy {
+    text-align: center;
+  }
+
+  .lov-hero__copy h1 {
+    width: min(100%, 500px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lov-hero__copy p {
+    width: min(100%, 418px);
+    margin-top: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+/* Figma 917:20949/21187/21427/21662/21896: SEO is a heritage accordion, not plain article text. */
+.lov-seo-content {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  padding: 0 0 80px;
+  background: #fff;
+}
+
+.lov-seo {
+  width: 980px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px 0 0;
+}
+
+.lov-seo .lov-seo__list.faq-section__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin: 0;
+}
+
+.lov-seo .faq-section__item {
+  width: 100%;
+  height: 217px;
+  min-height: 217px;
+  border: 0;
+  border-radius: 40px;
+  background: #f1f1f1;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.lov-seo .faq-section__item:nth-child(4),
+.lov-seo .faq-section__item:nth-child(5) {
+  height: 182px;
+  min-height: 182px;
+}
+
+.lov-seo .faq-section__item.is-open {
+  height: 428px;
+  min-height: 428px;
+  border: 1px solid #dddde8;
+  border-radius: 40px;
+  background: #fff;
+}
+
+.lov-seo .faq-section__toggle {
+  width: 100%;
+  min-height: 90px;
+  padding: 0 10px 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  border: 0;
+  background: transparent;
+  color: #101010;
+  text-align: left;
+  cursor: pointer;
+}
+
+.lov-seo .faq-section__toggle-content {
+  flex: 1 1 auto;
+  padding: 0;
+}
+
+.lov-seo .faq-section__title {
+  display: block;
+  max-width: 820px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 35px;
+  letter-spacing: 0;
+}
+
+@media (min-width: 992px) {
+  .lov-seo .faq-section__item:nth-child(1) .faq-section__title {
+    max-width: 700px;
+  }
+
+  .lov-seo .faq-section__item:nth-child(3) .faq-section__title {
+    max-width: 760px;
+  }
+}
+
+.lov-seo .faq-section__icon {
+  flex: 0 0 auto;
+  width: 68px;
+  height: 68px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.lov-seo .faq-section__item.is-open .faq-section__icon {
+  background: #f1f1f1;
+}
+
+.lov-seo .faq-section__panel {
+  overflow: hidden;
+  height: auto;
+  padding: 0 !important;
+  transition: height 300ms ease;
+}
+
+.lov-seo .faq-section__body {
+  display: block !important;
+  max-width: 820px;
+  padding: 18px 40px 0;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 35px;
+  color: #101010;
+}
+
+.lov-seo .faq-section__body strong {
+  font-weight: 700;
+}
+
+.lov-seo .faq-section__item:not(.is-open) .faq-section__panel {
+  height: 88px !important;
+}
+
+.lov-seo .faq-section__item:not(.is-open) .faq-section__body {
+  display: -webkit-box !important;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  padding-bottom: 0;
+}
+
+.lov-seo__title-768 {
+  display: none !important;
+}
+
+.lov-seo .faq-section__icon-plus::before,
+.lov-seo .faq-section__icon-plus::after,
+.lov-seo .faq-section__icon-cross::before,
+.lov-seo .faq-section__icon-cross::after {
+  width: 22px;
+  height: 3px;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .lov-seo-content {
+    padding-bottom: 60px;
+  }
+
+  .lov-seo {
+    width: 930px;
+    padding-top: 60px;
+  }
+
+  .lov-seo .faq-section__item.is-open {
+    height: 463px;
+    min-height: 463px;
+  }
+
+  .lov-seo .faq-section__title {
+    max-width: 770px;
+  }
+
+  .lov-seo .faq-section__body {
+    max-width: 770px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .lov-seo-content {
+    padding-bottom: 50px;
+  }
+
+  .lov-seo {
+    width: 690px;
+    padding-top: 50px;
+  }
+
+  .lov-seo .faq-section__item {
+    height: 217px;
+    min-height: 217px;
+  }
+
+  .lov-seo .faq-section__item:nth-child(5) {
+    height: 182px;
+    min-height: 182px;
+  }
+
+  .lov-seo .faq-section__item.is-open {
+    height: 445px;
+    min-height: 445px;
+  }
+
+  .lov-seo .faq-section__title {
+    max-width: 530px;
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .lov-seo .faq-section__body {
+    max-width: 530px;
+    font-size: 15px;
+    line-height: 33px;
+  }
+
+  .lov-seo .faq-section__item:nth-child(2) .faq-section__body {
+    font-size: 21px;
+    line-height: 35px;
+  }
+
+  .lov-seo__title-default {
+    display: none !important;
+  }
+
+  .lov-seo__title-768 {
+    display: block !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .lov-seo-content {
+    padding-bottom: 30px;
+  }
+
+  .lov-seo {
+    width: 510px;
+    padding-top: 30px;
+  }
+
+  .lov-seo .faq-section__item {
+    height: 211px;
+    min-height: 211px;
+    border-radius: 33px;
+  }
+
+  .lov-seo .faq-section__item:nth-child(2) {
+    height: 241px;
+    min-height: 241px;
+  }
+
+  .lov-seo .faq-section__item:nth-child(5) {
+    height: 182px;
+    min-height: 182px;
+  }
+
+  .lov-seo .faq-section__item.is-open {
+    height: 422px;
+    min-height: 422px;
+    border-radius: 33px;
+  }
+
+  .lov-seo .faq-section__toggle {
+    min-height: 107px;
+    padding: 12px 10px 0 40px;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .lov-seo .faq-section__toggle-content {
+    padding-top: 17px;
+  }
+
+  .lov-seo .faq-section__title {
+    max-width: 372px;
+    font-size: 20px;
+    line-height: 29px;
+  }
+
+  .lov-seo .faq-section__body {
+    box-sizing: content-box;
+    width: 372px;
+    max-width: 372px;
+    padding-top: 0;
+    font-size: 13px;
+    line-height: 25px;
+  }
+
+  .lov-seo .faq-section__item:nth-child(2) .faq-section__body {
+    font-size: 21px;
+    line-height: 35px;
+  }
+
+  .lov-seo .faq-section__icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  .lov-seo .faq-section__item:not(.is-open) .faq-section__panel {
+    height: 105px !important;
+  }
+
+  .lov-seo .faq-section__item:not(.is-open) .faq-section__body {
+    -webkit-line-clamp: 3;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .lov-seo-content {
+    padding-bottom: 30px;
+  }
+
+  .lov-seo {
+    width: 288px;
+    padding-top: 30px;
+  }
+
+  .lov-seo .lov-seo__list.faq-section__list {
+    gap: 15px;
+  }
+
+  .lov-seo .faq-section__item {
+    height: 268px;
+    min-height: 268px;
+    border-radius: 24px;
+  }
+
+  .lov-seo .faq-section__item:nth-child(2) {
+    height: 298px;
+    min-height: 298px;
+  }
+
+  .lov-seo .faq-section__item:nth-child(4) {
+    height: 239px;
+    min-height: 239px;
+  }
+
+  .lov-seo .faq-section__item:nth-child(5) {
+    height: 210px;
+    min-height: 210px;
+  }
+
+  .lov-seo .faq-section__item.is-open {
+    height: 562px;
+    min-height: 562px;
+    border-radius: 24px;
+  }
+
+  .lov-seo .faq-section__toggle {
+    min-height: 128px;
+    padding: 0 8px 0 20px;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .lov-seo .faq-section__title {
+    max-width: 188px;
+    padding-top: 20px;
+    font-size: 20px;
+    line-height: 29px;
+  }
+
+  .lov-seo .faq-section__icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+  }
+
+  .lov-seo .faq-section__body {
+    max-width: 248px;
+    padding: 0 20px;
+    font-size: 13px;
+    line-height: 25px;
+  }
+
+  .lov-seo .faq-section__item:nth-child(2) .faq-section__body {
+    font-size: 21px;
+    line-height: 35px;
+  }
+
+  .lov-seo .faq-section__item:not(.is-open) .faq-section__panel {
+    height: 75px !important;
+  }
+}
+
+/* Source-bound repair: Love Reading help-card decoration and per-breakpoint
+   text boxes come from the exact local Figma export, not local glyph drawing. */
+.lov-clients-love .lov-help-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  background: #ede6ff;
+}
+
+.lov-clients-love .lov-help-card::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.lov-clients-love .lov-help-card__star {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+  overflow: hidden;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.lov-clients-love .lov-help-card h3,
+.lov-clients-love .lov-help-card p {
+  position: relative;
+  z-index: 1;
+  max-width: none;
+}
+
+@media (min-width: 1200px) {
+  .lov-clients-love .lov-review-grid {
+    margin-top: 78px;
+  }
+
+  .lov-clients-love .lov-review-card {
+    height: 184px;
+    min-height: 184px;
+  }
+
+  .lov-clients-love .lov-review-card p {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  .lov-clients-love .lov-help-title {
+    margin-top: 69px !important;
+  }
+
+  .lov-clients-love .lov-help-card {
+    padding: 194px 24px 0;
+  }
+
+  .lov-clients-love .lov-help-card::before {
+    left: -31px;
+    top: -16px;
+    width: 180px;
+    height: 185px;
+    background-image: url("img/love-reading-source/clients-love-ellipse-1200.svg");
+  }
+
+  .lov-clients-love .lov-help-card__star {
+    left: 29px;
+    top: 47px;
+    width: 60px;
+    height: 57px;
+    background-image: url("img/love-reading-source/clients-love-help-star-1200.webp");
+    background-image: image-set(url("img/love-reading-source/clients-love-help-star-1200.webp") type("image/webp"));
+  }
+
+  .lov-clients-love .lov-help-card h3 {
+    width: 200px;
+    margin: 0;
+  }
+
+  .lov-clients-love .lov-help-card p {
+    width: 200px;
+    margin-top: 19px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .lov-clients-love .lov-help-card {
+    padding: 35px 35px 0 184px;
+  }
+
+  .lov-clients-love .lov-help-card::before {
+    left: -31px;
+    top: -16px;
+    width: 180px;
+    height: 185px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/992/I917-21093-695-8586-ellipse-decoration.svg");
+  }
+
+  .lov-clients-love .lov-help-card__star {
+    left: 29px;
+    top: 47px;
+    width: 60px;
+    height: 57px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/992/I917-21093-695-8587-help-card-star.png");
+    background-image: image-set(url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/992/I917-21093-695-8587-help-card-star.webp") type("image/webp"), url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/992/I917-21093-695-8587-help-card-star.png") type("image/png"));
+  }
+
+  .lov-clients-love .lov-help-card h3,
+  .lov-clients-love .lov-help-card p {
+    width: 220px;
+  }
+
+  .lov-clients-love .lov-help-card h3 {
+    margin: 0;
+  }
+
+  .lov-clients-love .lov-help-card p {
+    margin-top: 19px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .lov-clients-love .lov-help-card {
+    padding: 35px 30px 0 99px;
+  }
+
+  .lov-clients-love .lov-help-card::before {
+    left: -7px;
+    top: -6px;
+    width: 92px;
+    height: 95px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/768/I917-21336-878-12307-ellipse-decoration.svg");
+  }
+
+  .lov-clients-love .lov-help-card__star {
+    left: 23px;
+    top: 26px;
+    width: 32px;
+    height: 30px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/768/I917-21336-878-12308-help-card-star.png");
+    background-image: image-set(url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/768/I917-21336-878-12308-help-card-star.webp") type("image/webp"), url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/768/I917-21336-878-12308-help-card-star.png") type("image/png"));
+  }
+
+  .lov-clients-love .lov-help-card h3,
+  .lov-clients-love .lov-help-card p {
+    width: 200px;
+  }
+
+  .lov-clients-love .lov-help-card h3 {
+    margin: 0;
+  }
+
+  .lov-clients-love .lov-help-card p {
+    margin-top: 19px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .lov-clients-love .lov-help-card {
+    padding: 25px 30px 0 119px;
+  }
+
+  .lov-clients-love .lov-help-card::before {
+    left: -21px;
+    top: -16px;
+    width: 124px;
+    height: 127px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/576/I917-21573-882-13849-ellipse-decoration.svg");
+  }
+
+  .lov-clients-love .lov-help-card__star {
+    left: 20px;
+    top: 27px;
+    width: 42px;
+    height: 40px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/576/I917-21573-882-13850-help-card-star.png");
+    background-image: image-set(url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/576/I917-21573-882-13850-help-card-star.webp") type("image/webp"), url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/576/I917-21573-882-13850-help-card-star.png") type("image/png"));
+  }
+
+  .lov-clients-love .lov-help-card h3,
+  .lov-clients-love .lov-help-card p {
+    width: 360px;
+  }
+
+  .lov-clients-love .lov-help-card h3 {
+    margin: 0;
+  }
+
+  .lov-clients-love .lov-help-card p {
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .lov-clients-love .lov-help-card {
+    padding: 30px 20px 0 30px;
+  }
+
+  .lov-clients-love .lov-help-card::before {
+    left: 224px;
+    top: -11px;
+    width: 74px;
+    height: 75px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/320/I917-21807-917-20585-ellipse-decoration.svg");
+  }
+
+  .lov-clients-love .lov-help-card__star {
+    left: 248px;
+    top: 14px;
+    width: 26px;
+    height: 24px;
+    background-image: url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/320/I917-21807-917-20586-help-card-star.png");
+    background-image: image-set(url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/320/I917-21807-917-20586-help-card-star.webp") type("image/webp"), url("../figma-export/api/20260414-232048-ayfBFNukkQC05XmCVsJB6f/figma-assets/love-reading-clients-love/320/I917-21807-917-20586-help-card-star.png") type("image/png"));
+  }
+
+  .lov-clients-love .lov-help-card h3 {
+    width: 190px;
+    margin: 0;
+  }
+
+  .lov-clients-love .lov-help-card p {
+    width: 238px;
+    margin-top: 14px;
+  }
+}
+
+/* Oracle/Nebula owned replacement for legacy shell-lock section heights.
+   Source: figma-manifest/runtime-cascade/love-reading.shell-lock-assertions.json.
+   Purpose: keep current source-backed section geometry when oracle-shell-locks/love-reading.css is disabled. */
+@media (min-width: 1200px) {
+  section.lov-clients-love {
+    box-sizing: border-box !important;
+    height: 1385px !important;
+    min-height: 1385px !important;
+    max-height: 1385px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  section.lov-clients-love {
+    box-sizing: border-box !important;
+    height: 1480px !important;
+    min-height: 1480px !important;
+    max-height: 1480px !important;
+  }
+
+  section.lov-answer {
+    box-sizing: border-box !important;
+    height: 900px !important;
+    min-height: 900px !important;
+    max-height: 900px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  section.lov-clients-love {
+    box-sizing: border-box !important;
+    height: 1420px !important;
+    min-height: 1420px !important;
+    max-height: 1420px !important;
+  }
+
+  section.lov-seo-content {
+    box-sizing: border-box !important;
+    height: 1438px !important;
+    min-height: 1438px !important;
+    max-height: 1438px !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  section.lov-clients-love {
+    box-sizing: border-box !important;
+    height: 1720px !important;
+    min-height: 1720px !important;
+    max-height: 1720px !important;
+  }
+
+  section.lov-answer {
+    box-sizing: border-box !important;
+    height: 780px !important;
+    min-height: 780px !important;
+    max-height: 780px !important;
+  }
+
+  section.lov-seo-content {
+    box-sizing: border-box !important;
+    height: 1387px !important;
+    min-height: 1387px !important;
+    max-height: 1387px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  footer.site-footer {
+    box-sizing: border-box !important;
+    height: 1035px !important;
+    min-height: 1035px !important;
+    max-height: 1035px !important;
+  }
 }

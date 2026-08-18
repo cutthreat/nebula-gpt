@@ -19,20 +19,18 @@
     <meta name="twitter:title" content="Neuro Home | Online Psychic Readings, Tarot, Love and Zodiac" />
     <meta name="twitter:description"
         content="Explore Neuro online psychic readings, tarot guidance, love readings, zodiac insights, trusted advisors, and answers tailored to your life path." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23673EDA' d='M8 0l1.9 4.3L14 6.2l-4.1 1.2L8 11.6 6.1 7.4 2 6.2l4.1-1.9L8 0z'/%3E%3C/svg%3E">
     <link rel="apple-touch-icon" href="img/logo.png" />
     <link rel="stylesheet" href="bootstrap.css" />
-    <link rel="stylesheet" href="home.css?v=20260430-breakpoint-final" />
-    <link rel="stylesheet" href="home-reverse-type-owner.css?v=20260430-breakpoint-final" />
-    <link rel="stylesheet" href="home-reverse-shell-owner.css?v=20260430-breakpoint-final" />
-    <link rel="stylesheet" href="confideline-runtime.css?v=20260618-home-reset" />
-    <link rel="stylesheet" href="confideline-components.css?v=20260618-home-reset" />
+    <link rel="stylesheet" href="home.owner.00.css?v=20260726-consolidated-owner" />
+    <link rel="stylesheet" href="home.owner.01.css?v=20260726r5-seam" />
+    <link rel="stylesheet" href="home.owner.02.css?v=20260726r5-seam" />
+    <link rel="stylesheet" href="home.owner.03.css?v=20260726r5-seam" />
+    <link rel="stylesheet" href="home.owner.04.css?v=20260726-consolidated-owner" />
+    <link rel="stylesheet" href="home.owner.05.css?v=20260726r5-seam" />
 </head>
 
-<body>
+<body class="home-page">
 
     <div class="home" data-nebula-page="home">
 
@@ -40,12 +38,13 @@
             <div class="container">
                 <div class="site-header__inner d-flex align-items-center justify-content-between">
                     <a class="site-header__logo" href="home.html">
-                        <img src="img/logo.png" alt="logo neuro" width="142" height="30" />
+                        <picture><source srcset="img/logo.webp" type="image/webp" />
+<img src="img/logo.png" alt="logo neuro" width="142" height="30" /></picture>
                     </a>
 
                     <nav class="navbar navbar-expand-lg navbar-light site-header__nav" aria-label="Primary">
                         <button class="navbar-toggler p-0 border-0" type="button" data-toggle="collapse"
-                            data-target="#navbarOffcanvas">
+                            data-target="#navbarOffcanvas" aria-label="Open menu" aria-controls="navbarOffcanvas" aria-expanded="false">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <button class="site-header__language" type="button" aria-label="Language selector">Eng</button>
@@ -53,7 +52,8 @@
                             <div class="site-header__offcanvas">
                                 <div class="site-header__offcanvas-top">
                                     <a class="site-header__logo" href="home.html">
-                                        <img src="img/logo-white.png" alt="logo neuro" width="142" height="30" />
+                                        <picture><source srcset="img/logo-white.webp" type="image/webp" />
+<img src="img/logo-white.png" alt="logo neuro" width="142" height="30" /></picture>
                                     </a>
                                     <button class="site-header__offcanvas-close" type="button" data-toggle="collapse"
                                         data-target="#navbarOffcanvas" aria-label="Close menu"
@@ -97,7 +97,7 @@
 
         <main class="overflow-hidden">
 
-            <section class="hero-section background-gradient">
+            <section class="hero-section background-gradient" data-figma-node="1:10">
                 <div class="container">
                     <div class="row hero-section__row">
                         <div class="col-sm-7 col-md-6 hero-section__content">
@@ -119,26 +119,30 @@
                             <div class="hero-section__media d-flex justify-content-end">
                                 <div class="hero-media" aria-hidden="true">
                                     <div class="hero-media__card hero-media__card--rel">
-                                        <img class="hero-media__img" src="img/hero-rel.png" alt="" width="220"
-                                                height="300" loading="eager" decoding="sync" />
+                                        <picture><source srcset="img/hero-rel.webp" type="image/webp" />
+<img class="hero-media__img" src="img/hero-rel.png" alt="" width="220"
+                                                height="300" loading="eager" decoding="sync" /></picture>
                                         <div class="hero-media__label">Recover relationships</div>
                                     </div>
 
                                     <div class="hero-media__card hero-media__card--self">
-                                        <img class="hero-media__img" src="img/hero-self.png" alt="" width="220"
-                                                height="220" loading="eager" decoding="sync" />
+                                        <picture><source srcset="img/hero-self.webp" type="image/webp" />
+<img class="hero-media__img" src="img/hero-self.png" alt="" width="220"
+                                                height="220" loading="eager" decoding="sync" /></picture>
                                         <div class="hero-media__label">Find yourself</div>
                                     </div>
 
                                     <div class="hero-media__card hero-media__card--soul">
-                                        <img class="hero-media__img" src="img/hero-soul.png" alt="" width="220"
-                                                height="220" loading="eager" decoding="sync" />
+                                        <picture><source srcset="img/hero-soul.webp" type="image/webp" />
+<img class="hero-media__img" src="img/hero-soul.png" alt="" width="220"
+                                                height="220" loading="eager" decoding="sync" /></picture>
                                         <div class="hero-media__label">Find your soulmate</div>
                                     </div>
 
                                     <div class="hero-media__card hero-media__card--ex">
-                                        <img class="hero-media__img" src="img/hero-ex.png" alt="" width="220"
-                                                height="300" loading="eager" decoding="sync" />
+                                        <picture><source srcset="img/hero-ex.webp" type="image/webp" />
+<img class="hero-media__img" src="img/hero-ex.png" alt="" width="220"
+                                                height="300" loading="eager" decoding="sync" /></picture>
                                         <div class="hero-media__label">Return your ex</div>
                                     </div>
                                 </div>
@@ -157,7 +161,7 @@
                 </div>
             </section>
 
-            <section class="what-neuro-section">
+            <section class="what-neuro-section" data-figma-node="9:11">
                 <div class="container">
                     <h2 class="what-neuro-section__title">What is Neuro?</h2>
 
@@ -191,7 +195,7 @@
                 </div>
             </section>
 
-            <section class="experts-section background-gradient-dual" id="why-trust">
+            <section class="experts-section background-gradient-dual" id="why-trust" data-figma-node="10:130">
                 <div class="container">
                     <div class="experts-section__head d-flex flex-column">
                         <h2 class="section__title section__title--h2">Hundreds of psychic readers
@@ -206,8 +210,9 @@
                         <div class="col-6 col-lg-4 experts-section__col">
                             <article class="experts-section__card">
                                 <div class="experts-section__person">
-                                    <img class="experts-section__avatar" src="img/avatar-1.png" alt="" width="100"
-                                        height="100" loading="eager" decoding="sync" />
+                                    <picture><source srcset="img/avatar-1.webp" type="image/webp" />
+<img class="experts-section__avatar" src="img/avatar-1.png" alt="" width="100"
+                                        height="100" loading="eager" decoding="sync" /></picture>
                                     <div class="experts-section__meta">
                                         <div class="experts-section__name">Veronika</div>
                                         <div class="experts-section__rating" aria-label="Rating 4.8">
@@ -256,8 +261,9 @@
                         <div class="col-6 col-lg-4 experts-section__col">
                             <article class="experts-section__card">
                                 <div class="experts-section__person">
-                                    <img class="experts-section__avatar" src="img/avatar-1.png" alt="" width="100"
-                                        height="100" loading="eager" decoding="sync" />
+                                    <picture><source srcset="img/avatar-1.webp" type="image/webp" />
+<img class="experts-section__avatar" src="img/avatar-1.png" alt="" width="100"
+                                        height="100" loading="eager" decoding="sync" /></picture>
                                     <div class="experts-section__meta">
                                         <div class="experts-section__name">Veronika</div>
                                         <div class="experts-section__rating" aria-label="Rating 4.8">
@@ -306,8 +312,9 @@
                         <div class="col-6 col-lg-4 experts-section__col">
                             <article class="experts-section__card">
                                 <div class="experts-section__person">
-                                    <img class="experts-section__avatar" src="img/avatar-1.png" alt="" width="100"
-                                        height="100" loading="eager" decoding="sync" />
+                                    <picture><source srcset="img/avatar-1.webp" type="image/webp" />
+<img class="experts-section__avatar" src="img/avatar-1.png" alt="" width="100"
+                                        height="100" loading="eager" decoding="sync" /></picture>
                                     <div class="experts-section__meta">
                                         <div class="experts-section__name">Veronika</div>
                                         <div class="experts-section__rating" aria-label="Rating 4.8">
@@ -356,8 +363,9 @@
                         <div class="col-6 col-lg-4 experts-section__col">
                             <article class="experts-section__card">
                                 <div class="experts-section__person">
-                                    <img class="experts-section__avatar" src="img/avatar-1.png" alt="" width="100"
-                                        height="100" loading="eager" decoding="sync" />
+                                    <picture><source srcset="img/avatar-1.webp" type="image/webp" />
+<img class="experts-section__avatar" src="img/avatar-1.png" alt="" width="100"
+                                        height="100" loading="eager" decoding="sync" /></picture>
                                     <div class="experts-section__meta">
                                         <div class="experts-section__name">Veronika</div>
                                         <div class="experts-section__rating" aria-label="Rating 4.8">
@@ -406,8 +414,9 @@
                         <div class="col-6 col-lg-4 experts-section__col">
                             <article class="experts-section__card">
                                 <div class="experts-section__person">
-                                    <img class="experts-section__avatar" src="img/avatar-1.png" alt="" width="100"
-                                        height="100" loading="eager" decoding="sync" />
+                                    <picture><source srcset="img/avatar-1.webp" type="image/webp" />
+<img class="experts-section__avatar" src="img/avatar-1.png" alt="" width="100"
+                                        height="100" loading="eager" decoding="sync" /></picture>
                                     <div class="experts-section__meta">
                                         <div class="experts-section__name">Veronika</div>
                                         <div class="experts-section__rating" aria-label="Rating 4.8">
@@ -456,8 +465,9 @@
                         <div class="col-6 col-lg-4 experts-section__col">
                             <article class="experts-section__card">
                                 <div class="experts-section__person">
-                                    <img class="experts-section__avatar" src="img/avatar-1.png" alt="" width="100"
-                                        height="100" loading="eager" decoding="sync" />
+                                    <picture><source srcset="img/avatar-1.webp" type="image/webp" />
+<img class="experts-section__avatar" src="img/avatar-1.png" alt="" width="100"
+                                        height="100" loading="eager" decoding="sync" /></picture>
                                     <div class="experts-section__meta">
                                         <div class="experts-section__name">Veronika</div>
                                         <div class="experts-section__rating" aria-label="Rating 4.8">
@@ -508,27 +518,32 @@
                             <div class="experts-section__more-avatars d-none d-sm-flex" aria-hidden="true">
                                 <div class="experts-section__more-avatar">
                                     <div class="experts-section__more-avatar-inner">
-                                        <img src="img/psy-1.png" alt="" width="120" height="120" loading="eager" decoding="sync" />
+                                        <picture><source srcset="img/psy-1.webp" type="image/webp" />
+<img src="img/psy-1.png" alt="" width="120" height="120" loading="eager" decoding="sync" /></picture>
                                     </div>
                                 </div>
                                 <div class="experts-section__more-avatar">
                                     <div class="experts-section__more-avatar-inner">
-                                        <img src="img/psy-2.png" alt="" width="120" height="120" loading="eager" decoding="sync" />
+                                        <picture><source srcset="img/psy-2.webp" type="image/webp" />
+<img src="img/psy-2.png" alt="" width="120" height="120" loading="eager" decoding="sync" /></picture>
                                     </div>
                                 </div>
                                 <div class="experts-section__more-avatar">
                                     <div class="experts-section__more-avatar-inner">
-                                        <img src="img/psy-3.png" alt="" width="120" height="120" loading="eager" decoding="sync" />
+                                        <picture><source srcset="img/psy-3.webp" type="image/webp" />
+<img src="img/psy-3.png" alt="" width="120" height="120" loading="eager" decoding="sync" /></picture>
                                     </div>
                                 </div>
                                 <div class="experts-section__more-avatar">
                                     <div class="experts-section__more-avatar-inner">
-                                        <img src="img/psy-4.png" alt="" width="120" height="120" loading="eager" decoding="sync" />
+                                        <picture><source srcset="img/psy-4.webp" type="image/webp" />
+<img src="img/psy-4.png" alt="" width="120" height="120" loading="eager" decoding="sync" /></picture>
                                     </div>
                                 </div>
                                 <div class="experts-section__more-avatar">
                                     <div class="experts-section__more-avatar-inner">
-                                        <img src="img/psy-5.png" alt="" width="120" height="120" loading="eager" decoding="sync" />
+                                        <picture><source srcset="img/psy-5.webp" type="image/webp" />
+<img src="img/psy-5.png" alt="" width="120" height="120" loading="eager" decoding="sync" /></picture>
                                     </div>
                                 </div>
                                 <div class="experts-section__more-avatar experts-section__more-avatar--count">
@@ -547,7 +562,7 @@
                 </div>
             </section>
 
-            <section class="clients-section" id="reviews">
+            <section class="clients-section" id="reviews" data-figma-node="12:356">
                 <div class="container">
                     <div class="clients-section__head">
                         <h2 class="clients-section__title section__title section__title--h2">Clients love our services
@@ -656,28 +671,42 @@
 
                     <h3 class="clients-section__video-title section__title section__title--h2">Testimonials from
                         satisfied Users</h3>
-                    <div class="clients-section__videos" aria-label="Video testimonials">
-                        <button class="clients-section__video-card" type="button" aria-label="Play testimonial video">
-                            <img src="img/clients-video-1.png" alt="" width="255" height="450" loading="eager" decoding="sync" />
-                            <span class="clients-section__video-play" aria-hidden="true"></span>
+                    <div class="clients-section__videos-viewport" data-video-testimonials>
+                        <div class="clients-section__videos" aria-label="Video testimonials">
+                            <button class="clients-section__video-card" type="button" aria-label="Play testimonial video 1 of 4">
+                                <picture><source srcset="img/clients-video-1.webp" type="image/webp" />
+<img src="img/clients-video-1.png" alt="" width="255" height="450" loading="eager" decoding="sync" /></picture>
+                                <span class="clients-section__video-play" aria-hidden="true"></span>
+                            </button>
+                            <button class="clients-section__video-card" type="button" aria-label="Play testimonial video 2 of 4">
+                                <picture><source srcset="img/clients-video-2.webp" type="image/webp" />
+<img src="img/clients-video-2.png" alt="" width="255" height="450" loading="eager" decoding="sync" /></picture>
+                                <span class="clients-section__video-play" aria-hidden="true"></span>
+                            </button>
+                            <button class="clients-section__video-card" type="button" aria-label="Play testimonial video 3 of 4">
+                                <picture><source srcset="img/clients-video-3.webp" type="image/webp" />
+<img src="img/clients-video-3.png" alt="" width="255" height="450" loading="eager" decoding="sync" /></picture>
+                                <span class="clients-section__video-play" aria-hidden="true"></span>
+                            </button>
+                            <button class="clients-section__video-card" type="button" aria-label="Play testimonial video 4 of 4">
+                                <picture><source srcset="img/clients-video-4.webp" type="image/webp" />
+<img src="img/clients-video-4.png" alt="" width="255" height="450" loading="eager" decoding="sync" /></picture>
+                                <span class="clients-section__video-play" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="clients-section__video-controls" aria-label="Video testimonial navigation" hidden>
+                        <button class="clients-section__slider-btn clients-section__slider-btn--video-prev" type="button"
+                            aria-label="Previous video testimonial"><svg width="31" height="15" viewBox="0 0 31 15"><use href="img/sprite.svg#icon-arrow-prev"></use></svg>
                         </button>
-                        <button class="clients-section__video-card" type="button" aria-label="Play testimonial video">
-                            <img src="img/clients-video-2.png" alt="" width="255" height="450" loading="eager" decoding="sync" />
-                            <span class="clients-section__video-play" aria-hidden="true"></span>
-                        </button>
-                        <button class="clients-section__video-card" type="button" aria-label="Play testimonial video">
-                            <img src="img/clients-video-3.png" alt="" width="255" height="450" loading="eager" decoding="sync" />
-                            <span class="clients-section__video-play" aria-hidden="true"></span>
-                        </button>
-                        <button class="clients-section__video-card" type="button" aria-label="Play testimonial video">
-                            <img src="img/clients-video-4.png" alt="" width="255" height="450" loading="eager" decoding="sync" />
-                            <span class="clients-section__video-play" aria-hidden="true"></span>
+                        <button class="clients-section__slider-btn clients-section__slider-btn--video-next" type="button"
+                            aria-label="Next video testimonial"><svg width="31" height="15" viewBox="0 0 31 15"><use href="img/sprite.svg#icon-arrow-next"></use></svg>
                         </button>
                     </div>
                 </div>
             </section>
 
-            <section class="best-reading-section background-gradient-dual">
+            <section class="best-reading-section background-gradient-dual" data-figma-node="12:475">
                 <div class="container">
                     <h2 class="section__title section__title--h2 best-reading-section__title">Best online psychics and
                         psychic <br>readings on Neuro</h2>
@@ -739,7 +768,7 @@
                         </div>
                         <div class="col-md-6 best-reading-section__media">
                             <picture>
-                                <source media="(min-width: 768px)" srcset="img/best-reading_d.png" />
+                                <source srcset="img/best-reading_d.webp" type="image/webp" />
                                 <source media="(max-width: 768px)" srcset="img/best-reading_m.png" />
                                 <img class="best-reading-section__image" src="img/best-reading_d.png" alt=""
                                     width="1000" height="776" loading="eager" decoding="sync" />
@@ -749,14 +778,15 @@
                 </div>
             </section>
 
-            <section class="topics-section" id="topics">
+            <section class="topics-section" id="topics" data-figma-node="19:2">
                 <div class="container">
                     <div class="topics-section__promos">
                         <article class="topics-section__promo-card topics-section__promo-card--narrow">
                             <div class="topics-section__promo-inner">
                                 <div class="topics-section__promo-icon topics-section__promo-icon--hand"
                                     aria-hidden="true">
-                                    <img src="img/topics-offer-1.png" alt="" width="71" height="106" loading="eager" decoding="sync" />
+                                    <picture><source srcset="img/topics-offer-1.webp" type="image/webp" />
+<img src="img/topics-offer-1.png" alt="" width="71" height="106" loading="eager" decoding="sync" /></picture>
                                 </div>
                                 <div class="topics-section__promo-body">
                                     <div class="topics-section__promo-title">$1/min</div>
@@ -770,7 +800,8 @@
                             <div class="topics-section__promo-inner">
                                 <div class="topics-section__promo-icon topics-section__promo-icon--crystals"
                                     aria-hidden="true">
-                                    <img src="img/topics-offer-2.png" alt="" width="136" height="120" loading="eager" decoding="sync" />
+                                    <picture><source srcset="img/topics-offer-2.webp" type="image/webp" />
+<img src="img/topics-offer-2.png" alt="" width="136" height="120" loading="eager" decoding="sync" /></picture>
                                 </div>
                                 <div class="topics-section__promo-body">
                                     <div class="topics-section__promo-title">3 free min</div>
@@ -785,7 +816,8 @@
                             <div class="topics-section__promo-inner topics-section__promo-inner--wide">
                                 <div class="topics-section__promo-icon topics-section__promo-icon--rewards"
                                     aria-hidden="true">
-                                    <img src="img/topics-offer-3.png" alt="" width="136" height="120" loading="eager" decoding="sync" />
+                                    <picture><source srcset="img/topics-offer-3.webp" type="image/webp" />
+<img src="img/topics-offer-3.png" alt="" width="136" height="120" loading="eager" decoding="sync" /></picture>
                                 </div>
                                 <div class="topics-section__promo-body">
                                     <div class="topics-section__promo-kicker">Neuro Rewards</div>
@@ -806,8 +838,9 @@
 
                     <div class="topics-section__grid">
                         <a class="topics-section__card" href="cheap-psychic-new.html">
-                            <img class="topics-section__card-icon" src="img/topic-1.png" alt="" width="116" height="114"
-                                loading="eager" decoding="sync" aria-hidden="true" />
+                            <picture><source srcset="img/topic-1.webp" type="image/webp" />
+<img class="topics-section__card-icon" src="img/topic-1.png" alt="" width="116" height="114"
+                                loading="eager" decoding="sync" aria-hidden="true" /></picture>
                             <div class="topics-section__card-content">
                                 <div class="topics-section__name">Cheap Psychic</div>
                                 <div class="topics-section__card-link">Read more</div>
@@ -815,8 +848,9 @@
                         </a>
 
                         <a class="topics-section__card" href="psychic-chat-new.html">
-                            <img class="topics-section__card-icon" src="img/topic-2.png" alt="" width="116" height="114"
-                                loading="eager" decoding="sync" aria-hidden="true" />
+                            <picture><source srcset="img/topic-2.webp" type="image/webp" />
+<img class="topics-section__card-icon" src="img/topic-2.png" alt="" width="116" height="114"
+                                loading="eager" decoding="sync" aria-hidden="true" /></picture>
                             <div class="topics-section__card-content">
                                 <div class="topics-section__name">Psychic Chat</div>
                                 <div class="topics-section__card-link">Read more</div>
@@ -824,8 +858,9 @@
                         </a>
 
                         <a class="topics-section__card" href="love-reading-new.html">
-                            <img class="topics-section__card-icon" src="img/topic-3.png" alt="" width="116" height="114"
-                                loading="eager" decoding="sync" aria-hidden="true" />
+                            <picture><source srcset="img/topic-3.webp" type="image/webp" />
+<img class="topics-section__card-icon" src="img/topic-3.png" alt="" width="116" height="114"
+                                loading="eager" decoding="sync" aria-hidden="true" /></picture>
                             <div class="topics-section__card-content">
                                 <div class="topics-section__name">Love Psychic</div>
                                 <div class="topics-section__card-link">Read more</div>
@@ -833,8 +868,9 @@
                         </a>
 
                         <a class="topics-section__card" href="tarot-reading-new.html">
-                            <img class="topics-section__card-icon" src="img/topic-4.png" alt="" width="116" height="114"
-                                loading="eager" decoding="sync" aria-hidden="true" />
+                            <picture><source srcset="img/topic-4.webp" type="image/webp" />
+<img class="topics-section__card-icon" src="img/topic-4.png" alt="" width="116" height="114"
+                                loading="eager" decoding="sync" aria-hidden="true" /></picture>
                             <div class="topics-section__card-content">
                                 <div class="topics-section__name">Tarot</div>
                                 <div class="topics-section__card-link">Read more</div>
@@ -842,8 +878,9 @@
                         </a>
 
                         <a class="topics-section__card" href="free-psychic-reading-new.html">
-                            <img class="topics-section__card-icon" src="img/topic-5.png" alt="" width="116" height="114"
-                                loading="eager" decoding="sync" aria-hidden="true" />
+                            <picture><source srcset="img/topic-5.webp" type="image/webp" />
+<img class="topics-section__card-icon" src="img/topic-5.png" alt="" width="116" height="114"
+                                loading="eager" decoding="sync" aria-hidden="true" /></picture>
                             <div class="topics-section__card-content">
                                 <div class="topics-section__name">Free Reading</div>
                                 <div class="topics-section__card-link">Read more</div>
@@ -851,18 +888,20 @@
                         </a>
 
                         <a class="topics-section__card" href="soulmate-reading-new.html">
-                            <img class="topics-section__card-icon" src="img/topic-6.png" alt="" width="116" height="114"
-                                loading="eager" decoding="sync" aria-hidden="true" />
+                            <picture><source srcset="img/topic-6.webp" type="image/webp" />
+<img class="topics-section__card-icon" src="img/topic-6.png" alt="" width="116" height="114"
+                                loading="eager" decoding="sync" aria-hidden="true" /></picture>
                             <div class="topics-section__card-content">
                                 <div class="topics-section__name">Soulmate</div>
                                 <div class="topics-section__card-link">Read more</div>
                             </div>
                         </a>
+
                     </div>
                 </div>
             </section>
 
-            <section class="video-section">
+            <section class="video-section" data-figma-node="21:93">
                 <div class="container">
                     <div class="video-section__inner">
                         <h2 class="section__title section__title--h2">Learn More about Neuro Psychics</h2>
@@ -870,8 +909,9 @@
                         <button class="video-section__cover" type="button" aria-label="Play video"
                             data-video-url="https://www.youtube.com/embed/PdD_SdUB8GU?autoplay=1">
                             <span class="video-section__cover-media">
-                                <img src="img/video-cover-figma.png" alt="Video preview" width="840" height="510"
-                                    loading="eager" decoding="sync">
+                                <picture><source srcset="img/video-cover-figma.webp" type="image/webp" />
+<img src="img/video-cover-figma.png" alt="Video preview" width="840" height="510"
+                                    loading="eager" decoding="sync"></picture>
                             </span>
                             <span class="video-section__overlay" aria-hidden="true">
                                 <span class="video-section__play"></span>
@@ -882,7 +922,7 @@
                 </div>
             </section>
 
-            <section class="steps-section">
+            <section class="steps-section" data-figma-node="21:107">
                 <div class="container">
                     <h2 class="section__title section__title--h2">Getting Started is Simple</h2>
 
@@ -937,7 +977,7 @@
                 </div>
             </section>
 
-            <section class="situation-section position-relative" id="situation">
+            <section class="situation-section position-relative" id="situation" data-figma-node="21:174">
                 <div class="container">
                     <h2 class="section__title section__title--h2">A psychic reading <br>for any situation — <span
                             class="primary-color">on Neuro!</span></h2>
@@ -948,7 +988,7 @@
                                 techniques and spiritual readings. Talk with one of our psychic advisors about any topic
                                 you want.</p>
                             <picture>
-                                <source media="(min-width: 769px)" srcset="img/situation_d.png" />
+                                <source srcset="img/situation_d.webp" type="image/webp" />
                                 <source media="(max-width: 768px)" srcset="img/situation_m.png" />
                                 <img src="img/situation_d.png" alt="Psychic reading illustration" width="1639"
                                     height="570" class="situation-section__image" loading="eager" decoding="sync" />
@@ -986,7 +1026,7 @@
                 </div>
             </section>
 
-            <section class="faq-section" id="faq">
+            <section class="faq-section" id="faq" data-figma-node="551:5608">
                 <div class="container">
                     <div class="faq-section__list" id="homeFaq" data-accordion="single">
                         <div class="faq-section__item is-open">
@@ -1130,20 +1170,23 @@
 
         </main>
 
-        <footer class="site-footer bg-light-gray">
+            <footer class="site-footer bg-light-gray" data-figma-node="411:1197">
             <div class="container">
                 <div class="site-footer__inner">
                     <div class="site-footer__inner-top">
                         <div class="site-footer__col-left">
                             <a class="site-footer__logo" href="home.html">
-                                <img src="img/logo.png" alt="logo neuro" width="142" height="30">
+                                <picture><source srcset="img/logo.webp" type="image/webp" />
+<img src="img/logo.png" alt="logo neuro" width="142" height="30"></picture>
                             </a>
                             <div class="site-footer__appstores-links">
                                 <a class="site-footer__appstore-link" href="signup-step-1.html">
-                                    <img src="img/google_play.png" alt="Google Play" width="101" height="30">
+                                    <picture><source srcset="img/google_play.webp" type="image/webp" />
+<img src="img/google_play.png" alt="Google Play" width="101" height="30"></picture>
                                 </a>
                                 <a class="site-footer__appstore-link" href="signup-step-1.html">
-                                    <img src="img/appstore.png" alt="Apple Store" width="101" height="30">
+                                    <picture><source srcset="img/appstore.webp" type="image/webp" />
+<img src="img/appstore.png" alt="Apple Store" width="101" height="30"></picture>
                                 </a>
                             </div>
                         </div>
@@ -1221,7 +1264,8 @@
                     </div>
                     <div class="site-footer__inner-bottom">
                         <div class="pay-icon-wrapper">
-                            <img src="img/pay_icons.png" width="270" height="20" alt="">
+                            <picture><source srcset="img/pay_icons.webp" type="image/webp" />
+<img src="img/pay_icons.png" width="270" height="20" alt=""></picture>
                         </div>
                         <div class="site-footer__copyright">2025. Spiritual Neuro Limited. © All rights reserved.</div>
                     </div>

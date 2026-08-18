@@ -1,4 +1,4 @@
-:root {
+.home-page {
     --primary-color: #673EDA;
     --secondary-color: #A585FF;
     --accent-color: #FFC478;
@@ -8,7 +8,7 @@
     --radius-lg: 24px;
 }
 
-html {
+.home-page {
     height: 100%;
     direction: ltr;
     color: var(--text-color);
@@ -18,7 +18,7 @@ html {
     text-size-adjust: none;
 }
 
-body {
+.home-page {
     font-family: "Manrope", sans-serif;
     font-feature-settings: 'liga' off;
     font-size: 16px;
@@ -37,37 +37,37 @@ body {
     background: #fff;
 }
 
-body.nav-open {
+.home-page.nav-open {
     overflow: hidden;
 }
 
 @media print {
-    body {
+    .home-page {
         background: 0 0
     }
 }
 
-body ::-webkit-scrollbar {
+.home-page ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
     -webkit-transition: .3s background;
     transition: .3s background
 }
 
-body ::-webkit-scrollbar-thumb {
+.home-page ::-webkit-scrollbar-thumb {
     background: #b6c1d2
 }
 
-body :hover::-webkit-scrollbar-thumb {
+.home-page :hover::-webkit-scrollbar-thumb {
     background: #9da9bb
 }
 
-a {
+.home-page a {
     color: inherit;
     text-decoration: none;
 }
 
-a:hover {
+.home-page a:hover {
     color: var(--primary-color);
     text-decoration: none;
 }
@@ -154,7 +154,7 @@ a:hover {
     height: 16px;
 }
 
-.site-header {
+.home-page .site-header {
     padding: 24px 0;
     background: rgba(242, 240, 245, 0.65);
     -webkit-backdrop-filter: blur(60px);
@@ -163,17 +163,17 @@ a:hover {
 }
 
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
-    .site-header {
+    .home-page .site-header {
         background: rgba(242, 240, 245, 0.95);
     }
 }
 
-.site-header.fixed-top {
+.home-page .site-header.fixed-top {
     top: env(safe-area-inset-top);
     padding-top: env(safe-area-inset-top);
 }
 
-.site-header .navbar-light .navbar-toggler-icon {
+.home-page .site-header .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='15' viewBox='0 0 20 15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5H19' stroke='%237653D9' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 7.5H19' stroke='%237653D9' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M1 13.5H19' stroke='%237653D9' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
 }
 
@@ -196,7 +196,7 @@ a:hover {
     color: var(--primary-color);
 }
 
-.site-header .navbar-nav {
+.home-page .site-header .navbar-nav {
     display: flex;
     gap: 30px;
 }
@@ -1461,7 +1461,7 @@ a:hover {
 .video-section {
     padding: 83px 0 118px;
     background-color: var(--light-gray);
-    background-image: url("img/video-pattern-figma.png");
+    background-image: image-set(url("img/video-pattern-figma.webp") type("image/webp"), url("img/video-pattern-figma.png") type("image/png"));
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 1920px 100%;
@@ -1895,7 +1895,7 @@ a:hover {
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.site-footer {
+.home-page .site-footer {
     border-radius: 40px;
 }
 
@@ -2549,12 +2549,12 @@ a:hover {
         padding: 80px 0 41px;
     }
 
-    .site-header .navbar {
+    .home-page .site-header .navbar {
         order: -1;
         padding: 0;
     }
 
-    .site-header .navbar-collapse {
+    .home-page .site-header .navbar-collapse {
         position: fixed;
         left: 0;
         bottom: 0px;
@@ -2567,11 +2567,11 @@ a:hover {
         top: 0px;
     }
 
-    .site-header .navbar-collapse:not(.show) .site-header__offcanvas {
+    .home-page .site-header .navbar-collapse:not(.show) .site-header__offcanvas {
         transform: translateX(-100%);
     }
 
-    .site-header .navbar-collapse.show .site-header__offcanvas {
+    .home-page .site-header .navbar-collapse.show .site-header__offcanvas {
         transform: translateX(0);
     }
 
@@ -2595,25 +2595,25 @@ a:hover {
         justify-content: space-between;
     }
 
-    .site-header .navbar-nav {
+    .home-page .site-header .navbar-nav {
         display: flex;
         gap: 40px;
     }
 
-    .site-header .navbar-nav .nav-item a {
+    .home-page .site-header .navbar-nav .nav-item a {
         color: #fff;
         font-size: 24px;
         position: relative;
     }
 
-    .site-header .navbar-nav .nav-item {
+    .home-page .site-header .navbar-nav .nav-item {
         display: flex;
         align-items: center;
         justify-content: space-between;
         position: relative;
     }
 
-    .site-header .navbar-nav .nav-item:after {
+    .home-page .site-header .navbar-nav .nav-item:after {
         content: '';
         position: absolute;
         right: 0;
@@ -2647,7 +2647,7 @@ a:hover {
 
 @media (max-width: 768px) {
 
-    .site-header {
+    .home-page .site-header {
         padding: 22px 0;
     }
 
@@ -3827,7 +3827,7 @@ a:hover {
         box-sizing: border-box;
     }
 
-    .site-footer {
+    .home-page .site-footer {
         min-height: 420px;
         box-sizing: border-box;
     }
@@ -3884,7 +3884,7 @@ a:hover {
         box-sizing: border-box;
     }
 
-    .site-footer {
+    .home-page .site-footer {
         min-height: 570px;
         box-sizing: border-box;
     }
@@ -3964,7 +3964,7 @@ a:hover {
         box-sizing: border-box;
     }
 
-    .site-footer {
+    .home-page .site-footer {
         min-height: 720px;
         box-sizing: border-box;
     }
@@ -4094,7 +4094,7 @@ a:hover {
         box-sizing: border-box;
     }
 
-    .site-footer {
+    .home-page .site-footer {
         min-height: 680px;
         box-sizing: border-box;
     }
@@ -4867,7 +4867,7 @@ a:hover {
         line-height: 18px;
     }
 
-    .site-footer {
+    .home-page .site-footer {
         min-height: 1190px;
         box-sizing: border-box;
     }
@@ -5754,7 +5754,7 @@ a:hover {
         bottom: 58px;
     }
 
-    html:root body .home[data-nebula-page="home"] .what-neuro-section__quote-mark {
+    .home-page:root body .home[data-nebula-page="home"] .what-neuro-section__quote-mark {
         font-family: Manrope, sans-serif;
         font-size: 260px;
         line-height: 80px;
@@ -5886,7 +5886,7 @@ a:hover {
         gap: 3px;
     }
 
-    html:root body .home[data-nebula-page="home"] .clients-section__review .clients-section__quote-mark {
+    .home-page:root body .home[data-nebula-page="home"] .clients-section__review .clients-section__quote-mark {
         font-family: Tunga, serif;
         font-size: 60px;
         line-height: 23px;

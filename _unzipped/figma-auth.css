@@ -2,7 +2,7 @@
 @font-face{font-family:"Manrope";font-style:normal;font-weight:500;font-display:block;src:url("fonts/manrope/Manrope-500.ttf") format("truetype");}
 @font-face{font-family:"Manrope";font-style:normal;font-weight:600;font-display:block;src:url("fonts/manrope/Manrope-600.ttf") format("truetype");}
 @font-face{font-family:"Manrope";font-style:normal;font-weight:700;font-display:block;src:url("fonts/manrope/Manrope-700.ttf") format("truetype");}
-:root{
+.na-auth-page{
   --na-purple:#6d45ea;
   --na-purple-2:#7b5bff;
   --na-dark:#151230;
@@ -11,11 +11,12 @@
   --na-cream:#f8f5f6;
 }
 
-html,body{margin:0;padding:0;background:#120e24;}
-*,*::before,*::after{box-sizing:border-box;}
-body{font-family:"Manrope",sans-serif;}
-a{text-decoration:none;}
-img{max-width:100%;display:block;}
+.na-auth-page{margin:0;padding:0;background:#120e24;}
+.na-auth-page,.na-auth-page *,.na-auth-page *::before,.na-auth-page *::after{box-sizing:border-box;}
+.na-auth-page{font-family:"Manrope",sans-serif;}
+.na-auth-page a,.na-offer-popup a{text-decoration:none;}
+.na-auth-page img,.na-offer-popup img,.neuro-video-section img{max-width:100%;display:block;}
+.na-auth-page picture{display:contents;}
 
 /* exact figma sections kept */
 .neuro-what-section{padding:48px 0 76px;background:#fff;}
@@ -27,7 +28,7 @@ img{max-width:100%;display:block;}
 .neuro-what-section__quote{position:relative;border-radius:42px;padding:58px 96px 88px 60px;background:linear-gradient(180deg,#f2eff7 0%,#efedf4 100%);overflow:hidden;}
 .neuro-what-section__quote p{max-width:820px;margin:0;font-size:23px;line-height:1.6;color:#111;letter-spacing:-.02em;}
 .neuro-what-section__quote-mark{position:absolute;right:34px;bottom:24px;font-size:132px;line-height:.8;color:#6b46df;font-weight:700;}
-.neuro-video-section{padding:78px 0 92px;background:#f3f3f3 url("img/video-pattern.png") center top/cover no-repeat;}
+.neuro-video-section{padding:78px 0 92px;background:#f3f3f3 image-set(url("img/video-pattern.webp") type("image/webp"), url("img/video-pattern.png") type("image/png")) center top/cover no-repeat;}
 .neuro-video-section__title{margin:0 0 40px;font-size:64px;line-height:1.03;font-weight:500;letter-spacing:-.04em;color:#111;text-align:center;}
 .neuro-video-section__cover{display:block;position:relative;width:min(100%,830px);margin:0 auto;padding:0;border:0;background:transparent;cursor:pointer;}
 .neuro-video-section__cover img{display:block;width:100%;height:auto;border-radius:34px;}
@@ -371,19 +372,19 @@ img{max-width:100%;display:block;}
       linear-gradient(90deg, rgba(181,127,255,.08), rgba(255,255,255,0) 47%),
       linear-gradient(270deg, rgba(181,127,255,.25), rgba(255,255,255,0) 51%),
       linear-gradient(rgba(5,5,5,.77), rgba(5,5,5,.77)),
-      url("img/auth-bg-abstract-figma.png") center center/cover no-repeat;
+      image-set(url("img/auth-bg-abstract-figma.webp") type("image/webp"), url("img/auth-bg-abstract-figma.png") type("image/png")) center center/cover no-repeat;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-bg-layer--root{
     top:0;
     width:1280px;
     height:855px;
-    background:url("img/auth-signup-step1-1280-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-1280-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step1-1280-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--step2 .na-auth-bg-layer--root{
     top:0;
     width:1280px;
     height:855px;
-    background:url("img/auth-signup-step2-1280-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-1280-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step2-1280-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--create .na-auth-bg-layer--silhouette{
     z-index:0;
@@ -391,7 +392,7 @@ img{max-width:100%;display:block;}
     top:-1px;
     width:532.5px;
     height:801.5625px;
-    background:url("img/auth-bg-silhouette-figma.png") center center/cover no-repeat;
+    background:image-set(url("img/auth-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-bg-silhouette-figma.png") type("image/png")) center center/cover no-repeat;
     opacity:.12;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-bg-layer--silhouette{
@@ -399,7 +400,7 @@ img{max-width:100%;display:block;}
     top:0;
     width:568px;
     height:855px;
-    background:url("img/auth-signup-step1-1280-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-1280-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step1-1280-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
     opacity:1;
   }
   .na-auth-page--step2 .na-auth-bg-layer--silhouette{
@@ -407,7 +408,7 @@ img{max-width:100%;display:block;}
     top:0;
     width:568px;
     height:855px;
-    background:url("img/auth-signup-step2-1280-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-1280-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step2-1280-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
     opacity:1;
   }
   .na-auth-page--create .na-auth-page__shell{
@@ -436,14 +437,14 @@ img{max-width:100%;display:block;}
     align-items:flex-start;
     justify-content:center;
     padding:96px 0 0;
-    background:url("img/auth-bg-abstract-figma.png") center center/auto 100% no-repeat;
+    background:image-set(url("img/auth-bg-abstract-figma.webp") type("image/webp"), url("img/auth-bg-abstract-figma.png") type("image/png")) center center/auto 100% no-repeat;
     box-shadow:0 4px 40px rgba(0,0,0,.25);
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-page__panel{
-    background:url("img/auth-signup-step1-1280-panel-group-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-1280-panel-group-figma.webp") type("image/webp"), url("img/auth-signup-step1-1280-panel-group-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--step2 .na-auth-page__panel{
-    background:url("img/auth-signup-step2-1280-panel-group-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-1280-panel-group-figma.webp") type("image/webp"), url("img/auth-signup-step2-1280-panel-group-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--create .na-auth-page__panel::before{
     inset:0;
@@ -737,7 +738,7 @@ img{max-width:100%;display:block;}
       linear-gradient(90deg, rgba(181,127,255,.08), rgba(255,255,255,0) 47%),
       linear-gradient(270deg, rgba(181,127,255,.25), rgba(255,255,255,0) 51%),
       linear-gradient(rgba(5,5,5,.77), rgba(5,5,5,.77)),
-      url("img/auth-bg-abstract-figma.png") center center/cover no-repeat;
+      image-set(url("img/auth-bg-abstract-figma.webp") type("image/webp"), url("img/auth-bg-abstract-figma.png") type("image/png")) center center/cover no-repeat;
   }
   .na-auth-page--create .na-auth-bg-layer--silhouette{
     display:block;
@@ -746,7 +747,7 @@ img{max-width:100%;display:block;}
     top:var(--silhouette-y);
     width:var(--silhouette-w);
     height:var(--silhouette-h);
-    background:url("img/auth-bg-silhouette-figma.png") center center/cover no-repeat;
+    background:image-set(url("img/auth-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-bg-silhouette-figma.png") type("image/png")) center center/cover no-repeat;
     opacity:.12;
   }
   .na-auth-page--create .na-auth-page__shell{
@@ -817,7 +818,7 @@ img{max-width:100%;display:block;}
     overflow:hidden;
     background:
       linear-gradient(rgba(225,225,225,.93), rgba(225,225,225,.93)),
-      url("img/auth-bg-abstract-figma.png") center center/cover no-repeat;
+      image-set(url("img/auth-bg-abstract-figma.webp") type("image/webp"), url("img/auth-bg-abstract-figma.png") type("image/png")) center center/cover no-repeat;
     box-shadow:none;
   }
   .na-auth-page--create .na-auth-page__panel::before{
@@ -1067,14 +1068,14 @@ img{max-width:100%;display:block;}
     top:var(--bg-y);
     width:var(--bg-w);
     height:var(--bg-h);
-    background:url("/_unzipped/img/auth-signup-step1-960-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-960-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step1-960-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--create .na-auth-bg-layer--silhouette{
     left:var(--silhouette-x);
     top:var(--silhouette-y);
     width:var(--silhouette-w);
     height:var(--silhouette-h);
-    background:url("/_unzipped/img/auth-signup-step1-960-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-960-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step1-960-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
     opacity:1;
   }
   .na-auth-page--create .na-auth-page__brand{
@@ -1133,7 +1134,7 @@ img{max-width:100%;display:block;}
     top:12px;
   }
   .na-auth-page--create .na-auth-page__chevron{
-    content:url("/_unzipped/img/auth-signup-step1-960-lang-chevron-figma.png");
+    content:image-set(url("img/auth-signup-step1-960-lang-chevron-figma.webp") type("image/webp"), url("img/auth-signup-step1-960-lang-chevron-figma.png") type("image/png"));
     left:58px;
     top:20.5px;
     width:13px;
@@ -1160,7 +1161,7 @@ img{max-width:100%;display:block;}
     border-radius:0;
     display:block;
     overflow:hidden;
-    background:transparent url("/_unzipped/img/auth-signup-step1-960-panel-group-figma.png") center center/100% 100% no-repeat;
+    background:transparent image-set(url("img/auth-signup-step1-960-panel-group-figma.webp") type("image/webp"), url("img/auth-signup-step1-960-panel-group-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--create .na-auth-page__panel::before{
     content:none;
@@ -1282,16 +1283,16 @@ img{max-width:100%;display:block;}
     background:transparent;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-bg-layer--root{
-    background:url("/_unzipped/img/auth-signup-step1-640-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-640-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step1-640-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
     width:100%;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-bg-layer--silhouette{
-    background:url("/_unzipped/img/auth-signup-step1-640-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-640-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step1-640-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
     opacity:1;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-page__panel{
     background-color:transparent;
-    background-image:url("/_unzipped/img/auth-signup-step1-640-panel-group-figma.png");
+    background-image:image-set(url("img/auth-signup-step1-640-panel-group-figma.webp") type("image/webp"), url("img/auth-signup-step1-640-panel-group-figma.png") type("image/png"));
     background-position:center center;
     background-size:100% 100%;
     background-repeat:no-repeat;
@@ -1354,7 +1355,7 @@ img{max-width:100%;display:block;}
     top:12px;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-page__chevron{
-    content:url("/_unzipped/img/auth-signup-step1-640-lang-chevron-figma.png");
+    content:image-set(url("img/auth-signup-step1-640-lang-chevron-figma.webp") type("image/webp"), url("img/auth-signup-step1-640-lang-chevron-figma.png") type("image/png"));
     left:58px;
     top:20.5px;
     width:13px;
@@ -1426,14 +1427,14 @@ img{max-width:100%;display:block;}
     top:var(--bg-y);
     width:var(--bg-w);
     height:var(--bg-h);
-    background:url("/_unzipped/img/auth-signup-step1-1280-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-1280-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step1-1280-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--create .na-auth-bg-layer--silhouette{
     left:var(--silhouette-x);
     top:var(--silhouette-y);
     width:var(--silhouette-w);
     height:var(--silhouette-h);
-    background:url("/_unzipped/img/auth-signup-step1-1280-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-1280-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step1-1280-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
     opacity:1;
   }
   .na-auth-page--create .na-auth-page__brand{
@@ -1492,7 +1493,7 @@ img{max-width:100%;display:block;}
     top:12px;
   }
   .na-auth-page--create .na-auth-page__chevron{
-    content:url("/_unzipped/img/auth-signup-step1-1280-lang-chevron-figma.png");
+    content:image-set(url("img/auth-signup-step1-1280-lang-chevron-figma.webp") type("image/webp"), url("img/auth-signup-step1-1280-lang-chevron-figma.png") type("image/png"));
     left:58px;
     top:20.5px;
     width:13px;
@@ -1519,16 +1520,16 @@ img{max-width:100%;display:block;}
     border-radius:0;
     display:block;
     overflow:hidden;
-    background:transparent url("/_unzipped/img/auth-signup-step1-1280-panel-group-figma.png") center center/100% 100% no-repeat;
+    background:transparent image-set(url("img/auth-signup-step1-1280-panel-group-figma.webp") type("image/webp"), url("img/auth-signup-step1-1280-panel-group-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--create.na-auth-page--step2 .na-auth-bg-layer--root{
-    background:url("img/auth-signup-step2-1280-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-1280-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step2-1280-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--create.na-auth-page--step2 .na-auth-bg-layer--silhouette{
-    background:url("img/auth-signup-step2-1280-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-1280-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step2-1280-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--create.na-auth-page--step2 .na-auth-page__panel{
-    background:transparent url("img/auth-signup-step2-1280-panel-group-figma.png") center center/100% 100% no-repeat;
+    background:transparent image-set(url("img/auth-signup-step2-1280-panel-group-figma.webp") type("image/webp"), url("img/auth-signup-step2-1280-panel-group-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--create .na-auth-page__panel::before{
     content:none;
@@ -1759,7 +1760,7 @@ img{max-width:100%;display:block;}
     top:9px;
   }
   .na-auth-page--create .na-auth-page__chevron{
-    content:url("/_unzipped/img/auth-signup-step1-480-lang-chevron-figma.png");
+    content:image-set(url("img/auth-signup-step1-480-lang-chevron-figma.webp") type("image/webp"), url("img/auth-signup-step1-480-lang-chevron-figma.png") type("image/png"));
     left:49px;
     top:15.5px;
     width:13px;
@@ -1775,15 +1776,15 @@ img{max-width:100%;display:block;}
     display:none;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-bg-layer--root{
-    background:url("/_unzipped/img/auth-signup-step1-480-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-480-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step1-480-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-bg-layer--silhouette{
-    background:url("/_unzipped/img/auth-signup-step1-480-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-480-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step1-480-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
     opacity:1;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-page__panel{
     background-color:#d9d9d9;
-    background-image:url("/_unzipped/img/auth-signup-step1-480-rect12-figma.png");
+    background-image:image-set(url("img/auth-signup-step1-480-rect12-figma.webp") type("image/webp"), url("img/auth-signup-step1-480-rect12-figma.png") type("image/png"));
     background-position:center center;
     background-size:100% 100%;
     background-repeat:no-repeat;
@@ -1793,7 +1794,7 @@ img{max-width:100%;display:block;}
     position:absolute;
     inset:0;
     z-index:0;
-    background-image:url("/_unzipped/img/auth-signup-step1-480-rect11-figma.png");
+    background-image:image-set(url("img/auth-signup-step1-480-rect11-figma.webp") type("image/webp"), url("img/auth-signup-step1-480-rect11-figma.png") type("image/png"));
     background-position:center center;
     background-size:100% 100%;
     background-repeat:no-repeat;
@@ -2179,7 +2180,7 @@ img{max-width:100%;display:block;}
       linear-gradient(90deg, rgba(181,127,255,.08), rgba(255,255,255,0) 47%),
       linear-gradient(270deg, rgba(181,127,255,.25), rgba(255,255,255,0) 51%),
       linear-gradient(rgba(5,5,5,.77), rgba(5,5,5,.77)),
-      url("img/auth-bg-abstract-figma.png") center center/cover no-repeat;
+      image-set(url("img/auth-bg-abstract-figma.webp") type("image/webp"), url("img/auth-bg-abstract-figma.png") type("image/png")) center center/cover no-repeat;
   }
   .na-auth-page--create .na-auth-bg-layer--silhouette{
     display:block;
@@ -2325,10 +2326,10 @@ img{max-width:100%;display:block;}
     text-rendering:geometricPrecision;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-bg-layer--root{
-    background:url("/_unzipped/img/auth-signup-step1-320-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-320-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step1-320-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-bg-layer--silhouette{
-    background:url("/_unzipped/img/auth-signup-step1-320-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step1-320-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step1-320-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
     opacity:1;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-page__shell::before{
@@ -2343,7 +2344,7 @@ img{max-width:100%;display:block;}
     position:absolute;
     inset:0;
     z-index:0;
-    background-image:url("/_unzipped/img/auth-signup-step1-320-rect11-figma.png");
+    background-image:image-set(url("img/auth-signup-step1-320-rect11-figma.webp") type("image/webp"), url("img/auth-signup-step1-320-rect11-figma.png") type("image/png"));
     background-position:-40px -36px;
     background-size:400px 780px;
     background-repeat:no-repeat;
@@ -2417,10 +2418,10 @@ img{max-width:100%;display:block;}
     height:30px;
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-social-btn--google img{
-    content:url("img/auth-signup-step1-320-google-icon-rect-figma.png");
+    content:image-set(url("img/auth-signup-step1-320-google-icon-rect-figma.webp") type("image/webp"), url("img/auth-signup-step1-320-google-icon-rect-figma.png") type("image/png"));
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-social-btn--facebook img{
-    content:url("img/auth-signup-step1-320-facebook-icon-rect-figma.png");
+    content:image-set(url("img/auth-signup-step1-320-facebook-icon-rect-figma.webp") type("image/webp"), url("img/auth-signup-step1-320-facebook-icon-rect-figma.png") type("image/png"));
   }
   .na-auth-page--create:not(.na-auth-page--step2) .na-auth-page__links{
     left:148px;
@@ -2704,17 +2705,17 @@ img{max-width:100%;display:block;}
 
 @media (min-width:1200px){
   .na-auth-page--step2 .na-auth-bg-layer--root{
-    background:url("/_unzipped/img/auth-signup-step2-1280-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-1280-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step2-1280-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--step2 .na-auth-bg-layer--silhouette{
-    background:url("/_unzipped/img/auth-signup-step2-1280-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-1280-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step2-1280-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
     opacity:1;
   }
   .na-auth-page--step2 .na-auth-page__panel{
-    background:transparent url("/_unzipped/img/auth-signup-step2-1280-panel-group-figma.png") center center/100% 100% no-repeat;
+    background:transparent image-set(url("img/auth-signup-step2-1280-panel-group-figma.webp") type("image/webp"), url("img/auth-signup-step2-1280-panel-group-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--step2 .na-auth-page__chevron{
-    content:url("/_unzipped/img/auth-signup-step2-1280-lang-chevron-figma.png");
+    content:image-set(url("img/auth-signup-step2-1280-lang-chevron-figma.webp") type("image/webp"), url("img/auth-signup-step2-1280-lang-chevron-figma.png") type("image/png"));
   }
   .na-auth-page--step2 .na-auth-page__links{
     left:min(1016px, calc(100vw - 224px));
@@ -2723,17 +2724,17 @@ img{max-width:100%;display:block;}
 
 @media (min-width:641px) and (max-width:1199px){
   .na-auth-page--step2 .na-auth-bg-layer--root{
-    background:url("/_unzipped/img/auth-signup-step2-960-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-960-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step2-960-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--step2 .na-auth-bg-layer--silhouette{
-    background:url("/_unzipped/img/auth-signup-step2-960-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-960-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step2-960-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
     opacity:1;
   }
   .na-auth-page--step2 .na-auth-page__panel{
-    background:transparent url("/_unzipped/img/auth-signup-step2-960-panel-group-figma.png") center center/100% 100% no-repeat;
+    background:transparent image-set(url("img/auth-signup-step2-960-panel-group-figma.webp") type("image/webp"), url("img/auth-signup-step2-960-panel-group-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--step2 .na-auth-page__chevron{
-    content:url("/_unzipped/img/auth-signup-step2-960-lang-chevron-figma.png");
+    content:image-set(url("img/auth-signup-step2-960-lang-chevron-figma.webp") type("image/webp"), url("img/auth-signup-step2-960-lang-chevron-figma.png") type("image/png"));
   }
   .na-auth-page--step2 .na-auth-page__links{
     left:min(716px, calc(100vw - 224px));
@@ -2803,17 +2804,17 @@ img{max-width:100%;display:block;}
     height:8px;
   }
   .na-auth-page--step2 .na-auth-bg-layer--root{
-    background:url("/_unzipped/img/auth-signup-step2-640-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-640-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step2-640-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--step2 .na-auth-bg-layer--silhouette{
-    background:url("/_unzipped/img/auth-signup-step2-640-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-640-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step2-640-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
     opacity:1;
   }
   .na-auth-page--step2 .na-auth-page__panel{
-    background:transparent url("/_unzipped/img/auth-signup-step2-640-panel-group-figma.png") center center/100% 100% no-repeat;
+    background:transparent image-set(url("img/auth-signup-step2-640-panel-group-figma.webp") type("image/webp"), url("img/auth-signup-step2-640-panel-group-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--step2 .na-auth-page__chevron{
-    content:url("/_unzipped/img/auth-signup-step2-640-lang-chevron-figma.png");
+    content:image-set(url("img/auth-signup-step2-640-lang-chevron-figma.webp") type("image/webp"), url("img/auth-signup-step2-640-lang-chevron-figma.png") type("image/png"));
   }
 }
 
@@ -2865,17 +2866,17 @@ img{max-width:100%;display:block;}
     height:8px;
   }
   .na-auth-page--step2 .na-auth-bg-layer--root{
-    background:url("/_unzipped/img/auth-signup-step2-480-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-480-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step2-480-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--step2 .na-auth-bg-layer--silhouette{
-    background:url("/_unzipped/img/auth-signup-step2-480-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-480-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step2-480-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
     opacity:1;
   }
   .na-auth-page--step2 .na-auth-page__panel{
-    background:transparent url("/_unzipped/img/auth-signup-step2-480-panel-group-figma.png") -80px 0/640px 700px no-repeat;
+    background:transparent image-set(url("img/auth-signup-step2-480-panel-group-figma.webp") type("image/webp"), url("img/auth-signup-step2-480-panel-group-figma.png") type("image/png")) -80px 0/640px 700px no-repeat;
   }
   .na-auth-page--step2 .na-auth-page__chevron{
-    content:url("/_unzipped/img/auth-signup-step2-480-lang-chevron-figma.png");
+    content:image-set(url("img/auth-signup-step2-480-lang-chevron-figma.webp") type("image/webp"), url("img/auth-signup-step2-480-lang-chevron-figma.png") type("image/png"));
   }
 }
 
@@ -2956,17 +2957,17 @@ img{max-width:100%;display:block;}
     height:8px;
   }
   .na-auth-page--step2 .na-auth-bg-layer--root{
-    background:url("img/auth-signup-step2-320-bg-root-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-320-bg-root-figma.webp") type("image/webp"), url("img/auth-signup-step2-320-bg-root-figma.png") type("image/png")) center center/100% 100% no-repeat;
   }
   .na-auth-page--step2 .na-auth-bg-layer--silhouette{
-    background:url("img/auth-signup-step2-320-bg-silhouette-figma.png") center center/100% 100% no-repeat;
+    background:image-set(url("img/auth-signup-step2-320-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-signup-step2-320-bg-silhouette-figma.png") type("image/png")) center center/100% 100% no-repeat;
     opacity:1;
   }
   .na-auth-page--step2 .na-auth-page__panel{
-    background:transparent url("img/auth-signup-step2-320-panel-group-figma.png") -240px 0/640px 700px no-repeat;
+    background:transparent image-set(url("img/auth-signup-step2-320-panel-group-figma.webp") type("image/webp"), url("img/auth-signup-step2-320-panel-group-figma.png") type("image/png")) -240px 0/640px 700px no-repeat;
   }
   .na-auth-page--step2 .na-auth-page__chevron{
-    content:url("img/auth-signup-step2-320-lang-chevron-figma.png");
+    content:image-set(url("img/auth-signup-step2-320-lang-chevron-figma.webp") type("image/webp"), url("img/auth-signup-step2-320-lang-chevron-figma.png") type("image/png"));
   }
 }
 

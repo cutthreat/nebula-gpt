@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="phone-html">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,26 +24,28 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23673EDA' d='M8 0l1.9 4.3L14 6.2l-4.1 1.2L8 11.6 6.1 7.4 2 6.2l4.1-1.9L8 0z'/%3E%3C/svg%3E">
   <link rel="apple-touch-icon" href="img/logo.png" />
   <link rel="stylesheet" href="bootstrap.css" />
-  <link rel="stylesheet" href="home.css" />
-  <link rel="stylesheet" href="phone-psychic.css?v=20260401-phone-final-pass-3" />
-  <link rel="stylesheet" href="oracle-shell-locks/phone-psychic.css?v=20260425-shell-lock" />
+<link rel="stylesheet" href="phone-psychic.css?v=20260726r5-seam" />
+<link rel="stylesheet" href="phone-psychic.01.css?v=20260726r5-phone-hero" />
+<link rel="stylesheet" href="phone-psychic.02.css?v=20260726r5-seam" />
+<link rel="stylesheet" href="phone-psychic.03.css?v=20260726-page-owner" />
 </head>
-<body class="prn-body">
+<body class="phone-page prn-body">
   <div class="home pp-page">
     <header class="site-header fixed-top">
       <div class="container">
         <div class="site-header__inner d-flex align-items-center justify-content-between">
           <a class="site-header__logo" href="home.html" aria-label="Neuro home">
-            <img src="img/logo.png" alt="logo neuro" width="142" height="30" />
+            <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo neuro" width="142" height="30" /></picture>
           </a>
           <nav class="navbar navbar-expand-lg navbar-light site-header__nav" aria-label="Primary">
-            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="collapse" data-target="#navbarOffcanvasPhone">
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="collapse" data-target="#navbarOffcanvasPhone" aria-label="Open navigation" aria-controls="navbarOffcanvasPhone" aria-expanded="false">
               <span class="navbar-toggler-icon"></span>
             </button>
+            <span class="site-header__language" aria-hidden="true">Eng <span></span></span>
             <div class="navbar-collapse collapse navbar-nav-scroll" id="navbarOffcanvasPhone">
               <div class="site-header__offcanvas">
                 <div class="site-header__offcanvas-top">
-                  <a class="site-header__logo" href="home.html"><img src="img/logo-white.png" alt="logo neuro" width="142" height="30" /></a>
+                  <a class="site-header__logo" href="home.html"><picture><source srcset="img/logo-white.webp" type="image/webp"><img src="img/logo-white.png" alt="logo neuro" width="142" height="30" /></picture></a>
                   <button class="site-header__offcanvas-close" type="button" data-toggle="collapse" data-target="#navbarOffcanvasPhone" aria-label="Close menu" aria-controls="navbarOffcanvasPhone" aria-expanded="true"></button>
                 </div>
                 <ul class="navbar-nav">
@@ -58,6 +60,8 @@
             </div>
           </nav>
           <div class="site-header__actions">
+            <button class="site-header__theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false"><span></span></button>
+            <a class="site-header__signin" href="login.html">Sign in</a>
             <a class="c-btn c-btn--ghost site-header__btn" href="signup-step-1.html"><span>Sign up</span><span class="c-btn__icon c-btn__icon--arrow"></span></a>
           </div>
         </div>
@@ -65,7 +69,7 @@
     </header>
 
     <main class="overflow-hidden">
-      <section class="pp-hero">
+      <section class="pp-hero" data-figma-node="912:12254">
         <div class="pp-shell pp-hero__row">
           <div class="pp-hero__copy">
             <h1>Phone Psychic Reading from Top Spiritual Guides</h1>
@@ -73,19 +77,19 @@
             <p class="pp-hero__text">Say goodbye to spending a hefty part of your paycheck on long sessions with traditional psychics. Instead, opt for a quick, affordable conversation with one of Nebula&apos;s psychic advisors. They strengthen relationships, improve family bonds, and boost career growth.</p>
           </div>
           <div class="pp-hero__art" aria-hidden="true">
-            <img src="img/phone-hero-device.png" alt="" width="512" height="768" />
+            <picture><source srcset="img/phone-hero-device.webp" type="image/webp"><img src="img/phone-hero-device.png" alt="" width="512" height="768" /></picture>
           </div>
         </div>
       </section>
 
-      <section class="pp-experts">
+      <section class="pp-experts" data-figma-node="912:12274">
         <div class="pp-shell">
           <div class="pp-experts__grid">
             <article class="pp-expert-card" data-heritage-component="expert-card.v1" data-heritage-source="psychic-reading-new.html:.experts-section__card" data-heritage-variant="phone-psychic.expert-card" data-heritage-source-breakpoints="1200/992/768/576/320">
               <div class="pp-expert-card__person">
-                <img class="pp-expert-card__avatar" src="img/avatar-1.png" alt="" width="100" height="100" loading="lazy" />
+                <picture><source srcset="img/avatar-1.webp" type="image/webp"><img class="pp-expert-card__avatar" src="img/avatar-1.png" alt="" width="100" height="100" loading="lazy" /></picture>
                 <div class="pp-expert-card__meta">
-                  <h3>Veronika</h3>
+                  <h3><span class="pp-expert-card__name-desktop">Veronika</span><span class="pp-expert-card__name-mobile">Veronika</span></h3>
                   <div class="pp-expert-card__rating" aria-label="Rating 4.8"><strong>4.8</strong><svg class="pp-expert-card__rating-star" width="20" height="19" viewBox="0 0 20 19" aria-hidden="true"><use href="img/sprite.svg#icon-star"></use></svg><small>tarot reader</small></div>
                   <div class="pp-expert-card__online">online</div>
                 </div>
@@ -102,9 +106,9 @@
 
             <article class="pp-expert-card" data-heritage-component="expert-card.v1" data-heritage-source="psychic-reading-new.html:.experts-section__card" data-heritage-variant="phone-psychic.expert-card" data-heritage-source-breakpoints="1200/992/768/576/320">
               <div class="pp-expert-card__person">
-                <img class="pp-expert-card__avatar" src="img/avatar-2.png" alt="" width="100" height="100" loading="lazy" />
+                <picture><source media="(max-width: 767.98px)" srcset="img/avatar-1.webp" type="image/webp"><source srcset="img/avatar-2.webp" type="image/webp"><img class="pp-expert-card__avatar" src="img/avatar-2.png" alt="" width="100" height="100" loading="lazy" /></picture>
                 <div class="pp-expert-card__meta">
-                  <h3>Marina</h3>
+                  <h3><span class="pp-expert-card__name-desktop">Marina</span><span class="pp-expert-card__name-mobile">Veronika</span></h3>
                   <div class="pp-expert-card__rating" aria-label="Rating 4.2"><strong>4.2</strong><svg class="pp-expert-card__rating-star" width="20" height="19" viewBox="0 0 20 19" aria-hidden="true"><use href="img/sprite.svg#icon-star"></use></svg><small>tarot reader</small></div>
                   <div class="pp-expert-card__online">online</div>
                 </div>
@@ -121,9 +125,9 @@
 
             <article class="pp-expert-card" data-heritage-component="expert-card.v1" data-heritage-source="psychic-reading-new.html:.experts-section__card" data-heritage-variant="phone-psychic.expert-card" data-heritage-source-breakpoints="1200/992/768/576/320">
               <div class="pp-expert-card__person">
-                <img class="pp-expert-card__avatar" src="img/avatar-3.png" alt="" width="100" height="100" loading="lazy" />
+                <picture><source media="(max-width: 767.98px)" srcset="img/avatar-1.webp" type="image/webp"><source srcset="img/avatar-3.webp" type="image/webp"><img class="pp-expert-card__avatar" src="img/avatar-3.png" alt="" width="100" height="100" loading="lazy" /></picture>
                 <div class="pp-expert-card__meta">
-                  <h3>Svetlana</h3>
+                  <h3><span class="pp-expert-card__name-desktop">Svetlana</span><span class="pp-expert-card__name-mobile">Veronika</span></h3>
                   <div class="pp-expert-card__rating" aria-label="Rating 4.9"><strong>4.9</strong><svg class="pp-expert-card__rating-star" width="20" height="19" viewBox="0 0 20 19" aria-hidden="true"><use href="img/sprite.svg#icon-star"></use></svg><small>tarot reader</small></div>
                   <div class="pp-expert-card__online">online</div>
                 </div>
@@ -140,9 +144,9 @@
 
             <article class="pp-expert-card" data-heritage-component="expert-card.v1" data-heritage-source="psychic-reading-new.html:.experts-section__card" data-heritage-variant="phone-psychic.expert-card" data-heritage-source-breakpoints="1200/992/768/576/320">
               <div class="pp-expert-card__person">
-                <img class="pp-expert-card__avatar" src="img/avatar-4.png" alt="" width="100" height="100" loading="lazy" />
+                <picture><source media="(max-width: 767.98px)" srcset="img/avatar-1.webp" type="image/webp"><source srcset="img/avatar-4.webp" type="image/webp"><img class="pp-expert-card__avatar" src="img/avatar-4.png" alt="" width="100" height="100" loading="lazy" /></picture>
                 <div class="pp-expert-card__meta">
-                  <h3>Izolda</h3>
+                  <h3><span class="pp-expert-card__name-desktop">Izolda</span><span class="pp-expert-card__name-mobile">Veronika</span></h3>
                   <div class="pp-expert-card__rating" aria-label="Rating 4.8"><strong>4.8</strong><svg class="pp-expert-card__rating-star" width="20" height="19" viewBox="0 0 20 19" aria-hidden="true"><use href="img/sprite.svg#icon-star"></use></svg><small>tarot reader</small></div>
                   <div class="pp-expert-card__online">online</div>
                 </div>
@@ -159,9 +163,9 @@
 
             <article class="pp-expert-card" data-heritage-component="expert-card.v1" data-heritage-source="psychic-reading-new.html:.experts-section__card" data-heritage-variant="phone-psychic.expert-card" data-heritage-source-breakpoints="1200/992/768/576/320">
               <div class="pp-expert-card__person">
-                <img class="pp-expert-card__avatar" src="img/avatar-5.png" alt="" width="100" height="100" loading="lazy" />
+                <picture><source media="(max-width: 767.98px)" srcset="img/avatar-1.webp" type="image/webp"><source srcset="img/avatar-5.webp" type="image/webp"><img class="pp-expert-card__avatar" src="img/avatar-5.png" alt="" width="100" height="100" loading="lazy" /></picture>
                 <div class="pp-expert-card__meta">
-                  <h3>Galina</h3>
+                  <h3><span class="pp-expert-card__name-desktop">Galina</span><span class="pp-expert-card__name-mobile">Veronika</span></h3>
                   <div class="pp-expert-card__rating" aria-label="Rating 4.8"><strong>4.8</strong><svg class="pp-expert-card__rating-star" width="20" height="19" viewBox="0 0 20 19" aria-hidden="true"><use href="img/sprite.svg#icon-star"></use></svg><small>tarot reader</small></div>
                   <div class="pp-expert-card__online">online</div>
                 </div>
@@ -178,9 +182,9 @@
 
             <article class="pp-expert-card" data-heritage-component="expert-card.v1" data-heritage-source="psychic-reading-new.html:.experts-section__card" data-heritage-variant="phone-psychic.expert-card" data-heritage-source-breakpoints="1200/992/768/576/320">
               <div class="pp-expert-card__person">
-                <img class="pp-expert-card__avatar" src="img/avatar-6.png" alt="" width="100" height="100" loading="lazy" />
+                <picture><source media="(max-width: 767.98px)" srcset="img/avatar-1.webp" type="image/webp"><source srcset="img/avatar-6.webp" type="image/webp"><img class="pp-expert-card__avatar" src="img/avatar-6.png" alt="" width="100" height="100" loading="lazy" /></picture>
                 <div class="pp-expert-card__meta">
-                  <h3>Magic Pig</h3>
+                  <h3><span class="pp-expert-card__name-desktop">Magic Pig</span><span class="pp-expert-card__name-mobile">Veronika</span></h3>
                   <div class="pp-expert-card__rating" aria-label="Rating 4.8"><strong>4.8</strong><svg class="pp-expert-card__rating-star" width="20" height="19" viewBox="0 0 20 19" aria-hidden="true"><use href="img/sprite.svg#icon-star"></use></svg><small>tarot reader</small></div>
                   <div class="pp-expert-card__online">online</div>
                 </div>
@@ -201,10 +205,10 @@
         </div>
       </section>
 
-      <section class="pp-reviews">
+      <section class="pp-reviews" data-figma-node="912:12289">
         <div class="pp-shell">
           <h2>Honest Reviews from People</h2>
-          <div class="pp-reviews__rating"><span>4.8 raiting</span><span class="pp-reviews__rating-stars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span></div>
+          <div class="pp-reviews__rating"><span>4.8 rating</span><span class="pp-reviews__rating-stars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span></div>
           <div class="pp-reviews__grid">
             <article class="pp-review-card" data-heritage-component="review-testimonial-card.v1" data-heritage-source="psychic-reading-new.html:.clients-section__review" data-heritage-variant="phone-psychic.pp-review-card" data-source-mode="source_variant">
               <div class="pp-review-card__head"><span class="pp-review-card__avatar">K</span><span class="pp-review-card__name">Kate</span><span class="pp-review-card__stars" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></span></div>
@@ -219,6 +223,10 @@
               <div class="pp-review-card__body"><span class="pp-review-card__quote" aria-hidden="true">”</span><p>The session I had turned out to be very reassuring for me. I was struggling with my confidence, and it helped quite a bit.</p></div>
             </article>
           </div>
+          <div class="pp-reviews__nav" aria-label="Review carousel">
+            <button type="button" class="pp-reviews__nav-prev" aria-label="Previous review">←</button>
+            <button type="button" class="pp-reviews__nav-next" aria-label="Next review">→</button>
+          </div>
           <div class="pp-why-phone">
             <h2>Why Choose Neuro’s Psychic Phone Readings?</h2>
             <div class="pp-why-phone__grid">
@@ -231,39 +239,40 @@
         </div>
       </section>
 
-      <section class="pp-reasons pp-scenarios">
+      <section class="pp-reasons pp-scenarios" data-figma-node="912:12314">
         <div class="pp-shell pp-scenarios__row">
           <div class="pp-scenarios__copy">
             <h2>Phone Psychic Readings for All Life Scenarios</h2>
             <ul>
               <li><strong>Love and Relationship Guidance</strong> Neuro's psychics specialize in all aspects of love and relationships. They guide you in finding your soulmate, enhancing your dating skills, and more. With their spiritual guidance, you'll meet your partner in crime for life.</li>
-              <li><strong>Career and Financial Counselling</strong> Encountering obstacles in your career or finances? Our psychic advisors can help you consider new perspectives or possibilities.</li>
+              <li><strong>Career and Financial Counselling</strong> Encountering obstacles in your career or finances? <span class="pp-scenarios__copy-desktop">Our psychic advisors will help you find solutions.</span><span class="pp-scenarios__copy-mobile">Our psychic advisors can help you consider new perspectives or possibilities.</span></li>
               <li><strong>Self-Love Healing</strong> You cannot love someone until you start to love yourself. Self-love influences your mind, relationships, and career. If you're feeling low on these, Neuro's psychic advisors specialize in fostering self-love.</li>
             </ul>
           </div>
           <div class="pp-scenarios__art" aria-hidden="true">
-            <img src="img/phone-scenarios-woman-source.png" alt="" width="560" height="685" />
+            <picture><source srcset="img/phone-scenarios-woman-source.webp" type="image/webp"><img src="img/phone-scenarios-woman-source.png" alt="" width="560" height="685" /></picture>
           </div>
         </div>
       </section>
 
-      <section class="pp-affordable">
+      <section class="pp-affordable" data-figma-node="912:12336">
         <div class="pp-shell pp-affordable__row">
           <div class="pp-affordable__art" aria-hidden="true">
-            <img src="img/phone-affordable-device.png" alt="" width="512" height="768" />
+            <picture><source srcset="img/phone-tailored-device-figma.webp" type="image/webp"><img src="img/phone-tailored-device-figma.png" alt="" width="1024" height="1536" /></picture>
           </div>
           <div class="pp-affordable__card">
-            <h2>Affordable Conversation with Phone Psychics</h2>
+            <h2><span class="pp-affordable__title-desktop">Affordable Conversation with Phone Psychics</span><span class="pp-affordable__title-mobile">Psychic Readings Tailored Specifically for You</span></h2>
             <ul>
-              <li>Shorter sessions keep the format efficient and focused.</li>
-              <li>You can move quickly from question to answer without extra ceremony.</li>
-              <li>The page is built to make selection, trust, and action feel immediate.</li>
+              <li>Start a conversation immediately—no need for prior arrangements.</li>
+              <li>Save money by opting for phone readings instead of in-person consultations.</li>
+              <li>Find your psychic from Nebula&apos;s extensive talent pool.</li>
+              <li>Use Neuro&apos;s offers, including free credits and our welcoming bonus.</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section class="pp-faq">
+      <section class="pp-faq" data-figma-node="912:15246">
         <div class="pp-shell">
           <h2>Frequently Asked Questions</h2>
           <div class="pp-faq__list faq-section__list" id="phoneFaq" data-accordion="single" data-heritage-component="faq-accordion.v1" data-heritage-source="psychic-reading-new.html:.faq-section__list">
@@ -327,26 +336,26 @@
         </div>
       </section>
 
-      <section class="pp-seo">
+      <section class="pp-seo" data-figma-node="912:12356">
         <div class="pp-shell">
-          <div class="pp-seo__item pp-seo__item--open"><button type="button"><span>Phone Psychics: Have a Phone Psychic Reading at Any Time</span><span>⌄</span></button><div class="pp-seo__content"><p>In search of a psychic phone reading but don’t want to empty your pockets? A virtual talk with one of Nebula's star psychic advisors might be your ticket! This experience is not only budget-friendly but also super convenient.</p><p>Why spend much on an in-person session without knowing whether you vibe with the psychic advisor? That's often the scenario with face-to-face consultations but not with phone psychics. With Nebula, opt for online readings or phone readings, which will help you save time and money.</p></div></div>
-          <div class="pp-seo__item pp-seo__item--open"><button type="button"><span>What is a Psychic Phone Reading?</span><span>⌄</span></button><div class="pp-seo__content"><p>Before, people used to consult seers and oracles for advice and guidance. Many years ago, the Oracle of Delphi was known for her wisdom in Greece. In medieval Europe, people used astrology, palmistry, and scrying to gain insights into the future.</p><p>Today, you don't need to bring the shaman a chicken to enjoy the best psychic readings. Just take your telephone, find psychic services online, and call your advisor.</p></div></div>
-          <div class="pp-seo__item pp-seo__item--open"><button type="button"><span>Convenience of Psychic Phone Reading and Online Psychic Readings</span><span>⌄</span></button><div class="pp-seo__content"><p>Nowadays, psychic services have also taken a leap from traditional readings to more convenient phone readings, online consultations, and even a mobile app.</p><p>The ease and comfort of accessing psychic guidance at any time, from anywhere in the world, without prior arrangements, have changed the landscape of spiritual advice.</p></div></div>
-          <div class="pp-seo__item pp-seo__item--open"><button type="button"><span>How Do Psychic Readings by Phone Work?</span><span>⌄</span></button><div class="pp-seo__content"><p>During a psychic reading, the practitioner may use a variety of tools. They need it to access the spiritual energy and provide guidance.</p></div></div>
-          <div class="pp-seo__item pp-seo__item--open"><button type="button"><span>Affordability of Psychic Phone Readings</span><span>⌄</span></button><div class="pp-seo__content"><p>The flexibility in the price range of our psychic phone readings accommodates every budget. Everyone can call for our spiritual guidance. Nebula has made it its mission to ensure that quality psychic phone readings are accessible and affordable.</p></div></div>
+          <div class="pp-seo__item pp-seo__item--open"><button type="button" aria-expanded="true"><span>Phone Psychics: Have a Phone Psychic Reading at Any Time</span><span aria-hidden="true">×</span></button><div class="pp-seo__content"><p>In search of a psychic phone reading but don’t want to empty your pockets? A virtual talk with one of Nebula's star psychic advisors might be your ticket! This experience is not only budget-friendly but also super convenient.</p><p>Why spend much on an in-person session without knowing whether you vibe with the psychic advisor? That's often the scenario with face-to-face consultations but not with phone psychics. With Nebula, opt for online readings or phone readings, which will help you save time and money.</p></div></div>
+          <div class="pp-seo__item"><button type="button" aria-expanded="false"><span>What is a Psychic Phone Reading?</span><span aria-hidden="true">⌄</span></button><div class="pp-seo__content"><p>Before, people used to consult seers and oracles for advice and guidance. Many years ago, the Oracle of Delphi was known for her wisdom in Greece. In medieval Europe, people used astrology, palmistry, and scrying to gain insights into the future.</p><p>Today, you don't need to bring the shaman a chicken to enjoy the best psychic readings. Just take your telephone, find psychic services online, and call your advisor.</p></div></div>
+          <div class="pp-seo__item"><button type="button" aria-expanded="false"><span>Convenience of Psychic Phone Reading and Online Psychic Readings</span><span aria-hidden="true">⌄</span></button><div class="pp-seo__content"><p>Nowadays, psychic services have also taken a leap from traditional readings to more convenient phone readings, online consultations, and even a mobile app.</p><p>The ease and comfort of accessing psychic guidance at any time, from anywhere in the world, without prior arrangements, have changed the landscape of spiritual advice.</p></div></div>
+          <div class="pp-seo__item"><button type="button" aria-expanded="false"><span>How Do Psychic Readings by Phone Work?</span><span aria-hidden="true">⌄</span></button><div class="pp-seo__content"><p>During a psychic reading, the practitioner may use a variety of tools. They need it to access the spiritual energy and provide guidance. Some popular tools include:</p></div></div>
+          <div class="pp-seo__item"><button type="button" aria-expanded="false"><span>Affordability of Psychic Phone Readings</span><span aria-hidden="true">⌄</span></button><div class="pp-seo__content"><p>The flexibility in the price range of our psychic phone readings accommodates every budget. Everyone can call for our spiritual guidance. Nebula has made it its mission to ensure that quality psychic phone readings are accessible and affordable.</p></div></div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer bg-light-gray">
+    <footer class="site-footer bg-light-gray" data-figma-node="912:12394">
       <div class="container">
         <div class="site-footer__inner">
           <div class="site-footer__inner-top">
             <div class="site-footer__col-left">
-              <a class="site-footer__logo" href="home.html"><img src="img/logo.png" alt="logo neuro" width="142" height="30"></a>
+              <a class="site-footer__logo" href="home.html"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo neuro" width="142" height="30"></picture></a>
               <div class="site-footer__appstores-links">
-                <a class="site-footer__appstore-link" href="signup-step-1.html"><img src="img/google_play.png" alt="Google Play" width="101" height="30"></a>
-                <a class="site-footer__appstore-link" href="signup-step-1.html"><img src="img/appstore.png" alt="Apple Store" width="101" height="30"></a>
+                <a class="site-footer__appstore-link" href="signup-step-1.html"><picture><source srcset="img/google_play.webp" type="image/webp"><img src="img/google_play.png" alt="Google Play" width="101" height="30"></picture></a>
+                <a class="site-footer__appstore-link" href="signup-step-1.html"><picture><source srcset="img/appstore.webp" type="image/webp"><img src="img/appstore.png" alt="Apple Store" width="101" height="30"></picture></a>
               </div>
             </div>
             <div class="site-footer__col-right">
@@ -358,8 +367,8 @@
             </div>
           </div>
           <div class="site-footer__inner-bottom">
-            <div class="pay-icon-wrapper"><img src="img/pay_icons.png" width="270" height="20" alt=""></div>
-            <div class="site-footer__copyright">2026. Spiritual Neuro Limited. © All rights reserved.</div>
+            <div class="pay-icon-wrapper"><picture><source srcset="img/pay_icons.webp" type="image/webp"><img src="img/pay_icons.png" width="270" height="20" alt=""></picture></div>
+            <div class="site-footer__copyright">2025. Spiritual Neuro Limited. © All rights reserved.</div>
           </div>
         </div>
       </div>
@@ -368,16 +377,6 @@
   <script src="jquery.js"></script>
   <script src="bootstrap.js"></script>
   <script src="home.js"></script>
-  <script>
-    document.querySelectorAll('.pp-seo__item button').forEach((button) => {
-      button.addEventListener('click', () => {
-        const item = button.closest('.pp-seo__item');
-        const wasOpen = item.classList.contains('pp-seo__item--open');
-        item.classList.toggle('pp-seo__item--open', !wasOpen);
-        const icon = item.querySelector('button span:last-child');
-        if (icon) icon.textContent = wasOpen ? '+' : '⌄';
-      });
-    });
-  </script>
+  <script src="phone-psychic.js"></script>
 </body>
 </html>

@@ -52,7 +52,7 @@ body{
 
 .login-frame{
   position:relative;
-  width:1280px;
+  width:min(1280px,100%);
   height:855px;
   overflow:hidden;
 }
@@ -428,7 +428,7 @@ body{
   .login-mobile-toggle{
     display:inline-flex;
     position:absolute;
-    right:80px;
+    right:16px;
     top:50%;
     transform:translateY(-50%);
     z-index:6;

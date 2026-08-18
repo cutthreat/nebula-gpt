@@ -1,4 +1,4 @@
-:root{
+.auth-login-page{
   --login-purple:#673eda;
   --login-purple-2:#7653d9;
   --login-accent:#7555de;
@@ -6,15 +6,20 @@
   --login-bg-2:#101016;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
+.auth-login-page,
+.auth-login-page *,
+.auth-login-page *::before,
+.auth-login-page *::after{box-sizing:border-box}
+.auth-login-page{
+  min-height:100%;
   margin:0;
   font-family:"Manrope",system-ui,-apple-system,Segoe UI,sans-serif;
   background:#0b081b;
   color:#fff;
   overflow:hidden;
 }
+
+.auth-login-page picture{display:contents}
 
 .login-stage{
   position:relative;
@@ -427,7 +432,7 @@ body{
     height:855px;
   }
   .login-frame-bg{
-    content:url("img/auth-login-960-bg-root-figma.png");
+    content:image-set(url("img/auth-login-960-bg-root-figma.webp") type("image/webp"), url("img/auth-login-960-bg-root-figma.png") type("image/png"));
     width:960px;
     height:855px;
   }
@@ -479,7 +484,7 @@ body{
     height:855px;
   }
   .login-hero img{
-    content:url("img/auth-login-960-bg-silhouette-figma.png");
+    content:image-set(url("img/auth-login-960-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-login-960-bg-silhouette-figma.png") type("image/png"));
   }
   .login-card-wrap{
     left:230px;
@@ -492,7 +497,7 @@ body{
     border-radius:0;
   }
   .login-card-bg{
-    content:url("img/auth-login-960-panel-group-figma.png");
+    content:image-set(url("img/auth-login-960-panel-group-figma.webp") type("image/webp"), url("img/auth-login-960-panel-group-figma.png") type("image/png"));
   }
   .login-panel{
     left:103px;
@@ -506,7 +511,7 @@ body{
 }
 
 @media (max-width: 640px){
-  body{overflow:auto}
+  .auth-login-page{overflow:auto}
   .login-stage{
     min-height:100vh;
     min-height:100dvh;
@@ -616,7 +621,7 @@ body{
 }
 
 @media (width: 640px){
-  body{overflow:hidden}
+  .auth-login-page{overflow:hidden}
   .login-stage{
     min-height:855px;
     height:855px;
@@ -628,7 +633,7 @@ body{
     min-height:0;
   }
   .login-frame-bg{
-    content:url("img/auth-login-640-bg-root-figma.png");
+    content:image-set(url("img/auth-login-640-bg-root-figma.webp") type("image/webp"), url("img/auth-login-640-bg-root-figma.png") type("image/png"));
     left:0;
     top:0;
     width:640px;
@@ -695,7 +700,7 @@ body{
     opacity:1;
   }
   .login-hero img{
-    content:url("img/auth-login-640-bg-silhouette-figma.png");
+    content:image-set(url("img/auth-login-640-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-login-640-bg-silhouette-figma.png") type("image/png"));
   }
   .login-card-wrap{
     position:absolute;
@@ -714,7 +719,7 @@ body{
     border-radius:0;
   }
   .login-card-bg{
-    content:url("img/auth-login-640-panel-group-figma.png");
+    content:image-set(url("img/auth-login-640-panel-group-figma.webp") type("image/webp"), url("img/auth-login-640-panel-group-figma.png") type("image/png"));
   }
     .login-panel{
       position:absolute;
@@ -765,7 +770,7 @@ body{
 }
 
 @media (width: 480px){
-  body{overflow:hidden}
+  .auth-login-page{overflow:hidden}
   .login-stage{
     min-height:700px;
     height:700px;
@@ -777,7 +782,7 @@ body{
     min-height:0;
   }
   .login-frame-bg{
-    content:url("img/auth-login-480-bg-root-figma.png");
+    content:image-set(url("img/auth-login-480-bg-root-figma.webp") type("image/webp"), url("img/auth-login-480-bg-root-figma.png") type("image/png"));
     left:-80px;
     top:-78px;
     width:640px;
@@ -799,7 +804,7 @@ body{
     transform:none;
   }
   .login-brand img{
-    content:url("img/auth-login-320-logo-node-figma.png");
+    content:image-set(url("img/auth-login-320-logo-node-figma.webp") type("image/webp"), url("img/auth-login-320-logo-node-figma.png") type("image/png"));
     width:99px;
     height:21px;
   }
@@ -840,7 +845,7 @@ body{
     opacity:1;
   }
   .login-hero img{
-    content:url("img/auth-login-480-bg-silhouette-figma.png");
+    content:image-set(url("img/auth-login-480-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-login-480-bg-silhouette-figma.png") type("image/png"));
   }
   .login-card-wrap{
     position:absolute;
@@ -859,7 +864,7 @@ body{
     border-radius:0;
   }
   .login-card-bg{
-    content:url("img/auth-login-480-panel-group-figma.png");
+    content:image-set(url("img/auth-login-480-panel-group-figma.webp") type("image/webp"), url("img/auth-login-480-panel-group-figma.png") type("image/png"));
   }
   .login-panel{
     position:absolute;
@@ -910,7 +915,7 @@ body{
 }
 
 @media (width: 320px){
-  body{overflow:hidden}
+  .auth-login-page{overflow:hidden}
   .login-stage{
     min-height:700px;
     height:700px;
@@ -922,7 +927,7 @@ body{
     min-height:0;
   }
   .login-frame-bg{
-    content:url("img/auth-login-320-bg-root-figma.png");
+    content:image-set(url("img/auth-login-320-bg-root-figma.webp") type("image/webp"), url("img/auth-login-320-bg-root-figma.png") type("image/png"));
     left:0;
     top:-78px;
     width:320px;
@@ -983,7 +988,7 @@ body{
     opacity:1;
   }
   .login-hero img{
-    content:url("img/auth-login-320-bg-silhouette-figma.png");
+    content:image-set(url("img/auth-login-320-bg-silhouette-figma.webp") type("image/webp"), url("img/auth-login-320-bg-silhouette-figma.png") type("image/png"));
   }
   .login-card-wrap{
     position:absolute;
@@ -1002,7 +1007,7 @@ body{
     border-radius:0;
   }
   .login-card-bg{
-    content:url("img/auth-login-320-panel-group-figma.png");
+    content:image-set(url("img/auth-login-320-panel-group-figma.webp") type("image/webp"), url("img/auth-login-320-panel-group-figma.png") type("image/png"));
   }
   .login-panel{
     position:absolute;

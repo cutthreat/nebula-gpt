@@ -21,482 +21,25 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23673EDA' d='M8 0l1.9 4.3L14 6.2l-4.1 1.2L8 11.6 6.1 7.4 2 6.2l4.1-1.9L8 0z'/%3E%3C/svg%3E">
   <link rel="apple-touch-icon" href="img/logo.png" />
   <link rel="stylesheet" href="bootstrap.css" />
-  <link rel="stylesheet" href="home.css" />
-  <link rel="stylesheet" href="psychic-reading-new.css" />
-  <style>
-    .tcn-theme{background:linear-gradient(180deg,#f5f1ff 0%,#ebe2ff 58%,#faf8ff 100%)}
-    .prn-body .site-header__inner{gap:18px}
-    .prn-body .site-header__nav .navbar-nav{flex-wrap:nowrap;gap:18px}
-    .prn-body .site-header__link,.prn-body .site-header__btn{white-space:nowrap}
-    .prn-body .site-header__link{font-size:15px}
-    .prn-body .site-header__btn{min-height:44px;padding:0 18px}
-    .tcn-hero{overflow:hidden}
-    .tcn-hero .prn-hero-section__row{min-height:560px;padding-top:32px;padding-bottom:18px}
-    .tcn-badge,.tcn-mini-badge{display:inline-flex;margin-bottom:18px;padding:10px 16px;border-radius:999px;background:#fff;color:#6d45ea;border:1px solid rgba(109,69,234,.12);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-    .tcn-mini-badge{margin-bottom:14px}
-    .tcn-hero .prn-hero-section__content{max-width:520px}
-    .tcn-hero .prn-hero-section__title{max-width:520px;font-size:56px;line-height:1.04;letter-spacing:-.04em;overflow-wrap:break-word}
-    .tcn-hero .prn-hero-section__text{max-width:500px;font-size:15px;line-height:1.65}
-    .tcn-hero-meta{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 14px;color:#6d45ea;font-size:14px;font-weight:700}
-    .tcn-hero-links{display:flex;flex-wrap:wrap;gap:10px 16px;margin-top:16px}
-    .tcn-hero-links a{color:#7a5ce8;font-size:13px;font-weight:700;text-decoration:none}
-    .tcn-bull-art{position:relative;left:0;display:flex;justify-content:center;align-items:center;overflow:hidden;max-width:100%}
-    .prn-page .tcn-hero .prn-hero-section__media.tcn-bull-art{right:0 !important;max-width:100% !important;overflow:hidden !important}
-    @media (min-width:1200px){.prn-page .tcn-hero .prn-hero-section__media.tcn-bull-art{width:calc(100% - 551px) !important}}
-    @media (min-width:992px) and (max-width:1199.98px){.prn-page .tcn-hero .prn-hero-section__media.tcn-bull-art{width:calc(100% - 451px) !important}}
-    @media (min-width:768px) and (max-width:991.98px){.prn-page .tcn-hero .prn-hero-section__media.tcn-bull-art{width:calc(100% - 345px) !important}}
-    .tcn-bull-art img{width:min(calc(100% - 16px),520px);height:auto;filter:drop-shadow(0 24px 38px rgba(108,74,229,.16))}
-    .prn-page .tcn-bull-art img{width:min(calc(100% - 16px),520px) !important;min-width:0 !important;max-width:calc(100% - 16px) !important;height:auto !important;margin:0 !important;object-fit:contain !important;flex:0 1 auto !important}
-    .tcn-section-lead{max-width:840px;margin:0 0 22px;color:#3d3846;font-size:18px;line-height:1.72}
-    .tcn-card,.tcn-sign-card,.tcn-chart,.tcn-faq details,.tcn-faq .faq-section__item,.tcn-panel,.tcn-love-card,.tcn-copy-card{background:#fff;border-radius:24px;box-shadow:0 16px 36px rgba(86,57,175,.08);border:1px solid rgba(109,69,234,.08)}
-    .tcn-card,.tcn-sign-card,.tcn-panel,.tcn-love-card,.tcn-copy-card{padding:24px}
-    .tcn-card h3,.tcn-sign-card h3,.tcn-love-card h3,.tcn-copy-card h3,.tcn-faq summary,.tcn-faq .faq-section__title{margin:0 0 10px}
-    .tcn-card p,.tcn-sign-card p,.tcn-love-card p,.tcn-copy-card p,.tcn-faq p,.tcn-faq .faq-section__body{margin:0;color:#3d3846;font-size:18px;line-height:1.7}
-    .tcn-intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:18px;align-items:start}
-    .tcn-point-list{display:grid;gap:14px}
-    .tcn-point{padding:20px;border-radius:22px;background:linear-gradient(180deg,#faf7ff 0%,#fff 100%);border:1px solid rgba(109,69,234,.08)}
-    .tcn-point strong{display:block;margin-bottom:8px;color:#2c2640;font-size:18px}
-    .tcn-sign-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-    .tcn-sign-card{position:relative;overflow:hidden;display:grid;gap:8px;text-align:center;min-height:168px;padding:18px 16px 16px}
-    .tcn-sign-card::before{content:"";position:absolute;inset:0 0 auto 0;height:70px;background:linear-gradient(180deg,rgba(255,255,255,.34) 0%,rgba(255,255,255,0) 100%);pointer-events:none}
-    .tcn-sign-icon{position:relative;display:grid;place-items:center;width:76px;height:76px;margin:0 auto;border-radius:24px;background:linear-gradient(180deg,#f3ebff 0%,#e8deff 100%);color:#6d45ea;font-size:42px;font-weight:800;box-shadow:8px 0 0 rgba(255,203,69,.95)}
-    .tcn-sign-icon::before,.tcn-sign-icon::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
-    .tcn-sign-icon::before{width:10px;height:10px;background:#ffcb45;top:10px;left:10px}
-    .tcn-sign-icon::after{width:8px;height:8px;background:#b89dff;right:10px;bottom:12px}
-    .tcn-sign-card h3{font-size:26px;line-height:1.04;letter-spacing:-.02em;color:#6d45ea;text-transform:uppercase}
-    .tcn-sign-card p{font-size:13px;line-height:1.45;color:#6a6478}
-    .tcn-chart{padding:24px;display:grid;gap:18px}
-    .tcn-chart-table{width:100%;border-collapse:collapse}
-    .tcn-chart-table th,.tcn-chart-table td{padding:8px 10px;border-top:1px solid rgba(109,69,234,.08);font-size:13px}
-    .tcn-chart-table thead th{border-top:0;color:#6d45ea;font-weight:800}
-    .tcn-chart-table th{text-align:left}
-    .tcn-chart-cellset{display:flex;justify-content:flex-end;gap:8px}
-    .tcn-chart-mark{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:999px;background:#f4edff;font-size:13px;line-height:1}
-    .tcn-chart-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .tcn-score-card{padding:22px;border-radius:22px;background:linear-gradient(180deg,#faf7ff 0%,#fff 100%);border:1px solid rgba(109,69,234,.08)}
-    .tcn-score-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}
-    .tcn-score-top strong{display:block;font-size:22px;color:#2c2640}
-    .tcn-score-chip{display:inline-flex;align-items:center;justify-content:center;min-width:68px;min-height:40px;padding:0 16px;border-radius:999px;background:#f2ecff;color:#6d45ea;font-size:18px;font-weight:800}
-    .tcn-meter{height:10px;border-radius:999px;background:#efe9ff;overflow:hidden}
-    .tcn-meter span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#6d45ea 0%,#a07cff 100%)}
-    .tcn-chart-note{color:#6a6478;font-size:15px;line-height:1.6}
-    .tcn-best-grid,.tcn-love-grid,.tcn-copy-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .tcn-watch{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.9fr);gap:18px;align-items:stretch}
-    .tcn-watch-copy{padding:28px;border-radius:24px;background:linear-gradient(180deg,#6d45ea 0%,#8d66ff 100%);color:#fff}
-    .tcn-watch-copy p{margin:0;color:rgba(255,255,255,.88);font-size:17px;line-height:1.7}
-    .tcn-watch-points{display:grid;gap:12px;margin-top:18px}
-    .tcn-watch-points div{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16)}
-    .tcn-watch-points strong{display:block;margin-bottom:4px}
-    .tcn-watch-art{display:grid;place-items:center;padding:24px;border-radius:24px;background:linear-gradient(180deg,#f6f1ff 0%,#ece3ff 100%);border:1px solid rgba(109,69,234,.08)}
-    .tcn-watch-art img{width:min(100%,320px)}
-    .tcn-faq{display:grid;gap:12px}
-    .tcn-faq details{padding:0;overflow:hidden}
-    .tcn-faq .faq-section__item{padding:0;overflow:hidden}
-    .tcn-faq summary{list-style:none;cursor:pointer;padding:22px 24px;font-size:21px;font-weight:700}
-    .tcn-faq .faq-section__toggle{list-style:none;cursor:pointer;padding:22px 78px 22px 24px;font-size:21px;font-weight:700}
-    .tcn-faq summary::-webkit-details-marker{display:none}
-    .tcn-faq__body{padding:0 24px 24px}
-    .tcn-faq .faq-section__panel{padding:0 24px 24px}
-    .tcn-faq .faq-section__body{max-width:none;padding:0;display:block;overflow:visible;-webkit-line-clamp:unset}
-    .tcn-cta{padding:32px;border-radius:28px;background:linear-gradient(180deg,#faf7ff 0%,#efe6ff 100%);border:1px solid rgba(109,69,234,.08)}
-    .tcn-cta__row{display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .tcn-cta__copy{max-width:720px}
-    .tcn-cta__copy h2{margin:0 0 12px;color:#251f35;font-size:42px;line-height:1.12}
-    .tcn-cta__copy p{margin:0;color:#4d475a;font-size:18px;line-height:1.7}
-    .tcn-cta__button{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 28px;border-radius:999px;background:#6d45ea;color:#fff;text-decoration:none;font-weight:700;box-shadow:0 18px 36px rgba(109,69,234,.22)}
-    .tcn-copy-grid{margin-top:18px}
-    .tcn-conclusion{display:grid;grid-template-columns:minmax(320px,.9fr) minmax(0,1.1fr);gap:18px;align-items:center}
-    .tcn-conclusion-media{display:grid;place-items:center;padding:24px;border-radius:24px;background:#f6f1ff;border:1px solid rgba(109,69,234,.08)}
-    .tcn-conclusion-media img{width:min(100%,360px)}
-    .tcn-sex-symbol{width:min(100%,360px);height:auto}
-    .tcn-conclusion-copy h2{margin:0 0 14px;color:#251f35;font-size:42px;line-height:1.12}
-    .tcn-conclusion-copy p{margin:0 0 14px;color:#4d475a;font-size:18px;line-height:1.7}
-    .tcn-conclusion-copy h3{margin:0 0 10px;color:#251f35;font-size:32px;line-height:1.15;letter-spacing:-.02em}
-    .tcn-conclusion-copy p + h3{margin-top:22px}
-    .tcn-video-stage{position:relative;overflow:hidden;padding:18px;border-radius:28px;background:linear-gradient(180deg,#2b1f60 0%,#432c8e 100%);box-shadow:0 18px 40px rgba(86,57,175,.18)}
-    .tcn-video-frame{position:relative;border-radius:22px;overflow:hidden}
-    .tcn-video-frame img{display:block;width:100%;height:auto}
-    .tcn-video-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:82px;height:82px;border-radius:50%;background:rgba(255,255,255,.18);backdrop-filter:blur(10px);font-size:28px;font-weight:800;color:#fff}
-    .tcn-video-meta{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:16px;color:#fff}
-    .tcn-video-meta strong{font-size:24px;line-height:1.15}
-    .tcn-video-meta span{max-width:520px;color:rgba(255,255,255,.76);font-size:15px;line-height:1.6;text-align:right}
-    .tcn-pair-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-    .tcn-pair-card{padding:24px;border-radius:24px;background:linear-gradient(180deg,#fff 0%,#fbf8ff 100%);border:1px solid rgba(109,69,234,.08);box-shadow:0 16px 36px rgba(86,57,175,.08)}
-    .tcn-pair-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}
-    .tcn-pair-top h3{margin:0;color:#2b243d;font-size:28px;line-height:1.12;letter-spacing:-.02em}
-    .tcn-pair-score{display:inline-flex;align-items:center;justify-content:center;min-width:66px;min-height:40px;padding:0 14px;border-radius:999px;background:#f1eaff;color:#6d45ea;font-size:18px;font-weight:800;white-space:nowrap}
-    .tcn-pair-card p{margin:0;color:#4d475a;font-size:16px;line-height:1.7}
-    .tcn-essay{max-width:920px}
-    .tcn-essay p{margin:0 0 18px;color:#4d475a;font-size:17px;line-height:1.72}
-    .tcn-essay p:last-child{margin-bottom:0}
-    .tcn-bullet-list{display:grid;gap:10px;margin:20px 0 0;padding:0;list-style:none}
-    .tcn-bullet-list li{position:relative;padding-left:20px;color:#4d475a;font-size:17px;line-height:1.72}
-    .tcn-bullet-list li::before{content:"•";position:absolute;left:0;top:0;color:#6d45ea;font-weight:800}
-    .tcn-stage--marriage .tcn-essay{padding-bottom:8px}
-    .tcn-stage--sex .tcn-conclusion{margin-top:6px}
-    .tcn-stage--friendship .tcn-essay{padding-bottom:14px}
-    .tcn-stage--faq .tcn-faq{margin-top:8px}
-    .tcn-pair-list{grid-template-columns:1fr;gap:24px}
-    .tcn-pair-card{padding:30px 32px;border-radius:0;background:transparent;border:0;border-top:1px solid rgba(109,69,234,.12);box-shadow:none}
-    .tcn-pair-card:last-child{border-bottom:1px solid rgba(109,69,234,.12)}
-    .tcn-pair-top{align-items:flex-start;margin-bottom:12px}
-    .tcn-pair-top h3{font-size:30px;line-height:1.18;letter-spacing:-.025em}
-    .tcn-pair-card p{max-width:960px;font-size:18px;line-height:1.82}
-    .tcn-love-grid,.tcn-copy-grid{grid-template-columns:1fr;gap:22px}
-    .tcn-love-card,.tcn-copy-card{padding:30px 32px;border-radius:0;background:transparent;border:0;border-top:1px solid rgba(109,69,234,.12);box-shadow:none}
-    .tcn-love-card h3,.tcn-copy-card h3{font-size:28px;line-height:1.2;letter-spacing:-.02em}
-    .tcn-love-card p,.tcn-copy-card p{max-width:980px;font-size:18px;line-height:1.82}
-    .tcn-essay{max-width:1060px;padding:18px 0 34px}
-    .tcn-essay p{max-width:1020px;font-size:18px;line-height:1.86}
-    .tcn-bullet-list{max-width:1020px;gap:16px}
-    .tcn-bullet-list li{font-size:18px;line-height:1.82}
-    .tcn-faq summary{position:relative;padding-right:78px}
-    .tcn-faq summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#fff;color:#1d172c;font-size:22px;font-weight:800}
-    .tcn-faq details[open] summary::after{content:"×"}
-    .tcn-faq .faq-section__toggle{position:relative;background:transparent;border:0;width:100%;text-align:left}
-    .tcn-faq .faq-section__icon{position:absolute;right:22px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#fff;color:#1d172c;font-size:22px;font-weight:800}
-    @media (min-width:1200px){
-      .prn-main > section:nth-of-type(2){min-height:1100px}
-      .prn-main > section:nth-of-type(3){min-height:318px}
-      .prn-main > section:nth-of-type(4){min-height:1000px}
-      .prn-main > section:nth-of-type(5){min-height:1500px}
-      .prn-main > section:nth-of-type(6){min-height:900px}
-      .prn-main > section:nth-of-type(7){min-height:3500px}
-      .prn-main > section:nth-of-type(8){min-height:318px}
-      .prn-main > section:nth-of-type(9){min-height:2950px}
-      .prn-main > section:nth-of-type(10){min-height:1430px}
-      .prn-main > section:nth-of-type(11){min-height:1320px}
-      .prn-main > section:nth-of-type(12){min-height:860px}
-      .prn-main > section:nth-of-type(13){min-height:930px}
-      .prn-body .site-footer{min-height:420px}
-    }
-    @media (min-width:992px) and (max-width:1199.98px){
-      .prn-main > section:nth-of-type(2){min-height:1270px}
-      .prn-main > section:nth-of-type(3){min-height:318px}
-      .prn-main > section:nth-of-type(4){min-height:1040px}
-      .prn-main > section:nth-of-type(5){min-height:1640px}
-      .prn-main > section:nth-of-type(6){min-height:900px}
-      .prn-main > section:nth-of-type(7){min-height:3500px}
-      .prn-main > section:nth-of-type(8){min-height:318px}
-      .prn-main > section:nth-of-type(9){min-height:3040px}
-      .prn-main > section:nth-of-type(10){min-height:1330px}
-      .prn-main > section:nth-of-type(11){min-height:1320px}
-      .prn-main > section:nth-of-type(12){min-height:860px}
-      .prn-main > section:nth-of-type(13){min-height:920px}
-      .prn-body .site-footer{min-height:570px}
-    }
-    @media (min-width:992px){
-      .prn-main > section:nth-of-type(n+6){display:flex;align-items:flex-start}
-      .prn-main > section:nth-of-type(n+6) > .container{width:100%}
-    }
-    @media (min-width:768px) and (max-width:991.98px){
-      .prn-main > section:nth-of-type(2){min-height:1073px}
-      .prn-main > section:nth-of-type(3){min-height:300px}
-      .prn-main > section:nth-of-type(4){min-height:1320px}
-      .prn-main > section:nth-of-type(5){min-height:1310px}
-      .prn-main > section:nth-of-type(6){min-height:684px}
-      .prn-main > section:nth-of-type(7){min-height:3000px}
-      .prn-main > section:nth-of-type(8){min-height:300px}
-      .prn-main > section:nth-of-type(9){min-height:2960px}
-      .prn-main > section:nth-of-type(10){min-height:1270px}
-      .prn-main > section:nth-of-type(11){min-height:1350px}
-      .prn-main > section:nth-of-type(12){min-height:860px}
-      .prn-main > section:nth-of-type(13){min-height:760px}
-      .prn-body .site-footer{min-height:700px}
-    }
-    @media (min-width:391px) and (max-width:767.98px){
-      .prn-main > section:nth-of-type(2){min-height:920px}
-      .prn-main > section:nth-of-type(3){min-height:300px}
-      .prn-main > section:nth-of-type(4){min-height:1260px}
-      .prn-main > section:nth-of-type(5){min-height:1200px}
-      .prn-main > section:nth-of-type(6){min-height:517px}
-      .prn-main > section:nth-of-type(7){min-height:2750px}
-      .prn-main > section:nth-of-type(8){min-height:300px}
-      .prn-main > section:nth-of-type(9){min-height:3537px}
-      .prn-main > section:nth-of-type(10){min-height:1180px}
-      .prn-main > section:nth-of-type(11){min-height:1220px}
-      .prn-main > section:nth-of-type(12){min-height:590px}
-      .prn-main > section:nth-of-type(13){min-height:740px}
-      .prn-body .site-footer{min-height:680px}
-    }
-    @media (max-width:390.98px){
-      .prn-main > section:nth-of-type(2){min-height:1260px}
-      .prn-main > section:nth-of-type(3){min-height:300px}
-      .prn-main > section:nth-of-type(4){min-height:1550px}
-      .prn-main > section:nth-of-type(5){min-height:1650px}
-      .prn-main > section:nth-of-type(6){min-height:516px}
-      .prn-main > section:nth-of-type(7){min-height:3980px}
-      .prn-main > section:nth-of-type(8){min-height:300px}
-      .prn-main > section:nth-of-type(9){min-height:5500px}
-      .prn-main > section:nth-of-type(10){min-height:1950px}
-      .prn-main > section:nth-of-type(11){min-height:1700px}
-      .prn-main > section:nth-of-type(12){min-height:940px}
-      .prn-main > section:nth-of-type(13){min-height:1050px}
-      .prn-body .site-footer{min-height:1035px}
-    }
-    .prn-body .site-footer{margin-top:34px;padding:0 0 26px;background:transparent}
-    .prn-body .site-footer .container{position:relative}
-    .prn-body .site-footer__inner{padding:28px 30px 18px;border-radius:28px;background:linear-gradient(180deg,#fbf9ff 0%,#f3efff 100%);border:1px solid rgba(109,69,234,.08);box-shadow:0 18px 40px rgba(86,57,175,.08)}
-    .prn-body .site-footer__inner-top{gap:28px}
-    .prn-body .site-footer__col-right{gap:18px}
-    .prn-body .site-footer__title{margin-bottom:10px}
-    .prn-body .site-footer__link{opacity:.88}
-    .prn-body .site-footer__inner-bottom{padding-top:16px;margin-top:14px;border-top:1px solid rgba(109,69,234,.08)}
-    .prn-body .site-footer__copyright{opacity:.72}
-    @media (max-width:1199.98px){
-      .tcn-sign-grid,.tcn-best-grid,.tcn-love-grid,.tcn-copy-grid,.tcn-chart-grid,.tcn-pair-list{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .tcn-intro,.tcn-watch,.tcn-conclusion{grid-template-columns:1fr}
-      .tcn-cta__row{align-items:flex-start;flex-direction:column}
-      .tcn-video-meta{flex-direction:column;align-items:flex-start}
-      .tcn-video-meta span{max-width:none;text-align:left}
-    }
-    @media (max-width:767.98px){
-      .tcn-sign-grid,.tcn-best-grid,.tcn-love-grid,.tcn-copy-grid,.tcn-chart-grid,.tcn-pair-list{grid-template-columns:1fr}
-      .tcn-stage--marriage .tcn-sign-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-      .tcn-stage--marriage .tcn-sign-card{min-height:132px;padding:12px 8px}
-      .tcn-stage--marriage .tcn-sign-icon{width:54px;height:54px;border-radius:18px;font-size:30px;box-shadow:5px 0 0 rgba(255,203,69,.95)}
-      .tcn-stage--marriage .tcn-sign-card h3{font-size:16px}
-      .tcn-stage--marriage .tcn-sign-card p{font-size:10px}
-      .tcn-chart > div{grid-template-columns:1fr !important}
-      .tcn-chart table{margin-top:8px}
-      .tcn-card,.tcn-sign-card,.tcn-panel,.tcn-love-card,.tcn-copy-card,.tcn-chart,.tcn-watch-copy,.tcn-watch-art,.tcn-cta,.tcn-pair-card{padding:18px}
-      .tcn-card p,.tcn-sign-card p,.tcn-love-card p,.tcn-copy-card p,.tcn-section-lead,.tcn-faq p,.tcn-cta__copy p,.tcn-conclusion-copy p,.tcn-pair-card p,.tcn-essay p,.tcn-bullet-list li{font-size:15px}
-      .tcn-faq summary{font-size:18px}
-      .tcn-cta__copy h2,.tcn-conclusion-copy h2{font-size:32px}
-      .tcn-conclusion-copy h3{font-size:24px}
-      .tcn-video-play{width:68px;height:68px;font-size:24px}
-      .tcn-video-meta strong{font-size:21px}
-      .tcn-video-meta span{font-size:14px}
-      .tcn-pair-top{flex-direction:column}
-      .tcn-pair-top h3{font-size:24px}
-      .prn-body .site-footer{margin-top:26px;padding-bottom:18px}
-      .prn-body .site-footer__inner{padding:22px 20px 16px;border-radius:24px}
-    }
-    @media (max-width:390.98px){
-      .tcn-chart{overflow:hidden}
-      .tcn-chart > div{grid-template-columns:1fr !important}
-      .tcn-stage--marriage .tcn-sign-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-      .tcn-stage--marriage .tcn-sign-card{min-height:116px;padding:10px 6px}
-      .tcn-stage--marriage .tcn-sign-icon{width:46px;height:46px;border-radius:15px;font-size:26px}
-      .tcn-chart-table{table-layout:fixed}
-      .tcn-chart-table th,.tcn-chart-table td{padding:8px 6px;font-size:12px}
-      .tcn-chart-cellset{justify-content:flex-end;gap:4px;flex-wrap:wrap}
-      .tcn-chart-mark{width:20px;height:20px;font-size:11px}
-      .tcn-pair-card,.tcn-love-card,.tcn-copy-card{padding-left:0;padding-right:0}
-      .tcn-pair-top h3{font-size:22px}
-      .tcn-faq summary{padding-right:62px;font-size:17px}
-      .tcn-faq summary::after{right:14px;width:38px;height:38px}
-    }
-
-    /* Source-frame remap: live section 2 contains Figma "Zodiac Sign" + first "03-Bunner". */
-    @media (min-width:1200px){
-      .prn-main > section:nth-of-type(1){min-height:855px !important}
-      .prn-main > section:nth-of-type(2){min-height:1418px !important}
-      .prn-main > section:nth-of-type(3){min-height:1000px !important}
-      .prn-main > section:nth-of-type(4){min-height:1500px !important}
-      .prn-main > section:nth-of-type(5){min-height:900px !important}
-      .prn-main > section:nth-of-type(6){min-height:3500px !important}
-      .prn-main > section:nth-of-type(7){min-height:318px !important}
-      .prn-main > section:nth-of-type(8){min-height:2950px !important}
-      .prn-main > section:nth-of-type(9){min-height:1430px !important}
-      .prn-main > section:nth-of-type(10){min-height:1320px !important}
-      .prn-main > section:nth-of-type(11){min-height:860px !important}
-      .prn-main > section:nth-of-type(12){min-height:930px !important}
-    }
-    @media (min-width:992px) and (max-width:1199.98px){
-      .prn-main > section:nth-of-type(1){min-height:800px !important}
-      .prn-main > section:nth-of-type(2){min-height:1588px !important}
-      .prn-main > section:nth-of-type(3){min-height:1040px !important}
-      .prn-main > section:nth-of-type(4){min-height:1640px !important}
-      .prn-main > section:nth-of-type(5){min-height:900px !important}
-      .prn-main > section:nth-of-type(6){min-height:3500px !important}
-      .prn-main > section:nth-of-type(7){min-height:318px !important}
-      .prn-main > section:nth-of-type(8){min-height:3040px !important}
-      .prn-main > section:nth-of-type(9){min-height:1330px !important}
-      .prn-main > section:nth-of-type(10){min-height:1320px !important}
-      .prn-main > section:nth-of-type(11){min-height:860px !important}
-      .prn-main > section:nth-of-type(12){min-height:920px !important}
-    }
-    @media (min-width:768px) and (max-width:991.98px){
-      .prn-main > section:nth-of-type(1){min-height:800px !important}
-      .prn-main > section:nth-of-type(2){min-height:1373px !important}
-      .prn-main > section:nth-of-type(3){min-height:1320px !important}
-      .prn-main > section:nth-of-type(4){min-height:1310px !important}
-      .prn-main > section:nth-of-type(5){min-height:684px !important}
-      .prn-main > section:nth-of-type(6){min-height:3000px !important}
-      .prn-main > section:nth-of-type(7){min-height:300px !important}
-      .prn-main > section:nth-of-type(8){min-height:2960px !important}
-      .prn-main > section:nth-of-type(9){min-height:1270px !important}
-      .prn-main > section:nth-of-type(10){min-height:1350px !important}
-      .prn-main > section:nth-of-type(11){min-height:860px !important}
-      .prn-main > section:nth-of-type(12){min-height:760px !important}
-    }
-    @media (min-width:391px) and (max-width:767.98px){
-      .prn-main > section:nth-of-type(1){min-height:900px !important}
-      .prn-main > section:nth-of-type(2){min-height:1220px !important}
-      .prn-main > section:nth-of-type(3){min-height:1260px !important}
-      .prn-main > section:nth-of-type(4){min-height:1200px !important}
-      .prn-main > section:nth-of-type(5){min-height:517px !important}
-      .prn-main > section:nth-of-type(6){min-height:2750px !important}
-      .prn-main > section:nth-of-type(7){min-height:300px !important}
-      .prn-main > section:nth-of-type(8){min-height:3537px !important}
-      .prn-main > section:nth-of-type(9){min-height:1180px !important}
-      .prn-main > section:nth-of-type(10){min-height:1220px !important}
-      .prn-main > section:nth-of-type(11){min-height:590px !important}
-      .prn-main > section:nth-of-type(12){min-height:740px !important}
-    }
-    @media (max-width:390.98px){
-      .prn-main > section:nth-of-type(1){min-height:1000px !important}
-      .prn-main > section:nth-of-type(2){min-height:1560px !important}
-      .prn-main > section:nth-of-type(3){min-height:1550px !important}
-      .prn-main > section:nth-of-type(4){min-height:1650px !important}
-      .prn-main > section:nth-of-type(5){min-height:516px !important}
-      .prn-main > section:nth-of-type(6){min-height:3980px !important}
-      .prn-main > section:nth-of-type(7){min-height:300px !important}
-      .prn-main > section:nth-of-type(8){min-height:5500px !important}
-      .prn-main > section:nth-of-type(9){min-height:1950px !important}
-      .prn-main > section:nth-of-type(10){min-height:1700px !important}
-      .prn-main > section:nth-of-type(11){min-height:940px !important}
-      .prn-main > section:nth-of-type(12){min-height:1050px !important}
-    }
-
-    .prn-main > section{box-sizing:border-box}
-    @media (min-width:1200px){
-      .prn-main > section:nth-of-type(1){height:855px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(2){height:1418px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(3){height:1000px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(4){height:1500px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(5){height:900px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(6){height:3500px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(7){height:318px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(8){height:2950px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(9){height:1430px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(10){height:1320px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(11){height:860px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(12){height:930px !important;overflow:hidden}
-    }
-    @media (min-width:992px) and (max-width:1199.98px){
-      .prn-main > section:nth-of-type(1){height:800px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(2){height:1588px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(3){height:1040px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(4){height:1640px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(5){height:900px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(6){height:3500px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(7){height:318px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(8){height:3040px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(9){height:1330px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(10){height:1320px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(11){height:860px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(12){height:920px !important;overflow:hidden}
-    }
-    @media (min-width:768px) and (max-width:991.98px){
-      .prn-main > section:nth-of-type(1){height:800px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(2){height:1373px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(3){height:1320px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(4){height:1310px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(5){height:684px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(6){height:3000px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(7){height:300px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(8){height:2960px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(9){height:1270px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(10){height:1350px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(11){height:860px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(12){height:760px !important;overflow:hidden}
-    }
-    @media (min-width:391px) and (max-width:767.98px){
-      .prn-main > section:nth-of-type(1){height:900px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(2){height:1220px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(3){height:1260px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(4){height:1200px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(5){height:517px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(6){height:2750px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(7){height:300px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(8){height:3537px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(9){height:1180px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(10){height:1220px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(11){height:590px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(12){height:740px !important;overflow:hidden}
-    }
-    @media (max-width:390.98px){
-      .prn-main > section:nth-of-type(1){height:1000px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(2){height:1560px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(3){height:1550px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(4){height:1650px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(5){height:516px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(6){height:3980px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(7){height:300px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(8){height:5500px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(9){height:1950px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(10){height:1700px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(11){height:940px !important;overflow:hidden}
-      .prn-main > section:nth-of-type(12){height:1050px !important;overflow:hidden}
-    }
-    .prn-main{padding-top:0!important}
-    .prn-body .site-footer{margin-top:0!important;padding-bottom:0!important}
-    @media (min-width:1200px){
-      .prn-body .site-footer{height:420px!important;min-height:420px!important}
-    }
-    @media (min-width:992px) and (max-width:1199.98px){
-      .prn-main>section:nth-of-type(12){margin-top:-60px!important}
-      .prn-body .site-footer{height:570px!important;min-height:570px!important}
-    }
-    @media (min-width:768px) and (max-width:991.98px){
-      .prn-body .site-footer{height:700px!important;min-height:700px!important}
-      .prn-body .site-footer .container{height:700px!important;max-width:768px!important;padding:0 39px!important}
-      .prn-body .site-footer__inner{height:700px!important;padding:45px 0 64px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;box-sizing:border-box!important}
-      .prn-body .site-footer__inner-top{display:block!important;height:438px!important;padding:0!important;gap:0!important}
-      .prn-body .site-footer__col-left{width:212px!important;height:77px!important;margin:0 auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:20px!important}
-      .prn-body .site-footer__logo,.prn-body .site-footer__logo img{width:129px!important;height:auto!important}
-      .prn-body .site-footer__apps{display:flex!important;gap:10px!important;margin-top:0!important}
-      .prn-body .site-footer__apps img{width:101px!important;height:30px!important}
-      .prn-body .site-footer__col-right{width:450px!important;height:311px!important;margin:50px auto 0!important;display:grid!important;grid-template-columns:150px 140px 100px!important;column-gap:30px!important;row-gap:40px!important;align-items:start!important;justify-content:start!important}
-      .prn-body .site-footer__col-menu{display:block!important;width:auto!important;height:auto!important;min-width:0!important;gap:0!important}
-      .prn-body .site-footer__title{font-size:13px!important;line-height:20px!important;margin:0 0 20px!important}
-      .prn-body .site-footer__col-menu ul{display:grid!important;gap:6px!important;margin:0!important;padding:0!important}
-      .prn-body .site-footer__link{font-size:13px!important;line-height:23px!important}
-      .prn-body .site-footer__inner-bottom{height:103px!important;margin-top:50px!important;padding:50px 0 0!important;border-top:1px solid rgba(109,69,234,.08)!important;display:block!important;text-align:center!important;box-sizing:border-box!important}
-      .prn-body .site-footer__payments{justify-content:center!important;margin:0 auto 10px!important}
-      .prn-body .site-footer__copyright{font-size:13px!important;line-height:23px!important;margin:0!important;text-align:center!important}
-    }
-    @media (max-width:767.98px){
-      .prn-body .site-footer{height:680px!important;min-height:680px!important;margin-top:0!important;padding:0!important;overflow:visible!important}
-      .prn-body .site-footer .container{height:680px!important;max-width:576px!important;padding:0 33px!important}
-      .prn-body .site-footer__inner{height:680px!important;padding:45px 0 44px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;box-sizing:border-box!important}
-      .prn-body .site-footer__inner-top{display:block!important;height:438px!important;padding:0!important;gap:0!important}
-      .prn-body .site-footer__col-left{width:212px!important;height:77px!important;margin:0 auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:20px!important}
-      .prn-body .site-footer__logo,.prn-body .site-footer__logo img{width:129px!important;height:auto!important}
-      .prn-body .site-footer__apps{display:flex!important;gap:10px!important;margin-top:0!important}
-      .prn-body .site-footer__apps img{width:101px!important;height:30px!important}
-      .prn-body .site-footer__col-right{width:420px!important;height:311px!important;margin:50px auto 0!important;display:grid!important;grid-template-columns:150px 120px 100px!important;column-gap:25px!important;row-gap:40px!important;align-items:start!important;justify-content:start!important}
-      .prn-body .site-footer__col-menu{display:block!important;width:auto!important;height:auto!important;min-width:0!important;gap:0!important}
-      .prn-body .site-footer__title{font-size:13px!important;line-height:20px!important;margin:0 0 20px!important}
-      .prn-body .site-footer__col-menu ul{display:grid!important;gap:6px!important;margin:0!important;padding:0!important}
-      .prn-body .site-footer__link{font-size:13px!important;line-height:23px!important}
-      .prn-body .site-footer__inner-bottom{height:103px!important;margin-top:50px!important;padding:50px 0 0!important;border-top:1px solid rgba(109,69,234,.08)!important;display:block!important;text-align:center!important;box-sizing:border-box!important}
-      .prn-body .site-footer__payments{justify-content:center!important;margin:0 auto 10px!important}
-      .prn-body .site-footer__copyright{font-size:13px!important;line-height:23px!important;margin:0!important;text-align:center!important}
-    }
-    @media (max-width:390.98px){
-      .prn-body .site-footer{height:1035px!important;min-height:1035px!important}
-      .prn-body .site-footer .container{height:1035px!important;padding:0 22px!important}
-      .prn-body .site-footer__inner{height:1035px!important;background:transparent!important;box-shadow:none!important;border:0!important}
-    }
-  </style>
+  <link rel="stylesheet" href="oracle-shared-shell.00.css?v=20260726r5-seam" />
+  <link rel="stylesheet" href="oracle-shared-shell.01.css?v=20260726r5-seam" />  <link rel="stylesheet" href="taurus-compatibility-new.css?v=20260726r5-seam" />
+<link rel="stylesheet" href="taurus-compatibility-priority.css?v=20260726r5-seam" />
 </head>
 <body class="prn-body">
 <div class="home prn-page">
   <header class="site-header fixed-top">
     <div class="container">
       <div class="site-header__inner d-flex align-items-center justify-content-between">
-        <a class="site-header__logo" href="home.html"><img src="img/logo.png" alt="logo neuro" width="142" height="30" /></a>
+        <a class="site-header__logo" href="home.html"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo neuro" width="142" height="30" /></picture></a>
         <nav class="navbar navbar-expand-lg navbar-light site-header__nav" aria-label="Primary">
-          <button class="navbar-toggler p-0 border-0" type="button" data-toggle="collapse" data-target="#navbarOffcanvas">
+          <button class="navbar-toggler p-0 border-0" type="button" data-toggle="collapse" data-target="#navbarOffcanvas" aria-label="Open menu" aria-controls="navbarOffcanvas" aria-expanded="false">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <button class="site-header__language" type="button" aria-label="Language selector">Eng</button>
           <div class="navbar-collapse collapse navbar-nav-scroll" id="navbarOffcanvas">
             <div class="site-header__offcanvas">
               <div class="site-header__offcanvas-top">
-                <a class="site-header__logo" href="home.html"><img src="img/logo-white.png" alt="logo neuro" width="142" height="30" /></a>
+                <a class="site-header__logo" href="home.html"><picture><source srcset="img/logo-white.webp" type="image/webp"><img src="img/logo-white.png" alt="logo neuro" width="142" height="30" /></picture></a>
                 <button class="site-header__offcanvas-close" type="button" data-toggle="collapse" data-target="#navbarOffcanvas" aria-label="Close menu" aria-controls="navbarOffcanvas" aria-expanded="true"></button>
               </div>
               <ul class="navbar-nav">
@@ -532,7 +75,7 @@
           </div>
           <div class="col-lg-6">
             <div class="prn-hero-section__media tcn-bull-art">
-              <img src="img/zodiac-sign-02-taurus.png" alt="Taurus bull illustration" width="800" height="800" />
+              <picture><source srcset="img/zodiac-sign-02-taurus.webp" type="image/webp"><img src="img/zodiac-sign-02-taurus.png" alt="Taurus bull illustration" width="800" height="800" /></picture>
             </div>
           </div>
         </div>
@@ -543,25 +86,25 @@
       <div class="container">
         <h2 class="section__title section__title--h2 prn-simple-title">Choose your partner's zodiac sign</h2>
         <div class="tcn-sign-grid">
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♈</div><h3>ARIES</h3><p>Mar 21 - Apr 19</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♉</div><h3>TAURUS</h3><p>Apr 20 - May 20</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♊</div><h3>GEMINI</h3><p>May 21 - Jun 20</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♋</div><h3>CANCER</h3><p>Jun 21 - Jul 22</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♌</div><h3>LEO</h3><p>Jul 23 - Aug 22</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♍</div><h3>VIRGO</h3><p>Aug 23 - Sep 22</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♎</div><h3>LIBRA</h3><p>Sep 23 - Oct 22</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♏</div><h3>SCORPIO</h3><p>Oct 23 - Nov 21</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♐</div><h3>SAGITTARIUS</h3><p>Nov 22 - Dec 21</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♑</div><h3>CAPRICORN</h3><p>Dec 22 - Jan 19</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♒</div><h3>AQUARIUS</h3><p>Jan 20 - Feb 18</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♓</div><h3>PISCES</h3><p>Feb 19 - Mar 20</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-01-aries.webp" type="image/webp"><img src="img/zodiac-sign-01-aries.png" alt="Aries zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>ARIES</h3><p>Mar 21 - Apr 19</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-02-taurus.webp" type="image/webp"><img src="img/zodiac-sign-02-taurus.png" alt="Taurus zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>TAURUS</h3><p>Apr 20 - May 20</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-03-gemini.webp" type="image/webp"><img src="img/zodiac-sign-03-gemini.png" alt="Gemini zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>GEMINI</h3><p>May 21 - Jun 20</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-04-cancer.webp" type="image/webp"><img src="img/zodiac-sign-04-cancer.png" alt="Cancer zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>CANCER</h3><p>Jun 21 - Jul 22</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-05-leo.webp" type="image/webp"><img src="img/zodiac-sign-05-leo.png" alt="Leo zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>LEO</h3><p>Jul 23 - Aug 22</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-06-virgo.webp" type="image/webp"><img src="img/zodiac-sign-06-virgo.png" alt="Virgo zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>VIRGO</h3><p>Aug 23 - Sep 22</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-07-libra.webp" type="image/webp"><img src="img/zodiac-sign-07-libra.png" alt="Libra zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>LIBRA</h3><p>Sep 23 - Oct 22</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-08-scorpio.webp" type="image/webp"><img src="img/zodiac-sign-08-scorpio.png" alt="Scorpio zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>SCORPIO</h3><p>Oct 23 - Nov 21</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-09-sagittarius.webp" type="image/webp"><img src="img/zodiac-sign-09-sagittarius.png" alt="Sagittarius zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>SAGITTARIUS</h3><p>Nov 22 - Dec 21</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-10-capricorn.webp" type="image/webp"><img src="img/zodiac-sign-10-capricorn.png" alt="Capricorn zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>CAPRICORN</h3><p>Dec 22 - Jan 19</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-11-aquarius.webp" type="image/webp"><img src="img/zodiac-sign-11-aquarius.png" alt="Aquarius zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>AQUARIUS</h3><p>Jan 20 - Feb 18</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-12-pisces.webp" type="image/webp"><img src="img/zodiac-sign-12-pisces.png" alt="Pisces zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>PISCES</h3><p>Feb 19 - Mar 20</p></article>
         </div>
-        <div style="padding:26px 28px;border-radius:24px;background:linear-gradient(90deg,#3a2a7f 0%,#5d43c5 58%,#30225e 100%);color:#fff;box-shadow:0 22px 42px rgba(67,48,140,.24);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
-          <div style="max-width:560px">
-            <strong style="display:block;margin-bottom:8px;font-size:34px;line-height:1.08;text-transform:uppercase;">Explore the universe of your relationship</strong>
-            <p style="margin:0;color:rgba(255,255,255,.86);font-size:14px;line-height:1.5;">Start your free compatibility read with one of our expert advisors and turn this Taurus screen into a more personal relationship answer.</p>
+        <div class="tcn-relationship-cta">
+          <div class="tcn-relationship-cta__copy">
+            <strong class="tcn-relationship-cta__title">Explore the universe of your relationship</strong>
+            <p class="tcn-relationship-cta__text">Start your free compatibility read with one of our expert advisors and turn this Taurus screen into a more personal relationship answer.</p>
           </div>
-          <a href="signup-step-1.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:999px;background:#ffcb45;color:#4c2d00;font-size:13px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;white-space:nowrap;">Start my free consultation</a>
+          <a class="tcn-relationship-cta__action" href="signup-step-1.html">Start my free consultation</a>
         </div>
       </div>
     </section>
@@ -569,17 +112,17 @@
       <div class="container">
         <h2 class="section__title section__title--h2 prn-simple-title">Taurus compatibility chart</h2>
         <article class="tcn-chart">
-          <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,.95fr);gap:18px;align-items:start;">
+          <div class="tcn-chart-layout">
             <div>
               <div class="tcn-mini-badge">Apr 20 - May 20</div>
-              <p style="margin:0 0 16px;color:#4c4658;font-size:17px;line-height:1.72;">Taurus exudes an aura of strength and tranquility that draws in those who cross their path. Their sensible allure captivates many, but Taurus usually looks for something stable before they go deeper.</p>
-              <p style="margin:0 0 16px;color:#4c4658;font-size:17px;line-height:1.72;">That is why Taurus compatibility is less about noise and more about fit. A good match supports the way Taurus loves: with patience, loyalty, touch, practical care, and time to build trust properly.</p>
-              <p style="margin:0;color:#4c4658;font-size:17px;line-height:1.72;">The strongest pairings here are grounded enough to respect pace, but warm enough to keep the relationship moving. The weakest matches often push too fast or make stability feel impossible.</p>
+              <p class="tcn-chart-copy">Taurus exudes an aura of strength and tranquility that draws in those who cross their path. Their sensible allure captivates many, but Taurus usually looks for something stable before they go deeper.</p>
+              <p class="tcn-chart-copy">That is why Taurus compatibility is less about noise and more about fit. A good match supports the way Taurus loves: with patience, loyalty, touch, practical care, and time to build trust properly.</p>
+              <p class="tcn-chart-copy tcn-chart-copy--last">The strongest pairings here are grounded enough to respect pace, but warm enough to keep the relationship moving. The weakest matches often push too fast or make stability feel impossible.</p>
             </div>
-            <div style="padding:18px;border-radius:20px;background:linear-gradient(180deg,#ffffff 0%,#faf7ff 100%);border:1px solid rgba(109,69,234,.08);">
-              <div style="margin:0 0 12px;color:#28223a;font-size:17px;font-weight:800;text-align:center;">Taurus Compatibility Chart</div>
+            <div class="tcn-chart-card">
+              <div class="tcn-chart-card__title">Taurus Compatibility Chart</div>
               <table class="tcn-chart-table" aria-label="Taurus compatibility table">
-                <thead><tr><th>Zodiac sign</th><th style="text-align:right;">Match</th></tr></thead>
+                <thead><tr><th>Zodiac sign</th><th class="tcn-chart-score-heading">Match</th></tr></thead>
                 <tbody>
                   <tr><td>Aries</td><td><div class="tcn-chart-cellset"><span class="tcn-chart-mark">💖</span><span class="tcn-chart-mark">👍</span><span class="tcn-chart-mark">❌</span><span class="tcn-chart-mark">👍</span></div></td></tr>
                   <tr><td>Taurus</td><td><div class="tcn-chart-cellset"><span class="tcn-chart-mark">💖</span><span class="tcn-chart-mark">💖</span><span class="tcn-chart-mark">👍</span><span class="tcn-chart-mark">👍</span></div></td></tr>
@@ -605,10 +148,10 @@
         <h2 class="section__title section__title--h2 prn-simple-title">The Best Compatibility For Taurus</h2>
         <p class="tcn-section-lead">Taurus resonates with signs just as focused on building a safe, stable, and beautiful environment for love itself. Cancer, Leo, Capricorn, and Pisces often meet Taurus where it matters most: trust, rhythm, and long-view affection.</p>
         <div class="tcn-sign-grid">
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♋</div><h3>CANCER</h3><p>Jun 21 - Jul 22</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♌</div><h3>LEO</h3><p>Jul 23 - Aug 22</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♑</div><h3>CAPRICORN</h3><p>Dec 22 - Jan 19</p></article>
-          <article class="tcn-sign-card"><div class="tcn-sign-icon">♓</div><h3>PISCES</h3><p>Feb 19 - Mar 20</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-04-cancer.webp" type="image/webp"><img src="img/zodiac-sign-04-cancer.png" alt="Cancer zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>CANCER</h3><p>Jun 21 - Jul 22</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-05-leo.webp" type="image/webp"><img src="img/zodiac-sign-05-leo.png" alt="Leo zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>LEO</h3><p>Jul 23 - Aug 22</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-10-capricorn.webp" type="image/webp"><img src="img/zodiac-sign-10-capricorn.png" alt="Capricorn zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>CAPRICORN</h3><p>Dec 22 - Jan 19</p></article>
+          <article class="tcn-sign-card"><div class="tcn-sign-icon"><picture><source srcset="img/zodiac-sign-12-pisces.webp" type="image/webp"><img src="img/zodiac-sign-12-pisces.png" alt="Pisces zodiac sign" width="140" height="140" loading="lazy" /></picture></div><h3>PISCES</h3><p>Feb 19 - Mar 20</p></article>
         </div>
       </div>
     </section>
@@ -617,7 +160,7 @@
         <h2 class="section__title section__title--h2 prn-simple-title">Watch What Signs Are Compatible With Taurus</h2>
         <div class="tcn-video-stage">
           <div class="tcn-video-frame">
-            <img src="img/video-cover.png" alt="Compatibility video preview" width="1160" height="652" loading="eager" />
+            <picture><source srcset="img/video-cover.webp" type="image/webp"><img src="img/video-cover.png" alt="Compatibility video preview" width="1160" height="652" loading="eager" /></picture>
             <div class="tcn-video-play">▶</div>
           </div>
           <div class="tcn-video-meta">
@@ -700,24 +243,7 @@
             <p>Water signs such as Cancer or Pisces, and selected earth matches like Virgo or Capricorn, often create the most sustainable chemistry because they do not fight the Taurus need for rhythm, safety, and embodied trust.</p>
           </div>
           <div class="tcn-conclusion-media">
-            <svg class="tcn-sex-symbol" viewBox="0 0 360 280" role="img" aria-label="Taurus intimacy symbol" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="tcnSexGradientLeft" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#ffd45f"/>
-                  <stop offset="100%" stop-color="#f7a928"/>
-                </linearGradient>
-                <linearGradient id="tcnSexGradientRight" x1="0%" y1="100%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#8d66ff"/>
-                  <stop offset="100%" stop-color="#6d45ea"/>
-                </linearGradient>
-              </defs>
-              <path d="M74 84c0-29 23-52 52-52s52 23 52 52c0 28-21 48-49 70-22 18-43 35-57 58" fill="none" stroke="url(#tcnSexGradientLeft)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M286 84c0-29-23-52-52-52s-52 23-52 52c0 28 21 48 49 70 22 18 43 35 57 58" fill="none" stroke="url(#tcnSexGradientRight)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M103 194v42M82 215h42" fill="none" stroke="#f7b431" stroke-width="12" stroke-linecap="round"/>
-              <path d="M264 57l29-29M282 28h28M293 28v28" fill="none" stroke="#8d66ff" stroke-width="12" stroke-linecap="round"/>
-              <circle cx="72" cy="62" r="8" fill="#ffd45f"/>
-              <circle cx="308" cy="162" r="7" fill="#8d66ff"/>
-            </svg>
+            <img class="tcn-sex-symbol" src="img/taurus-intimacy-symbol.svg" alt="Taurus intimacy symbol" width="360" height="280" loading="lazy" />
           </div>
         </div>
       </div>
@@ -786,10 +312,10 @@
       <div class="site-footer__inner">
         <div class="site-footer__inner-top">
           <div class="site-footer__col-left">
-            <a class="site-footer__logo" href="home.html"><img src="img/logo.png" alt="logo neuro" width="142" height="30"></a>
+            <a class="site-footer__logo" href="home.html"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo neuro" width="142" height="30"></picture></a>
             <div class="site-footer__appstores-links">
-              <a class="site-footer__appstore-link" href="signup-step-1.html"><img src="img/google_play.png" alt="Google Play" width="101" height="30"></a>
-              <a class="site-footer__appstore-link" href="signup-step-1.html"><img src="img/appstore.png" alt="Apple Store" width="101" height="30"></a>
+              <a class="site-footer__appstore-link" href="signup-step-1.html"><picture><source srcset="img/google_play.webp" type="image/webp"><img src="img/google_play.png" alt="Google Play" width="101" height="30"></picture></a>
+              <a class="site-footer__appstore-link" href="signup-step-1.html"><picture><source srcset="img/appstore.webp" type="image/webp"><img src="img/appstore.png" alt="Apple Store" width="101" height="30"></picture></a>
             </div>
           </div>
           <div class="site-footer__col-right">
@@ -801,7 +327,7 @@
           </div>
         </div>
         <div class="site-footer__inner-bottom">
-          <div class="pay-icon-wrapper"><img src="img/pay_icons.png" width="270" height="20" alt=""></div>
+          <div class="pay-icon-wrapper"><picture><source srcset="img/pay_icons.webp" type="image/webp"><img src="img/pay_icons.png" width="270" height="20" alt=""></picture></div>
           <div class="site-footer__copyright">2026. Spiritual Neuro Limited. © All rights reserved.</div>
         </div>
       </div>

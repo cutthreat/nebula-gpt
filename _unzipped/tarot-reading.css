@@ -1,4 +1,4 @@
-:root {
+.tarot-page{
   --tarot-bg: #f5f5f5;
   --tarot-soft: #f1f1f1;
   --tarot-panel: #ffffff;
@@ -8,14 +8,14 @@
   --tarot-purple-2: #7653d9;
   --tarot-text: #101010;
   --tarot-muted: #898989;
-  --cut13-rating-star-1200: url("img/figma-source/cut13/tarot-rating-star-1200-node-893-12364.png");
-  --cut13-review-card-star-1200: url("img/figma-source/cut13/tarot-review-card-star-1200-node-I893-12370-750-7627.png");
-  --cut13-trust-card-star-1200: url("img/figma-source/cut13/tarot-trust-card-star-1200-node-I893-12376-413-4533.png");
-  --cut13-best-online-star6-1200: url("img/figma-source/cut13/tarot-best-online-star6-1200-node-893-12388.png");
-  --cut13-need-star-320: url("img/figma-source/cut13/tarot-need-star-320-node-893-13163.png");
-  --cut13-best-online-star6-1200-transparent: url("img/figma-source/cut13/tarot-best-online-star6-1200-node-893-12388-transparent.png");
-  --cut13-need-star-320-transparent: url("img/figma-source/cut13/tarot-need-star-320-node-893-13163-transparent.png");
-  --cut13-situation-star7-1200: url("img/figma-source/cut13/tarot-situation-star7-1200-node-893-12410.png");
+  --cut13-rating-star-1200: image-set(url('img/figma-source/cut13/tarot-rating-star-1200-node-893-12364.webp') type("image/webp"), url('img/figma-source/cut13/tarot-rating-star-1200-node-893-12364.png') type("image/png"));
+  --cut13-review-card-star-1200: image-set(url('img/figma-source/cut13/tarot-review-card-star-1200-node-I893-12370-750-7627.webp') type("image/webp"), url('img/figma-source/cut13/tarot-review-card-star-1200-node-I893-12370-750-7627.png') type("image/png"));
+  --cut13-trust-card-star-1200: image-set(url('img/figma-source/cut13/tarot-trust-card-star-1200-node-I893-12376-413-4533.webp') type("image/webp"), url('img/figma-source/cut13/tarot-trust-card-star-1200-node-I893-12376-413-4533.png') type("image/png"));
+  --cut13-best-online-star6-1200: image-set(url('img/figma-source/cut13/tarot-best-online-star6-1200-node-893-12388.webp') type("image/webp"), url('img/figma-source/cut13/tarot-best-online-star6-1200-node-893-12388.png') type("image/png"));
+  --cut13-need-star-320: image-set(url('img/figma-source/cut13/tarot-need-star-320-node-893-13163.webp') type("image/webp"), url('img/figma-source/cut13/tarot-need-star-320-node-893-13163.png') type("image/png"));
+  --cut13-best-online-star6-1200-transparent: image-set(url('img/figma-source/cut13/tarot-best-online-star6-1200-node-893-12388-transparent.webp') type("image/webp"), url('img/figma-source/cut13/tarot-best-online-star6-1200-node-893-12388-transparent.png') type("image/png"));
+  --cut13-need-star-320-transparent: image-set(url('img/figma-source/cut13/tarot-need-star-320-node-893-13163-transparent.webp') type("image/webp"), url('img/figma-source/cut13/tarot-need-star-320-node-893-13163-transparent.png') type("image/png"));
+  --cut13-situation-star7-1200: image-set(url('img/figma-source/cut13/tarot-situation-star7-1200-node-893-12410.webp') type("image/webp"), url('img/figma-source/cut13/tarot-situation-star7-1200-node-893-12410.png') type("image/png"));
 }
 
 /* Owner live-rejection repair: keep mobile reviews swipeable without clipped cards. */
@@ -43,13 +43,13 @@
   }
 }
 
-*,
-*::before,
-*::after {
+.tarot-page *,
+.tarot-page *::before,
+.tarot-page *::after{
   box-sizing: border-box;
 }
 
-body {
+.prn-body{
   margin: 0;
   min-width: 320px;
   font-family: "Manrope", sans-serif;
@@ -57,12 +57,12 @@ body {
   background: #fff;
 }
 
-img {
+.tarot-page img{
   display: block;
   max-width: 100%;
 }
 
-a {
+.tarot-page a{
   color: inherit;
   text-decoration: none;
 }
@@ -531,11 +531,11 @@ button {
 }
 
 .tarot-page .apn-love-card__fact:first-child::before {
-  background-image: url("img/all-psychic-fact-exp.png");
+  background-image: image-set(url('img/all-psychic-fact-exp.webp') type("image/webp"), url('img/all-psychic-fact-exp.png') type("image/png"));
 }
 
 .tarot-page .apn-love-card__fact:nth-child(2)::before {
-  background-image: url("img/all-psychic-fact-consult.png");
+  background-image: image-set(url('img/all-psychic-fact-consult.webp') type("image/webp"), url('img/all-psychic-fact-consult.png') type("image/png"));
 }
 
 .tarot-page .apn-love-card__fact-accent {
@@ -575,6 +575,7 @@ button {
   min-height: 58.42px;
   justify-content: center;
   gap: 8px;
+  color: #fff;
   padding: 20px 30px;
   border-radius: 13px;
   box-sizing: border-box;
@@ -596,7 +597,7 @@ button {
   width: 22px;
   height: 21px;
   flex: 0 0 22px;
-  background: url("img/all-psychic-chat-icon-white.png") center / contain no-repeat;
+  background: image-set(url('img/all-psychic-chat-icon-white.webp') type("image/webp"), url('img/all-psychic-chat-icon-white.png') type("image/png")) center / contain no-repeat;
 }
 
 .tarot-page .apn-love-card__price {
@@ -5466,7 +5467,7 @@ button {
 
 @media (min-width: 1200px) {
   .tarot-page .site-header.fixed-top { padding-top: 39px !important; padding-bottom: 0 !important; }
-  .tarot-page .site-header > .container { width: 100% !important; max-width: none !important; padding-left: 45px !important; padding-right: 45px !important; }
+  .tarot-page .site-header > .container { width: 100% !important; max-width: 1140px !important; padding-left: 15px !important; padding-right: 15px !important; }
   .tarot-page .site-header__inner { min-height: 50px !important; height: 50px !important; }
   .tarot-page .site-header__inner > .site-header__logo img { width: 142px !important; height: 30px !important; }
   .tarot-page .site-header__nav { width: 633px !important; flex: 0 0 633px !important; }
@@ -6472,3 +6473,22 @@ button {
   height: 2.5px !important;
   transform: translate(-50%, -50%) rotate(-45deg) !important;
 }
+
+/* tarot-picture-compliance-repair: preserve existing image box contracts after WebP picture wrapping. */
+.tarot-page picture{display:contents}
+.tarot-page .apn-love-card__avatar > picture,
+.tarot-page .site-header__logo > picture,
+.tarot-page .site-footer__logo > picture,
+.tarot-page .site-footer__appstore-link > picture,
+.tarot-page .pay-icon-wrapper > picture,
+.tarot-page .tarot-hero__art > picture,
+.tarot-page .tarot-rely__art > picture,
+.tarot-page .tarot-need__art > picture{display:block;width:100%;height:100%}
+.tarot-page .apn-love-card__avatar > picture > img,
+.tarot-page .site-header__logo > picture > img,
+.tarot-page .site-footer__logo > picture > img,
+.tarot-page .site-footer__appstore-link > picture > img,
+.tarot-page .pay-icon-wrapper > picture > img,
+.tarot-page .tarot-hero__art > picture > img,
+.tarot-page .tarot-rely__art > picture > img,
+.tarot-page .tarot-need__art > picture > img{display:block;width:100%;height:100%}

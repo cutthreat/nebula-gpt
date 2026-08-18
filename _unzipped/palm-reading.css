@@ -1,4 +1,7 @@
-:root {
+.palm-page {
+  --primary-color: #673eda;
+  --secondary-color: #a585ff;
+  --accent-color: #ffc478;
   --palm-bg: #f5f5f5;
   --palm-text: #000;
   --palm-muted: #4c4656;
@@ -9,17 +12,17 @@
   --palm-border: #e9e9eb;
 }
 
-*,
-*::before,
-*::after {
+.palm-page *,
+.palm-page *::before,
+.palm-page *::after {
   box-sizing: border-box;
 }
 
-html {
+.palm-page {
   scroll-behavior: auto;
 }
 
-body {
+.prn-body {
   margin: 0;
   min-width: 320px;
   font-family: "Manrope", sans-serif;
@@ -27,12 +30,12 @@ body {
   background: #fff;
 }
 
-img {
+.palm-page img {
   display: block;
   max-width: 100%;
 }
 
-a {
+.palm-page a {
   color: inherit;
   text-decoration: none;
 }
@@ -234,6 +237,14 @@ select {
   letter-spacing: -0.01em;
 }
 
+.palm-page .palm-cta {
+  color: var(--palm-purple);
+}
+
+.palm-page .site-header__btn {
+  color: var(--primary-color);
+}
+
 .palm-hero__art {
   grid-area: art;
   position: relative;
@@ -262,6 +273,14 @@ select {
 }
 
 @media (min-width: 1200px) {
+  .palm-page .site-header .navbar-nav {
+    gap: 30px;
+  }
+
+  .palm-seo .palm-shell {
+    width: 1060px;
+  }
+
   .palm-hero {
     min-height: 855px;
   }
@@ -782,6 +801,16 @@ select {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .palm-hero__copy {
+    transform: translateY(30px);
+  }
+
+  .palm-hero__actions {
+    transform: translateY(-127px);
+  }
+}
+
 @media (max-width: 991.98px) {
   .palm-shell {
     padding-left: 16px;
@@ -866,8 +895,7 @@ select {
     padding: 58px 0 68px;
   }
 
-  .palm-story h2,
-  .palm-questions h2 {
+  .palm-story h2 {
     font-size: 40px;
     line-height: 50px;
   }
@@ -883,8 +911,7 @@ select {
     border-radius: 28px;
   }
 
-  .palm-story__body,
-  .palm-story__list li {
+  .palm-story__body {
     font-size: 18px;
     line-height: 34px;
   }
@@ -992,6 +1019,21 @@ select {
   }
 }
 
+@media (min-width: 577px) and (max-width: 991.98px) {
+  .palm-hero__copy,
+  .palm-hero__actions {
+    transform: translateY(64px);
+  }
+
+  .palm-questions__row {
+    gap: 0;
+  }
+
+  .palm-questions__art {
+    margin-top: -70px;
+  }
+}
+
 @media (max-width: 576px) {
   .palm-header__brand img {
     width: 92px;
@@ -1028,6 +1070,10 @@ select {
 
   .palm-hero__copy {
     display: block;
+  }
+
+  .palm-page .navbar-toggler-icon {
+    filter: invert(34%) sepia(72%) saturate(1998%) hue-rotate(238deg) brightness(87%) contrast(94%);
   }
 
   .palm-hero__art {
@@ -1083,15 +1129,16 @@ select {
     padding: 38px 0 46px;
   }
 
-  .palm-story h2,
-  .palm-questions h2 {
+  .palm-story h2 {
     font-size: 30px;
     line-height: 40px;
     letter-spacing: -0.03em;
   }
 
   .palm-questions h2 {
+    font-size: 30px;
     line-height: 42px;
+    letter-spacing: -0.03em;
   }
 
   .palm-story__card {
@@ -1099,8 +1146,7 @@ select {
     border-radius: 18px;
   }
 
-  .palm-story__body,
-  .palm-story__list li {
+  .palm-story__body {
     font-size: 16px;
     line-height: 31px;
   }
@@ -1171,6 +1217,9 @@ select {
   .palm-seo__preview {
     padding-right: 10px;
     font-size: 13px;
+  }
+
+  .palm-seo__content {
     line-height: 24px;
   }
 
@@ -1226,6 +1275,28 @@ select {
   .palm-footer__bottom img {
     width: 186px;
     height: auto;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 576px) {
+  .palm-hero__copy {
+    transform: translateY(16px);
+  }
+
+  .palm-page .palm-hero__art,
+  .palm-page .palm-hero__art > picture,
+  .palm-page .palm-hero__art > picture > img {
+    width: 223px;
+    height: 304px;
+  }
+
+  .palm-page .palm-hero__art {
+    min-height: 304px;
+    margin: 0 auto;
+  }
+
+  .palm-hero__points {
+    margin-bottom: 28px;
   }
 }
 
@@ -1394,6 +1465,8 @@ select {
 /* Footer source-frame repair: keep inherited footer bottom row inside the Figma footer frame. */
 .palm-page .site-footer {
   overflow: hidden;
+  border-radius: 40px;
+  background: var(--palm-footer);
 }
 
 .palm-page .pay-icon-wrapper {
@@ -1489,3 +1562,18 @@ select {
     margin-top: 0 !important;
   }
 }
+
+/* palm-compliance-repair: preserve existing image contracts after WebP picture wrapping. */
+.palm-page picture{display:contents}
+.palm-page .site-header__logo > picture,
+.palm-page .site-footer__logo > picture,
+.palm-page .site-footer__appstore-link > picture,
+.palm-page .pay-icon-wrapper > picture,
+.palm-page .palm-hero__art > picture,
+.palm-page .palm-questions__art > picture{display:block;width:100%;height:100%}
+.palm-page .site-header__logo > picture > img,
+.palm-page .site-footer__logo > picture > img,
+.palm-page .site-footer__appstore-link > picture > img,
+.palm-page .pay-icon-wrapper > picture > img,
+.palm-page .palm-hero__art > picture > img,
+.palm-page .palm-questions__art > picture > img{display:block;width:100%;height:100%}

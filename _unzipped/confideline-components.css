@@ -7,8 +7,7 @@
 }
 
 @media (min-width: 1200px) {
-    html:root body .home .what-neuro-section__quote-mark,
-    html:root body .what-neuro-section__quote-mark {
+    .home .what-neuro-section__quote-mark {
         line-height: 80px;
     }
 }
