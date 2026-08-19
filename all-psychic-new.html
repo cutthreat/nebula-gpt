@@ -2103,7 +2103,13 @@
     .apn-hero-cluster__source--320{display:none}
     @media (max-width:768px) and (min-width:577px){
       .apn-hero-cluster>*{display:none !important}
-      .apn-hero-cluster__source--768{display:block !important;width:320px;height:400px;max-width:none}
+      .apn-hero-cluster{min-height:0;margin:0;transform:none}
+      .apn-hero-cluster__source--768{display:block !important;width:100%;height:auto;max-width:none;flex:none}
+      .apn-hero-media{height:auto}
+      .apn-hero .prn-hero-section__title{width:auto;max-width:100%}
+      .apn-hero__accent{width:auto;max-width:100%;height:auto}
+      .apn-search-shell{width:100%;max-width:350px}
+      .apn-search-card{width:100%;max-width:350px}
     }
     @media (max-width:576px) and (min-width:400px){
       .apn-hero-cluster>*{display:none !important}
@@ -3733,6 +3739,57 @@
         height:1760px !important;
         min-height:0 !important;
         box-sizing:border-box !important;
+      }
+    }
+    @media (min-width:577px) and (max-width:767.98px){
+      .prn-body .prn-hero-section.apn-theme.apn-hero{
+        height:auto !important;
+        min-height:601px !important;
+      }
+      .prn-body .apn-hero .prn-hero-section__title{
+        font-size:clamp(29px,4.82vw,37px);
+        line-height:1.35;
+      }
+      .prn-body .apn-hero__accent{
+        line-height:1.3;
+      }
+      .prn-body .apn-neuro-proof__title{width:100%;max-width:690px}
+      .prn-body .apn-neuro-proof__stats{width:100%;max-width:690px;grid-template-columns:84fr 136fr 93fr 153fr;column-gap:clamp(14px,7vw,74px)}
+      .prn-body .apn-neuro-proof__value{font-size:clamp(42px,8.8vw,60px)}
+      .prn-body .apn-neuro-proof__label{font-size:clamp(17px,3.3vw,23px)}
+      .prn-body .apn-neuro-proof__copy{font-size:clamp(13px,2.2vw,15px)}
+      .prn-body .apn-neuro-quote{width:100%;max-width:690px;margin-left:0}
+      .prn-body .apn-neuro-quote__text{width:auto;max-width:487px}
+      .prn-body .apn-affordable__title{width:100%;max-width:690px}
+      .prn-body .apn-affordable__points{width:100%;max-width:690px;height:auto;padding:32px 24px}
+      .prn-body .apn-affordable__point{grid-template-columns:40px minmax(0,1fr);width:100%;max-width:610px}
+      .prn-body .apn-clients__title{font-size:clamp(26px,5.3vw,36px)}
+      .prn-body .apn-clients__rating{font-size:clamp(22px,4.4vw,30px)}
+      .prn-body .apn-clients__grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:0 10px}
+      .prn-body .apn-reasons__title{font-size:clamp(40px,8.5vw,58px)}
+      .prn-body .apn-reasons__grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:30px 16px}
+      .prn-body .apn-reason-card{padding:35px 20px 30px 84px}
+      .prn-body .apn-faq-section{width:100%;max-width:690px}
+      .prn-body .apn-faq__title{width:100%;max-width:690px;font-size:clamp(38px,8vw,45px)}
+      .prn-body .apn-faq{width:100%;max-width:690px}
+      .prn-body .apn-faq__item{width:100%}
+      .prn-body .apn-answer-stack{width:100%;max-width:690px}
+      .prn-body .apn-answer-item--open .apn-answer-title{width:auto;max-width:100%}
+      .prn-body .apn-answer-item--open .apn-answer-body p{width:auto;max-width:100%}
+      .prn-body .apn-neuro-catalog__title{width:100%;max-width:690px}
+      .prn-body .apn-neuro-catalog__grid{width:100%;max-width:690px;grid-template-columns:repeat(2,minmax(0,1fr))}
+      .prn-body .apn-faq__answer p{width:auto;max-width:100%}
+      .prn-body .apn-faq__item[open]{height:auto;min-height:257px}
+      .prn-body .apn-faq__item[open] .apn-faq__question{width:auto;max-width:none;right:80px}
+      .prn-body .apn-faq__item[open] .apn-faq__answer{padding-bottom:20px}
+      .prn-body .apn-client-card{height:auto;min-height:270px}
+      .prn-body .prn-plain-section.apn-clients-shot-hide,
+      .prn-body .prn-plain-section.apn-affordable,
+      .prn-body .prn-plain-section.apn-reasons-shot-hide,
+      .prn-body .prn-plain-section.apn-faq-shot-hide,
+      .prn-body .prn-plain-section.apn-answer-shot-hide{
+        height:auto !important;
+        min-height:0 !important;
       }
     }
     @media (min-width:400px) and (max-width:576px){
