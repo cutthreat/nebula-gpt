@@ -610,8 +610,14 @@
       .apn-reason-card:first-child .apn-reason-card__title{max-width:145px}
       .apn-faq__toggle svg,.apn-answer-toggle svg{display:block}
       .apn-faq__toggle::before,.apn-faq__toggle::after,.apn-answer-toggle::before,.apn-answer-toggle::after{content:none}
-      .apn-faq__item:nth-of-type(4) .apn-faq__toggle svg{width:16px;height:16px}
-      .apn-faq__item[open] .apn-faq__toggle svg,.apn-answer-item--open .apn-answer-toggle svg{display:block;width:22.63px;height:22.63px}
+      .apn-faq__item:not([open]) .apn-faq__toggle svg{display:block;width:16px;height:16px}
+      .apn-faq__item[open] .apn-faq__toggle svg{display:none}
+      .apn-faq__item[open] .apn-faq__toggle::before{content:"";position:absolute;left:50%;top:50%;width:22.63px;height:2.5px;border-radius:1.25px;background:#090909;transform:translate(-50%,-50%) rotate(45deg)}
+      .apn-faq__item[open] .apn-faq__toggle::after{content:"";position:absolute;left:50%;top:50%;width:22.63px;height:2.5px;border-radius:1.25px;background:#090909;transform:translate(-50%,-50%) rotate(-45deg)}
+      .apn-answer-item:not(.apn-answer-item--open) .apn-answer-toggle svg{display:none}
+      .apn-answer-item:not(.apn-answer-item--open) .apn-answer-toggle{background:#fff}
+      .apn-answer-item:not(.apn-answer-item--open) .apn-answer-toggle::before{content:"";position:absolute;left:50%;top:50%;width:18px;height:11px;background:url("data:image/svg+xml,%3Csvg width='18' height='11' viewBox='0 0 18 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L9 9L16 2' stroke='%23000000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;transform:translate(-50%,-50%)}
+      .apn-answer-item--open .apn-answer-toggle svg{display:block;width:22.63px;height:22.63px}
       .apn-clients__stars{transform:translate(20px,1px)}
       .apn-answer-item--open .apn-answer-body{padding-bottom:6px}
     }
