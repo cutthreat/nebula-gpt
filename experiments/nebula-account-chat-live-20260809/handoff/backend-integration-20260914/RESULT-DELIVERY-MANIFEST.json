@@ -1,7 +1,7 @@
 {
   "schema": "codex_result_delivery_manifest.v1",
   "status": "verified_with_limits",
-  "delivery_class": "local_artifact",
+  "delivery_class": "mixed",
   "user_access_status": "verified_local_openable",
   "verified_at_utc": "2026-09-14T09:11:40.7084550Z",
   "task_summary": "Подготовлен и опубликован Git handoff-пакет для передачи изолированной Yii2-верстки Nebula Cabinet + Chat backend-разработчику и Codex.",
