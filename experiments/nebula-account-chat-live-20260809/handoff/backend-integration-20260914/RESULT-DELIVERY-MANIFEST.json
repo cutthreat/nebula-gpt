@@ -54,6 +54,19 @@
       "verified_at_utc": "2026-09-14T09:11:40.7084550Z",
       "expected_sha256": "7C6B0E403369B68C51AD929FC045BB90BB5EBCB24664D8F5F75E3CDCE8E48534",
       "proof_refs": ["../../proof/module-inventory/final/coverage-audit.json"]
+    },
+    {
+      "id": "chatroom-visual-reference",
+      "kind": "visual_ui",
+      "target": "F:/CodexProjects/confideline-nebula/implementation/nebula-gpt/experiments/nebula-account-chat-live-20260809/proof/host/yii2-chatroom-1200.png",
+      "claim": "Зафиксированный reference-only Yii2 screenshot default Chatroom на 1200 px; используется для передачи визуальной структуры, но не подтверждает текущий backend runtime.",
+      "verification_status": "verified",
+      "verification_method": "Recorded mounted Yii2 capture referenced by the frontend host-intent closeout; current backend/runtime acceptance is explicitly excluded.",
+      "verified_at_utc": "2026-08-13T00:00:00Z",
+      "proof_refs": ["../../proof/module-inventory/frontend-host-intent-milestone-closeout-2026-08-13.md"],
+      "runtime_observation": true,
+      "requested_states": ["default-chatroom-1200"],
+      "observed_states": ["default-chatroom-1200"]
     }
   ]
 }
