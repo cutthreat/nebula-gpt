@@ -1,0 +1,77 @@
+{
+  "schema": "nebula.cabinet_chat_backend_handoff.v1",
+  "status": "frontend_host_intent_milestone_complete_at_authority_boundary",
+  "variant_root": "experiments/nebula-account-chat-live-20260809",
+  "source_of_truth": {
+    "figma_file_key": "C76M54fY7z926wIQoWFh8Y",
+    "profile_packet": "source/LIGHT-PROFILE-PACKET.json",
+    "chat_packet": "source/LIGHT-CHATROOM-PACKET.json",
+    "coverage": "proof/module-inventory/final/coverage-audit.json"
+  },
+  "delivery_scope": {
+    "accepted_static_units": 50,
+    "total_units": 54,
+    "accepted_routes": 27,
+    "breakpoints": [1200, 992, 768, 576, 320],
+    "not_backend_verified": true,
+    "not_production_promoted": true
+  },
+  "first_backend_slice": {
+    "id": "chat_message_delivery_v1",
+    "goal": "Authorised client reads own conversations, opens one thread, sends one text message, receives authoritative snapshot and retries safely.",
+    "ui_owner": {
+      "route": "/nebula-account/chatroom",
+      "controller": "yii2/modules/nebulaAccount/controllers/ChatroomController.php",
+      "views": [
+        "yii2/modules/nebulaAccount/views/chatroom/index.php",
+        "yii2/modules/nebulaAccount/views/partials/chat-thread.php",
+        "yii2/modules/nebulaAccount/views/partials/chat-composer.php",
+        "yii2/modules/nebulaAccount/views/partials/chat-composer-entry.php"
+      ],
+      "assets": "yii2/modules/nebulaAccount/assets/ChatroomAsset.php"
+    },
+    "backend_owner_must_define": [
+      "authenticated principal and conversation access policy",
+      "versioned conversation/message snapshot schema",
+      "cursor pagination and ordering",
+      "message submit endpoint with client-generated idempotency key",
+      "server states for pending, accepted, delivered, read, rejected and retryable failure",
+      "idempotency retention, conflict and timeout outcome",
+      "attachment policy and upload lifecycle before exposing attachment action",
+      "audit/actor timestamps and server-assigned message identifiers"
+    ],
+    "required_contract_tests": [
+      "unauthorised and foreign-conversation access is denied without data leak",
+      "same idempotency key produces exactly one persisted message",
+      "timeout/retry resolves the original request without a duplicate",
+      "reload returns the authoritative persisted snapshot",
+      "server rejection remains an error state and never renders delivered",
+      "five-width visual smoke retains the source composition"
+    ]
+  },
+  "deferred_contracts": [
+    "profile/settings/consent persistence",
+    "credits, checkout, payment and balance mutation",
+    "paid-session lifecycle, timer, rate, ledger, start/end and debits",
+    "delivery/read receipts beyond the first authoritative message contract",
+    "g02/g03 authenticated owner/opener/outcome",
+    "g50 media source, player and lifecycle"
+  ],
+  "forbidden_shortcuts": [
+    "localStorage or fixture data as backend truth",
+    "client timer or balance calculation as billing authority",
+    "fake sent/delivered/paid/saved/completed UI state",
+    "client-side-only conversation authorisation",
+    "replay of a possibly accepted mutation without idempotency reconciliation"
+  ],
+  "proof_boundary": {
+    "existing_static_proof": "proof/module-inventory/frontend-host-intent-milestone-closeout-2026-08-13.md",
+    "required_before_backend_ready_claim": [
+      "current host/runtime evidence",
+      "contract test results",
+      "authorised/denied access proof",
+      "idempotency and reload/readback proof",
+      "five-width visual regression evidence"
+    ]
+  }
+}
