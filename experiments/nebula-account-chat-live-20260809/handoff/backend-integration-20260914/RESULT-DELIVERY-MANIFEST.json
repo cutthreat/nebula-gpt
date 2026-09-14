@@ -19,7 +19,7 @@
       "verification_status": "verified",
       "verification_method": "UTF-8 readback and SHA-256 readback",
       "verified_at_utc": "2026-09-14T09:11:40.7084550Z",
-      "expected_sha256": "BB29FA2A0100C78455622CAD40284ACE3AA31663BBBAA6B566F7321AE4B182AA",
+      "expected_sha256": "CF2EBBAF5C74E8A7574D72CE591F401A479653FEA500F5199D09E07BDAFBC58E",
       "proof_refs": ["integration-contract.json"]
     },
     {
@@ -67,6 +67,21 @@
       "runtime_observation": true,
       "requested_states": ["default-chatroom-1200"],
       "observed_states": ["default-chatroom-1200"]
+    },
+    {
+      "id": "public-static-preview",
+      "kind": "web_url",
+      "target": "https://cutthreat.github.io/nebula-pages-public/nebula-account/",
+      "claim": "Публичный статический Cabinet + Chat preview доступен через GitHub Pages с другого ПК без авторизации.",
+      "verification_status": "verified",
+      "verification_method": "External HTTPS GET: entry page, Chatroom, Profile, chat CSS and chat JavaScript each returned HTTP 200.",
+      "verified_at_utc": "2026-09-14T09:17:30Z",
+      "proof_refs": ["README.md"],
+      "access_observation": {
+        "status": "reachable",
+        "same_route": true,
+        "observed_at_utc": "2026-09-14T09:17:30Z"
+      }
     }
   ]
 }

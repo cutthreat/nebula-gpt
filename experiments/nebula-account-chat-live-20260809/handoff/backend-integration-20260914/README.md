@@ -18,6 +18,16 @@
 - Доказательства пяти ширин и локальных интеракций: `proof/`.
 - Человеческий маршрут, машинный контракт и проверка состава: эта папка.
 
+## Публичная верстка
+
+Полностью статическая версия опубликована через GitHub Pages и открывается с любого ПК:
+
+- [вход в кабинет и чат](https://cutthreat.github.io/nebula-pages-public/nebula-account/);
+- [Chatroom](https://cutthreat.github.io/nebula-pages-public/nebula-account/chatroom.html);
+- [Profile](https://cutthreat.github.io/nebula-pages-public/nebula-account/profile.html).
+
+Это полный client-only preview: HTML, CSS, JavaScript, изображения и шрифты размещены в Git-репозитории `cutthreat/nebula-pages-public` (ветка `main`). Публичный просмотр не передаёт реальные данные и не выполняет backend-операции.
+
 ## Реально готово
 
 - 50 из 54 единиц кабинета/чата приняты в изолированном Yii2-контуре; 27 ожидаемых GET-маршрутов имеют статическую проекцию.
