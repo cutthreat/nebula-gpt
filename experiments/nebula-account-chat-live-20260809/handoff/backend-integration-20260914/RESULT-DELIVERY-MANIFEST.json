@@ -1,0 +1,59 @@
+{
+  "schema": "codex_result_delivery_manifest.v1",
+  "status": "verified_with_limits",
+  "delivery_class": "local_artifact",
+  "user_access_status": "verified_local_openable",
+  "verified_at_utc": "2026-09-14T09:11:40.7084550Z",
+  "task_summary": "Подготовлен и опубликован Git handoff-пакет для передачи изолированной Yii2-верстки Nebula Cabinet + Chat backend-разработчику и Codex.",
+  "limits": [
+    "Пакет подтверждает состав и источник верстки, а не backend/runtime готовность.",
+    "Auth, persistence, message delivery, attachments, payments, credit balance и paid-session lifecycle требуют отдельного owner-ответа и runtime-проверки.",
+    "Рабочее дерево содержит несвязанные изменения; коммит содержит только handoff-пакет."
+  ],
+  "deliverables": [
+    {
+      "id": "human-readme",
+      "kind": "local_file",
+      "target": "F:/CodexProjects/confideline-nebula/implementation/nebula-gpt/experiments/nebula-account-chat-live-20260809/handoff/backend-integration-20260914/README.md",
+      "claim": "Русская точка входа для Игоря с составом, границами и первым backend-срезом.",
+      "verification_status": "verified",
+      "verification_method": "UTF-8 readback and SHA-256 readback",
+      "verified_at_utc": "2026-09-14T09:11:40.7084550Z",
+      "expected_sha256": "BB29FA2A0100C78455622CAD40284ACE3AA31663BBBAA6B566F7321AE4B182AA",
+      "proof_refs": ["integration-contract.json"]
+    },
+    {
+      "id": "codex-instructions",
+      "kind": "local_file",
+      "target": "F:/CodexProjects/confideline-nebula/implementation/nebula-gpt/experiments/nebula-account-chat-live-20260809/handoff/backend-integration-20260914/CODEX.md",
+      "claim": "Машиночитаемый порядок работы, границы и критерии приёмки для Codex.",
+      "verification_status": "verified",
+      "verification_method": "UTF-8 readback and SHA-256 readback",
+      "verified_at_utc": "2026-09-14T09:11:40.7084550Z",
+      "expected_sha256": "DD3521DF5A3EF2A74F4ACFC16D122EC609E318F72FA416D53339FA6B3D665995",
+      "proof_refs": ["integration-contract.json"]
+    },
+    {
+      "id": "integration-contract",
+      "kind": "local_file",
+      "target": "F:/CodexProjects/confideline-nebula/implementation/nebula-gpt/experiments/nebula-account-chat-live-20260809/handoff/backend-integration-20260914/integration-contract.json",
+      "claim": "Версионированный контракт первого backend-среза и список deferred-контрактов.",
+      "verification_status": "verified",
+      "verification_method": "JSON parse and SHA-256 readback",
+      "verified_at_utc": "2026-09-14T09:11:40.7084550Z",
+      "expected_sha256": "5B55737487BD89D23A42CE95BE82A1F60D23E04EFD6D37BFFDCD5E40E73BE7FF",
+      "proof_refs": ["../../proof/module-inventory/final/coverage-audit.json"]
+    },
+    {
+      "id": "composition-verifier",
+      "kind": "local_file",
+      "target": "F:/CodexProjects/confideline-nebula/implementation/nebula-gpt/experiments/nebula-account-chat-live-20260809/handoff/backend-integration-20260914/verify-handoff.ps1",
+      "claim": "Локальная проверка наличия ключевых исходников, Yii2-владельцев и proof-артефактов.",
+      "verification_status": "verified",
+      "verification_method": "Executed with pass_structure_only and SHA-256 readback",
+      "verified_at_utc": "2026-09-14T09:11:40.7084550Z",
+      "expected_sha256": "7C6B0E403369B68C51AD929FC045BB90BB5EBCB24664D8F5F75E3CDCE8E48534",
+      "proof_refs": ["../../proof/module-inventory/final/coverage-audit.json"]
+    }
+  ]
+}
